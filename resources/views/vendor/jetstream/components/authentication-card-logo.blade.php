@@ -1,0 +1,1 @@
+<img src="{{ url('img/logo-kosmo-1.png') }}" style="width: 13%;margin-left: 43%;"/>

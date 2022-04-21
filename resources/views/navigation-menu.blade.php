@@ -54,6 +54,12 @@
                     <x-jet-nav-link href="{{ route('proyectos') }}" :active="request()->routeIs('proyectos')" style="color: white;">
                         {{ __('Proyectos') }}
                     </x-jet-nav-link>
+                    @if(@Auth::user()->hasRole('administrador'))
+                        <x-jet-nav-link href="{{ route('crear-usuario') }}" :active="request()->routeIs('crear-usuario')" style="color: white;">
+                            {{ __('Crear Usuario') }}
+                        </x-jet-nav-link>
+                    @endif
+
 
                 </div>
 

@@ -86,10 +86,11 @@
                 @endif
             </div>
         </div>
+        <iframe src="apt/Ficha de Análisis del Puesto de trabajo (APT).docx">  </iframe>
     </div>
     <!-- Modal -->
     <div class="modal fade" id="informaApt" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <form method="POST" action="">
                     @csrf
@@ -101,6 +102,7 @@
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Subir Informe APT</label>
                             <input class="form-control" type="file" id="formFile">
+                            <p class="mt-2">Descargar el formato del informe y subirlo. <a href="/apt/Ficha de Análisis del Puesto de trabajo (APT).docx">Descargar</a></p>
                         </div>
                     </div>
                     <div class="modal-footer">

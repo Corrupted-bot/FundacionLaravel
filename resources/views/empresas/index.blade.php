@@ -26,9 +26,9 @@
     </x-slot>
 
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="container" style="width: fit-content;">
+            <div class="container mt-4" style="width: fit-content;">
 
-                <table id="empresas" class="table table-striped table-hover " style="width:100%">
+                <table id="empresas" class="table table-striped table-hover table-bordered " style="width:100%">
                     <thead style="background-color: #2257a3;color: white;">
                         <tr>
                             <th>Nombre</th>

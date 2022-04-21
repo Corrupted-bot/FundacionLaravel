@@ -5,10 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Empresa;
 use Illuminate\Support\Facades\Redirect;
-use Session;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class EmpresaController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -17,7 +21,7 @@ class EmpresaController extends Controller
     public function index()
     {
         $empresas = Empresa::all();
-        return View("empresas.index")->with("empresas",$empresas);
+        return View("empresas.index")->with("empresas", $empresas);
     }
 
     /**
@@ -28,7 +32,6 @@ class EmpresaController extends Controller
     public function create()
     {
         return View("empresas.create");
-     
     }
 
     /**
@@ -74,7 +77,7 @@ class EmpresaController extends Controller
      */
     public function edit($id)
     {
-        
+
         return Empresa::find($id);
     }
 
@@ -126,9 +129,8 @@ class EmpresaController extends Controller
         //
     }
 
-    public function obtenerDatos(){
+    public function obtenerDatos()
+    {
         return Empresa::all();
     }
-
-
 }

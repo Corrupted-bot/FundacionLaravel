@@ -31,14 +31,14 @@
 
                                     <div class="mb-3">
                                         <label for="nombre" class="form-label">Nombre<span style="color: red;"> *</span></label>
-                                        <input type="text" class="form-control" id="nombre" name="nombre">
+                                        <input type="text" class="form-control" id="nombre" name="nombre" required>
                                     </div>
                                 </div>
                                 <div class="col">
 
                                     <div class="mb-3">
                                         <label for="rut" class="form-label">Rut<span style="color: red;"> *</span></label>
-                                        <input type="text" class="form-control" id="rut" name="rut">
+                                        <input type="text" class="form-control" id="rut" name="rut" required>
                                     </div>
                                 </div>
                             </div>
@@ -46,7 +46,7 @@
                                 <div class="col">
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Email<span style="color: red;"> *</span></label>
-                                        <input type="email" class="form-control" id="email" name="email">
+                                        <input type="email" class="form-control" id="email" name="email"  required>
                                     </div>
                                 </div>
                             </div>
@@ -55,14 +55,14 @@
 
                                     <div class="mb-3">
                                         <label for="telefono" class="form-label">Teléfono<span style="color: red;"> *</span></label>
-                                        <input type="text" class="form-control" id="telefono" name="telefono">
+                                        <input type="text" class="form-control" id="telefono" name="telefono"  required>
                                     </div>
                                 </div>
                                 <div class="col">
 
                                     <div class="mb-3">
                                         <label for="giro" class="form-label">Giro<span style="color: red;"> *</span></label>
-                                        <input type="text" class="form-control" id="giro" name="giro">
+                                        <input type="text" class="form-control" id="giro" name="giro" required>
                                     </div>
                                 </div>
                             </div>
@@ -71,21 +71,21 @@
 
                                     <div class="mb-3">
                                         <label for="direccion" class="form-label">Dirección<span style="color: red;"> *</span></label>
-                                        <input type="text" class="form-control" id="direccion" name="direccion">
+                                        <input type="text" class="form-control" id="direccion" name="direccion" required>
                                     </div>
                                 </div>
                                 <div class="col">
 
                                     <div class="mb-3">
                                         <label for="cargo" class="form-label">Cargo<span style="color: red;"> *</span></label>
-                                        <input type="text" class="form-control" id="cargo" name="cargo">
+                                        <input type="text" class="form-control" id="cargo" name="cargo" required>
                                     </div>
                                 </div>
                                 <div class="col">
 
                                     <div class="mb-3">
                                         <label for="dotacion" class="form-label">Dotación<span style="color: red;"> *</span></label>
-                                        <input type="text" class="form-control" id="dotacion" name="dotacion">
+                                        <input type="text" class="form-control" id="dotacion" name="dotacion" required>
                                     </div>
                                 </div>
                             </div>

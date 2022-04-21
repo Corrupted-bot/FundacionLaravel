@@ -16,7 +16,7 @@ use App\Http\Controllers\ProyectoController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect("/login");
 });
 
 Route::middleware([
@@ -29,7 +29,10 @@ Route::middleware([
     })->name('dashboard');
 });
 
-
+Route::group(['middleware' => ['role:administrador' ]], function () {
+    Route::get('/create/usuario', "App\Http\Controllers\UsuarioController@index")->name("crear-usuario");
+    Route::post('/create/usuario', "App\Http\Controllers\UsuarioController@registerUsuario");
+});
 
  
 Route::resource('empresas', EmpresaController::class, [

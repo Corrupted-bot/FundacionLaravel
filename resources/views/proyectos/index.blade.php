@@ -107,6 +107,7 @@
             .nav-link2:active {
                 background-color: black !important;
             }
+
             .nav-link {
                 background-color: #2257a3 !important;
                 color: white !important;
@@ -2097,7 +2098,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td id="logro_estacionamiento_1"></td>
+                                            <td>
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_1">
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Dimensiones: Sus dimensiones mínimas son 2,5 mt de ancho x 5,00 mt
@@ -2112,7 +2120,15 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td id="logro_estacionamiento_2"></td>
+                                            <td>
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_2">
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+
+                                                </select>
+                                            </td>
 
                                         </tr>
                                         <tr>
@@ -2129,7 +2145,15 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td id="logro_estacionamiento_3"></td>
+                                            <td>
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_3">
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+
+                                                </select>
+                                            </td>
 
                                         </tr>
                                         <tr>
@@ -2144,7 +2168,15 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td id="logro_estacionamiento_4"></td>
+                                            <td>
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_4">
+
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+
+                                                </select>
+                                            </td>
 
                                         </tr>
                                         <tr>
@@ -2160,7 +2192,15 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td id="logro_estacionamiento_5"></td>
+                                            <td>
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_5">
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+
+                                                </select>
+                                            </td>
 
                                         </tr>
                                         <tr>
@@ -2177,7 +2217,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td id="logro_estacionamiento_6"></td>
+                                            <td>
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_6">
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
 
                                         </tr>
                                     </tbody>
@@ -3011,7 +3058,7 @@
 
 
 
-        total_estacionamiento = [0, 0, 0, 0, 0, 0]
+        total_estacionamiento = [-1, -1, -1, -1, -1, -1]
 
 
         function sumar(array) {
@@ -3026,129 +3073,80 @@
 
         $("#estacionamiento_1").change(function() {
             if ($("#estacionamiento_1").val() == "cumple") {
-
-                $("#logro_estacionamiento_1").text("16,66666666666667%");
-                total_estacionamiento[0] = 16.66666666666667
+                $("#logro_estacionamiento_1").css("visibility", "visible");
             }
             if ($("#estacionamiento_1").val() == "no_cumple") {
-
-                $("#logro_estacionamiento_1").text("-16,66666666666667%");
-                total_estacionamiento[0] = -16.66666666666667
-
+                $("#logro_estacionamiento_1").css("visibility", "visible");
             }
             if ($("#estacionamiento_1").val() == "no_aplica") {
-
-                $("#logro_estacionamiento_1").text("0%");
-                total_estacionamiento[0] = 0
+                $("#logro_estacionamiento_1").css("visibility", "hidden");
+                $("#logro_estacionamiento_1").val("");
             }
-
-            $("#total_estacionamiento").text(sumar(total_estacionamiento).toFixed(2))
-            //16,66666666666667
         })
         $("#estacionamiento_2").change(function() {
             if ($("#estacionamiento_2").val() == "cumple") {
-
-                $("#logro_estacionamiento_2").text("16,66666666666667%");
-                total_estacionamiento[1] = 16.66666666666667
+                $("#logro_estacionamiento_2").css("visibility", "visible");
             }
             if ($("#estacionamiento_2").val() == "no_cumple") {
-
-                $("#logro_estacionamiento_2").text("-16,66666666666667%");
-                total_estacionamiento[1] = -16.66666666666667
-
+                $("#logro_estacionamiento_2").css("visibility", "visible");
             }
             if ($("#estacionamiento_2").val() == "no_aplica") {
+                $("#logro_estacionamiento_2").css("visibility", "hidden");
+                $("#logro_estacionamiento_2").val("");
 
-                $("#logro_estacionamiento_2").text("0%");
-                total_estacionamiento[1] = 0
             }
-
-            $("#total_estacionamiento").text(sumar(total_estacionamiento).toFixed(2))
-            //16,66666666666667
         })
         $("#estacionamiento_3").change(function() {
             if ($("#estacionamiento_3").val() == "cumple") {
-
-                $("#logro_estacionamiento_3").text("16,66666666666667%");
-                total_estacionamiento[2] = 16.66666666666667
+                $("#logro_estacionamiento_3").css("visibility", "visible");
             }
             if ($("#estacionamiento_3").val() == "no_cumple") {
-
-                $("#logro_estacionamiento_3").text("-16,66666666666667%");
-                total_estacionamiento[2] = -16.66666666666667
-
+                $("#logro_estacionamiento_3").css("visibility", "visible");
             }
             if ($("#estacionamiento_3").val() == "no_aplica") {
-
-                $("#logro_estacionamiento_3").text("0%");
-                total_estacionamiento[2] = 0
+                $("#logro_estacionamiento_3").css("visibility", "hidden");
+                $("#logro_estacionamiento_3").val("");
+                
             }
-
-            $("#total_estacionamiento").text(sumar(total_estacionamiento).toFixed(2))
-            //16,66666666666667
         })
         $("#estacionamiento_4").change(function() {
             if ($("#estacionamiento_4").val() == "cumple") {
-
-                $("#logro_estacionamiento_4").text("16,66666666666667%");
-                total_estacionamiento[3] = 16.66666666666667
+                $("#logro_estacionamiento_4").css("visibility", "visible");
             }
             if ($("#estacionamiento_4").val() == "no_cumple") {
-
-                $("#logro_estacionamiento_4").text("-16,66666666666667%");
-                total_estacionamiento[3] = -16.66666666666667
-
+                $("#logro_estacionamiento_4").css("visibility", "visible");
             }
             if ($("#estacionamiento_4").val() == "no_aplica") {
-
-                $("#logro_estacionamiento_4").text("0%");
-                total_estacionamiento[3] = 0
+                $("#logro_estacionamiento_4").css("visibility", "hidden");
+                $("#logro_estacionamiento_4").val("");
+                
             }
-
-            $("#total_estacionamiento").text(sumar(total_estacionamiento).toFixed(2))
-            //16,66666666666667
         })
         $("#estacionamiento_5").change(function() {
             if ($("#estacionamiento_5").val() == "cumple") {
-
-                $("#logro_estacionamiento_5").text("16,66666666666667%");
-                total_estacionamiento[4] = 16.66666666666667
+                $("#logro_estacionamiento_5").css("visibility", "visible");
             }
             if ($("#estacionamiento_5").val() == "no_cumple") {
-
-                $("#logro_estacionamiento_5").text("-16,66666666666667%");
-                total_estacionamiento[4] = -16.66666666666667
-
+                $("#logro_estacionamiento_5").css("visibility", "visible");
             }
             if ($("#estacionamiento_5").val() == "no_aplica") {
-
-                $("#logro_estacionamiento_5").text("0%");
-                total_estacionamiento[4] = 0
+                $("#logro_estacionamiento_5").css("visibility", "hidden");
+                $("#logro_estacionamiento_5").val("");
+                
             }
-
-            $("#total_estacionamiento").text(sumar(total_estacionamiento).toFixed(2))
-            //16,66666666666667
         })
         $("#estacionamiento_6").change(function() {
             if ($("#estacionamiento_6").val() == "cumple") {
-
-                $("#logro_estacionamiento_6").text("16,66666666666667%");
-                total_estacionamiento[5] = 16.66666666666667
+                $("#logro_estacionamiento_6").css("visibility", "visible");
             }
             if ($("#estacionamiento_6").val() == "no_cumple") {
-
-                $("#logro_estacionamiento_6").text("-16,66666666666667%");
-                total_estacionamiento[5] = -16.66666666666667
-
+                $("#logro_estacionamiento_6").css("visibility", "visible");
             }
             if ($("#estacionamiento_6").val() == "no_aplica") {
-
-                $("#logro_estacionamiento_6").text("0%");
-                total_estacionamiento[5] = 0
+                $("#logro_estacionamiento_6").css("visibility", "hidden");
+                $("#logro_estacionamiento_6").val("");
+                
             }
-
-            $("#total_estacionamiento").text(sumar(total_estacionamiento).toFixed(2))
-            //16,66666666666667
         })
 
 

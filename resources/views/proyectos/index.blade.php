@@ -2260,7 +2260,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_ingreso_1" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Existe una rampa de acceso con una pendiente preferentemente de 8%<br>
@@ -2275,7 +2282,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_ingreso_2" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Acceso plano: El pavimento es homogéneo, estable, antideslizante en<br>
@@ -2289,7 +2303,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_ingreso_3" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Acceso por rampa: El pavimento de la rampa es homogéneo, estable,<br>
@@ -2304,7 +2325,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_ingreso_4" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Acceso por rampa: Ancho: El ancho mínimo de la rampa es igual o
@@ -2320,7 +2348,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_ingreso_5" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Acceso por rampa: Longitud: La rampa tiene un largo máximo de 9,00<br>
@@ -2334,7 +2369,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_ingreso_6" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>"Acceso por rampa: Pasamanos: Si el largo de la rampa es mayor a 1,5
@@ -2349,7 +2391,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_ingreso_7" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>"Acceso por rampa: Descanso: Plano horizontal que permite
@@ -2364,9 +2413,24 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_ingreso_8" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                     </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                            <th><button type="button" class="btn btn-info" style="width: -webkit-fill-available;" onclick="TotalIngreso()">Ver Total</button></th>
+                                            <th colspan="2">Total:<span id="total_ingreso"></span>%</th>
+                                        </tr>
+                                    </tfoot>
                                 </table>
                             </div>
                             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
@@ -2667,6 +2731,7 @@
 
 
                                     </tbody>
+
                                 </table>
                             </div>
                             <div class="tab-pane fade" id="contact5" role="tabpanel" aria-labelledby="contact5-tab">
@@ -3163,6 +3228,135 @@
                 
             }
         })
+        //INGRESOOOOO
+        $("#ingreso_1").change(function() {
+            if ($("#ingreso_1").val() == "cumple") {
+                $("#logro_ingreso_1").css("visibility", "visible");
+                $("#logro_ingreso_1").attr("disabled",false);
+            }
+            if ($("#ingreso_1").val() == "no_cumple") {
+                $("#logro_ingreso_1").css("visibility", "visible");
+                $("#logro_ingreso_1").val("0");
+                $("#logro_ingreso_1").attr("disabled",true);
+            }
+            if ($("#ingreso_1").val() == "no_aplica") {
+                $("#logro_ingreso_1").css("visibility", "hidden");
+                $("#logro_ingreso_1").val("");
+                
+            }
+        })
+        $("#ingreso_2").change(function() {
+            if ($("#ingreso_2").val() == "cumple") {
+                $("#logro_ingreso_2").css("visibility", "visible");
+                $("#logro_ingreso_2").attr("disabled",false);
+            }
+            if ($("#ingreso_2").val() == "no_cumple") {
+                $("#logro_ingreso_2").css("visibility", "visible");
+                $("#logro_ingreso_2").val("0");
+                $("#logro_ingreso_2").attr("disabled",true);
+            }
+            if ($("#ingreso_2").val() == "no_aplica") {
+                $("#logro_ingreso_2").css("visibility", "hidden");
+                $("#logro_ingreso_2").val("");
+                
+            }
+        })
+        $("#ingreso_3").change(function() {
+            if ($("#ingreso_3").val() == "cumple") {
+                $("#logro_ingreso_3").css("visibility", "visible");
+                $("#logro_ingreso_3").attr("disabled",false);
+            }
+            if ($("#ingreso_3").val() == "no_cumple") {
+                $("#logro_ingreso_3").css("visibility", "visible");
+                $("#logro_ingreso_3").val("0");
+                $("#logro_ingreso_3").attr("disabled",true);
+            }
+            if ($("#ingreso_3").val() == "no_aplica") {
+                $("#logro_ingreso_3").css("visibility", "hidden");
+                $("#logro_ingreso_3").val("");
+                
+            }
+        })
+        $("#ingreso_4").change(function() {
+            if ($("#ingreso_4").val() == "cumple") {
+                $("#logro_ingreso_4").css("visibility", "visible");
+                $("#logro_ingreso_4").attr("disabled",false);
+            }
+            if ($("#ingreso_4").val() == "no_cumple") {
+                $("#logro_ingreso_4").css("visibility", "visible");
+                $("#logro_ingreso_4").val("0");
+                $("#logro_ingreso_4").attr("disabled",true);
+            }
+            if ($("#ingreso_4").val() == "no_aplica") {
+                $("#logro_ingreso_4").css("visibility", "hidden");
+                $("#logro_ingreso_4").val("");
+                
+            }
+        })
+        $("#ingreso_5").change(function() {
+            if ($("#ingreso_5").val() == "cumple") {
+                $("#logro_ingreso_5").css("visibility", "visible");
+                $("#logro_ingreso_5").attr("disabled",false);
+            }
+            if ($("#ingreso_5").val() == "no_cumple") {
+                $("#logro_ingreso_5").css("visibility", "visible");
+                $("#logro_ingreso_5").val("0");
+                $("#logro_ingreso_5").attr("disabled",true);
+            }
+            if ($("#ingreso_5").val() == "no_aplica") {
+                $("#logro_ingreso_5").css("visibility", "hidden");
+                $("#logro_ingreso_5").val("");
+                
+            }
+        })
+        $("#ingreso_6").change(function() {
+            if ($("#ingreso_6").val() == "cumple") {
+                $("#logro_ingreso_6").css("visibility", "visible");
+                $("#logro_ingreso_6").attr("disabled",false);
+            }
+            if ($("#ingreso_6").val() == "no_cumple") {
+                $("#logro_ingreso_6").css("visibility", "visible");
+                $("#logro_ingreso_6").val("0");
+                $("#logro_ingreso_6").attr("disabled",true);
+            }
+            if ($("#ingreso_6").val() == "no_aplica") {
+                $("#logro_ingreso_6").css("visibility", "hidden");
+                $("#logro_ingreso_6").val("");
+                
+            }
+        })
+        $("#ingreso_7").change(function() {
+            if ($("#ingreso_7").val() == "cumple") {
+                $("#logro_ingreso_7").css("visibility", "visible");
+                $("#logro_ingreso_7").attr("disabled",false);
+            }
+            if ($("#ingreso_7").val() == "no_cumple") {
+                $("#logro_ingreso_7").css("visibility", "visible");
+                $("#logro_ingreso_7").val("0");
+                $("#logro_ingreso_7").attr("disabled",true);
+            }
+            if ($("#ingreso_7").val() == "no_aplica") {
+                $("#logro_ingreso_7").css("visibility", "hidden");
+                $("#logro_ingreso_7").val("");
+                
+            }
+        })
+        $("#ingreso_8").change(function() {
+            if ($("#ingreso_8").val() == "cumple") {
+                $("#logro_ingreso_8").css("visibility", "visible");
+                $("#logro_ingreso_8").attr("disabled",false);
+            }
+            if ($("#ingreso_8").val() == "no_cumple") {
+                $("#logro_ingreso_8").css("visibility", "visible");
+                $("#logro_ingreso_8").val("0");
+                $("#logro_ingreso_8").attr("disabled",true);
+            }
+            if ($("#ingreso_8").val() == "no_aplica") {
+                $("#logro_ingreso_8").css("visibility", "hidden");
+                $("#logro_ingreso_8").val("");
+                
+            }
+        })
 
 
 
@@ -3265,6 +3459,20 @@
         }
         total = Aux2/Aux.length;
         $("#total_estacionamiento").text(total.toFixed());
+    }
+    function TotalIngreso(){
+
+
+        Aux = []
+        Aux2 = 0;
+        for (let index = 1; index <= 6; index++) {
+            if($(`#logro_ingreso_${index}`).val() != null){
+                Aux.push($(`#logro_ingreso_${index}`).val())
+                Aux2 += parseInt($(`#logro_ingreso_${index}`).val())
+            }
+        }
+        total = Aux2/Aux.length;
+        $("#total_ingreso").text(total.toFixed());
     }
 
     function AbrirInformeAPT(id) {

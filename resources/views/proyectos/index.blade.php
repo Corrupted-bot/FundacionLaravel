@@ -2099,8 +2099,7 @@
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_1">
-                                                    <option value="" selected disabled>Seleccionar logro</option>
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_1" >
                                                     @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
                                                         @endfor
 
@@ -2121,7 +2120,7 @@
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_2">
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_2" >
                                                     <option value="" selected disabled>Seleccionar logro</option>
 
                                                     @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
@@ -2146,7 +2145,7 @@
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_3">
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_3" >
                                                     <option value="" selected disabled>Seleccionar logro</option>
 
                                                     @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
@@ -2169,7 +2168,7 @@
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_4">
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_4" >
 
                                                     <option value="" selected disabled>Seleccionar logro</option>
                                                     @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
@@ -2193,7 +2192,7 @@
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_5">
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_5" >
                                                     <option value="" selected disabled>Seleccionar logro</option>
 
                                                     @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
@@ -2218,7 +2217,7 @@
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_6">
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_6" >
                                                     <option value="" selected disabled>Seleccionar logro</option>
 
                                                     @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
@@ -2232,8 +2231,8 @@
                                         <tr>
                                             <th></th>
                                             <th></th>
-                                            <th></th>
-                                            <th colspan="3">Total:<span id="total_estacionamiento"></span>%</th>
+                                            <th><button type="button" class="btn btn-info" style="width: -webkit-fill-available;" onclick="TotalEstacionamiento()">Ver Total</button></th>
+                                            <th colspan="2">Total:<span id="total_estacionamiento"></span>%</th>
                                         </tr>
                                     </tfoot>
                                 </table>
@@ -3058,25 +3057,22 @@
 
 
 
-        total_estacionamiento = [-1, -1, -1, -1, -1, -1]
 
 
-        function sumar(array) {
-            let sum = 0;
 
-            for (let i = 0; i < array.length; i++) {
-                sum += array[i];
-            }
-            return sum;
-        }
+
 
 
         $("#estacionamiento_1").change(function() {
             if ($("#estacionamiento_1").val() == "cumple") {
                 $("#logro_estacionamiento_1").css("visibility", "visible");
+                $("#logro_estacionamiento_1").attr("disabled",false);
             }
             if ($("#estacionamiento_1").val() == "no_cumple") {
                 $("#logro_estacionamiento_1").css("visibility", "visible");
+                $("#logro_estacionamiento_1").val("0");
+                $("#logro_estacionamiento_1").attr("disabled",true);
+                
             }
             if ($("#estacionamiento_1").val() == "no_aplica") {
                 $("#logro_estacionamiento_1").css("visibility", "hidden");
@@ -3086,9 +3082,13 @@
         $("#estacionamiento_2").change(function() {
             if ($("#estacionamiento_2").val() == "cumple") {
                 $("#logro_estacionamiento_2").css("visibility", "visible");
+                $("#logro_estacionamiento_2").attr("disabled",false);
+
             }
             if ($("#estacionamiento_2").val() == "no_cumple") {
                 $("#logro_estacionamiento_2").css("visibility", "visible");
+                $("#logro_estacionamiento_2").val("0");
+                $("#logro_estacionamiento_2").attr("disabled",true);
             }
             if ($("#estacionamiento_2").val() == "no_aplica") {
                 $("#logro_estacionamiento_2").css("visibility", "hidden");
@@ -3099,9 +3099,13 @@
         $("#estacionamiento_3").change(function() {
             if ($("#estacionamiento_3").val() == "cumple") {
                 $("#logro_estacionamiento_3").css("visibility", "visible");
+                $("#logro_estacionamiento_3").attr("disabled",false);
+
             }
             if ($("#estacionamiento_3").val() == "no_cumple") {
                 $("#logro_estacionamiento_3").css("visibility", "visible");
+                $("#logro_estacionamiento_3").val("0");
+                $("#logro_estacionamiento_3").attr("disabled",true);
             }
             if ($("#estacionamiento_3").val() == "no_aplica") {
                 $("#logro_estacionamiento_3").css("visibility", "hidden");
@@ -3112,9 +3116,13 @@
         $("#estacionamiento_4").change(function() {
             if ($("#estacionamiento_4").val() == "cumple") {
                 $("#logro_estacionamiento_4").css("visibility", "visible");
+                $("#logro_estacionamiento_4").attr("disabled",false);
+
             }
             if ($("#estacionamiento_4").val() == "no_cumple") {
                 $("#logro_estacionamiento_4").css("visibility", "visible");
+                $("#logro_estacionamiento_4").val("0");
+                $("#logro_estacionamiento_4").attr("disabled",true);
             }
             if ($("#estacionamiento_4").val() == "no_aplica") {
                 $("#logro_estacionamiento_4").css("visibility", "hidden");
@@ -3125,9 +3133,13 @@
         $("#estacionamiento_5").change(function() {
             if ($("#estacionamiento_5").val() == "cumple") {
                 $("#logro_estacionamiento_5").css("visibility", "visible");
+                $("#logro_estacionamiento_5").attr("disabled",false);
+
             }
             if ($("#estacionamiento_5").val() == "no_cumple") {
                 $("#logro_estacionamiento_5").css("visibility", "visible");
+                $("#logro_estacionamiento_5").val("0");
+                $("#logro_estacionamiento_5").attr("disabled",true);
             }
             if ($("#estacionamiento_5").val() == "no_aplica") {
                 $("#logro_estacionamiento_5").css("visibility", "hidden");
@@ -3138,9 +3150,12 @@
         $("#estacionamiento_6").change(function() {
             if ($("#estacionamiento_6").val() == "cumple") {
                 $("#logro_estacionamiento_6").css("visibility", "visible");
+                $("#logro_estacionamiento_6").attr("disabled",false);
             }
             if ($("#estacionamiento_6").val() == "no_cumple") {
                 $("#logro_estacionamiento_6").css("visibility", "visible");
+                $("#logro_estacionamiento_6").val("0");
+                $("#logro_estacionamiento_6").attr("disabled",true);
             }
             if ($("#estacionamiento_6").val() == "no_aplica") {
                 $("#logro_estacionamiento_6").css("visibility", "hidden");
@@ -3237,13 +3252,33 @@
 
 
     });
+    function TotalEstacionamiento(){
 
+
+        Aux = []
+        Aux2 = 0;
+        for (let index = 1; index <= 6; index++) {
+            if($(`#logro_estacionamiento_${index}`).val() != null){
+                Aux.push($(`#logro_estacionamiento_${index}`).val())
+                Aux2 += parseInt($(`#logro_estacionamiento_${index}`).val())
+            }
+        }
+        total = Aux2/Aux.length;
+        $("#total_estacionamiento").text(total.toFixed());
+    }
 
     function AbrirInformeAPT(id) {
         // $("#informaApt").val(id);
         $("#informaApt").modal('show');
     }
+    function sumar(array) {
+            let sum = 0;
 
+            for (let i = 0; i < array.length; i++) {
+                sum += array[i];
+            }
+            return sum;
+        }
     function AbrirMatriz(id) {
         // $("#informaApt").val(id);
         $("#matriz").modal('show');

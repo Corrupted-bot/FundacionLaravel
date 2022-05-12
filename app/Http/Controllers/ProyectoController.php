@@ -7,6 +7,12 @@ use Illuminate\Support\Facades\Redirect;
 use Session;
 use App\Models\Proyecto;
 use DB;
+use PhpOffice\PhpWord\TemplateProcessor;
+use PhpOffice\PhpWord\IOFactory;
+use PhpOffice\PhpWord\Settings;
+
+
+
 class ProyectoController extends Controller
 {
     public function __construct()
@@ -100,4 +106,29 @@ class ProyectoController extends Controller
     {
         //
     }
+
+    public function word($id){
+
+        $proyecto = DB::table("proyectos")->where("id","=",$id)->get();
+        $empresa = DB::table("empresas")->where("id","=",$proyecto[0]->idEmpresa)->get();
+
+        // // Make sure you have `dompdf/dompdf` in your composer dependencies.
+        // Settings::setPdfRendererName(Settings::PDF_RENDERER_DOMPDF);
+        // // Any writable directory here. It will be ignored.
+        // Settings::setPdfRendererPath('.');
+
+        // $phpWord = IOFactory::load(public_path('descargables/APT.docx'), 'Word2007');
+        // $phpWord->save(public_path('descargables/APT.pdf'), 'PDF');
+
+        $templateWord = new TemplateProcessor(public_path('apt/Ficha de Análisis del Puesto de trabajo (APT).docx'));
+        $templateWord->setValue('nombre_empresa',$empresa[0]->nombre);
+        $templateWord->setValue('direccion_empresa',$empresa[0]->direccion);
+        $templateWord->setValue('telefono_empresa',$empresa[0]->telefono);
+        $templateWord->setValue('email_empresa',$empresa[0]->email);
+        $templateWord->setValue('cargo_empresa',$empresa[0]->cargo);
+        $templateWord->setValue('dotacion_empresa',$empresa[0]->dotacion);
+        $templateWord->saveAs('descargables/APT.docx');
+        return response()->download(public_path('descargables/APT.docx'));
+    }
+
 }

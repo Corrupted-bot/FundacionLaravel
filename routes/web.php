@@ -42,7 +42,7 @@ Route::resource('empresas', EmpresaController::class, [
     ]
 ]);
 
-
+Route::get("/word/{id}","App\Http\Controllers\ProyectoController@word");
 
 Route::post("/editar-empresa",'App\Http\Controllers\EmpresaController@EditarEmpresa');
 Route::post("/eliminar-empresa",'App\Http\Controllers\EmpresaController@EliminarEmpresa');

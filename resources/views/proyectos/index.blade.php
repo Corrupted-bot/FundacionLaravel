@@ -3,6 +3,7 @@
     <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         #proyectos_filter {
             text-align: end;
@@ -2026,9 +2027,9 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="modal-footer">
+                        <a type="button" class="btn nav-link" href="/word/1"> <i class="fas fa-file-word"></i> Descargar</a>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         <button type="submit" class="btn btn-success">Subir Informe</button>
                     </div>
@@ -2048,7 +2049,7 @@
                     </div>
                     <div class="modal-body">
 
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist" style="margin-bottom: 20px;">
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">ÍTEM Nº1 ESTACIONAMIENTOS</button>
                             </li>
@@ -2072,6 +2073,9 @@
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="contact7-tab" data-bs-toggle="tab" data-bs-target="#contact7" type="button" role="tab" aria-controls="contact7" aria-selected="false">ÍTEM Nº8 CONEXIÓN VERTICAL: ASCENSOR</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="contact8-tab" data-bs-toggle="tab" data-bs-target="#contact8" type="button" role="tab" aria-controls="contact8" aria-selected="false">RESUMEN</button>
                             </li>
                         </ul>
                         <div class="tab-content" id="myTabContent">
@@ -2456,7 +2460,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_puerta_1" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Espacio libre: La puerta principal de ingreso cuenta con espacio libre
@@ -2471,7 +2482,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_puerta_2" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Apertura y manillas: La puerta es de fácil accionamiento, por simple<br>
@@ -2486,7 +2504,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_puerta_3" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Contraste: La puerta es claramente perceptible respecto a los
@@ -2501,7 +2526,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_puerta_4" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Percepción: La puerta de ingreso es fácilmente localizable, en caso
@@ -2516,10 +2548,24 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
-                                        </tr>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_puerta_5" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
 
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
+                                        </tr>
                                     </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                            <th><button type="button" class="btn btn-info" style="width: -webkit-fill-available;" onclick="TotalPuerta()">Ver Total</button></th>
+                                            <th colspan="2">Total:<span id="total_puerta"></span>%</th>
+                                        </tr>
+                                    </tfoot>
                                 </table>
                             </div>
                             <div class="tab-pane fade" id="contact3" role="tabpanel" aria-labelledby="contact3-tab">
@@ -2545,7 +2591,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_evacuacion_1" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Puertas de Evacuación: La puerta es de fácil accionamiento es por
@@ -2559,7 +2612,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_evacuacion_2" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Puertas de Evacuación: Percepción: La puerta de evacuación es<br>
@@ -2574,7 +2634,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_evacuacion_3" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Vías de evacuación: La vía de evacuación está conectada a la ruta<br>
@@ -2588,7 +2655,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_evacuacion_4" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Vías de evacuación: Percepción: Las vías de evacuación son
@@ -2603,7 +2677,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_evacuacion_5" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>"Iluminación: El recorrido interior de las vías de evacuación, se
@@ -2618,7 +2699,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_evacuacion_6" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>El recinto cuenta con sistema sonoro y lumínico de alarma para
@@ -2633,11 +2721,26 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_evacuacion_7" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
 
 
                                     </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                            <th><button type="button" class="btn btn-info" style="width: -webkit-fill-available;" onclick="TotalEvacuacion()">Ver Total</button></th>
+                                            <th colspan="2">Total:<span id="total_evacuacion"></span>%</th>
+                                        </tr>
+                                    </tfoot>
                                 </table>
                             </div>
                             <div class="tab-pane fade" id="contact4" role="tabpanel" aria-labelledby="contact4-tab">
@@ -2664,7 +2767,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_espacios_1" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>"Espacio de aproximación y uso: El mesón de atención y/o recepción<br>
@@ -2680,7 +2790,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_espacios_2" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>"Atención preferencial: Cuenta con al menos una unidad de atención<br>
@@ -2695,7 +2812,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_espacios_3" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>"Dimensiones de cajas de pago o mesón de atención preferencial:
@@ -2711,7 +2835,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_espacios_4" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Zona de espera: Considera espacio libre señalizado para la silla de<br>
@@ -2725,12 +2856,27 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_espacios_5" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
 
 
 
                                     </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                            <th><button type="button" class="btn btn-info" style="width: -webkit-fill-available;" onclick="TotalEspacios()">Ver Total</button></th>
+                                            <th colspan="2">Total:<span id="total_espacios"></span>%</th>
+                                        </tr>
+                                    </tfoot>
 
                                 </table>
                             </div>
@@ -2758,7 +2904,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_interior_1" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Pasillo: Pasillo más angosto de ancho mayor o igual a 1,50 mt. No<br>
@@ -2772,7 +2925,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_interior_2" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>En todo su recorrido, la ruta accesible se encuentra libre de
@@ -2787,7 +2947,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_interior_3" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Elementos fuera de altura: Elementos como letreros, lámparas u
@@ -2802,7 +2969,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_interior_4" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Iluminación: La iluminación es uniforme y homogénea en todo su<br>
@@ -2816,12 +2990,24 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_interior_5" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
-
-
-
                                     </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                            <th><button type="button" class="btn btn-info" style="width: -webkit-fill-available;" onclick="TotalInterior()">Ver Total</button></th>
+                                            <th colspan="2">Total:<span id="total_interior"></span>%</th>
+                                        </tr>
+                                    </tfoot>
                                 </table>
                             </div>
                             <div class="tab-pane fade" id="contact6" role="tabpanel" aria-labelledby="contact6-tab">
@@ -2846,7 +3032,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_escaleras_1" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Huella escalera (parte horizontal del peldaño): Existe
@@ -2861,7 +3054,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_escaleras_2" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>"Pasamanos: Cuenta con pasamanos doble a ambos costados, al menos<br>
@@ -2877,7 +3077,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_escaleras_3" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>"Pavimento podotáctil de alerta/contraste cromático: La escalera cuenta
@@ -2894,7 +3101,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_escaleras_4" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Altura peldaños: La altura de los peldaños es regular y se encuentra
@@ -2908,7 +3122,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_escaleras_5" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Zona sombra escaleras: La zona bajo la escalera se encuentra<br>
@@ -2923,12 +3144,27 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_escaleras_6" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
 
 
 
                                     </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                            <th><button type="button" class="btn btn-info" style="width: -webkit-fill-available;" onclick="TotalEscaleras()">Ver Total</button></th>
+                                            <th colspan="2">Total:<span id="total_escaleras"></span>%</th>
+                                        </tr>
+                                    </tfoot>
                                 </table>
                             </div>
                             <div class="tab-pane fade" id="contact7" role="tabpanel" aria-labelledby="contact7-tab">
@@ -2954,7 +3190,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_ascensor_1" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>"Puerta: El ancho libre de paso en la <br>puerta es de mínimo 0,90 mt"
@@ -2968,7 +3211,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_ascensor_2" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>"Dimensiones de Cabina: La dimensión mínima de la cabina será de 1,40 mt
@@ -2983,7 +3233,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_ascensor_3" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>"Zona exterior: El espacio exterior al acceso al ascensor permite giro
@@ -2997,7 +3254,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_ascensor_4" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>"Pasamanos interior: Cuenta con pasamanos <br> a ambos costados de la
@@ -3011,7 +3275,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_ascensor_5" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Información táctil: Cuenta con botonera interior y exterior, con braille
@@ -3025,7 +3296,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_ascensor_6" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Botonera interior: Se encuentra a una altura entre 1 mt y 1,4 mt</td>
@@ -3038,7 +3316,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_ascensor_7" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Botonera exterior: Se encuentra a una altura entre 1 mt y 1,4 mt</td>
@@ -3051,7 +3336,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_ascensor_8" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Información sensorial: Cuenta con dispositivos audiovisuales que
@@ -3065,7 +3357,14 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_ascensor_9" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Sensor: Cuenta con sensor de movimiento o protección, que detenga el<br>
@@ -3081,11 +3380,70 @@
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
-                                            <td></td>
+                                            <td>
+                                            <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_ascensor_10" >
+                                                    <option value="" selected disabled>Seleccionar logro</option>
+
+                                                    @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
+                                                        @endfor
+                                                </select>
+                                            </td>
                                         </tr>
 
 
 
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                            <th><button type="button" class="btn btn-info" style="width: -webkit-fill-available;" onclick="TotalAscensor()">Ver Total</button></th>
+                                            <th colspan="2">Total:<span id="total_ascensor"></span>%</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="contact8" role="tabpanel" aria-labelledby="contact8-tab">
+                                <table class="table table-striped table-bordered mt-2">
+                                    <thead style="background-color: #2257a3;color: white;">
+                                        <tr>
+                                            <th scope="col">ITEM</th>
+                                            <th scope="col">Logro Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            <tr>
+                                                <td>ESTACIONAMIENTO</td>
+                                                <td><span id="estacionamiento_resumen"></span>%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>INGRESO</td>
+                                                <td><span id="ingreso_resumen"></span>%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>PUERTA DE INGRESO</td>
+                                                <td><span id="puerta_resumen"></span>%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>EVACUACIÓN</td>
+                                                <td><span id="evacuacion_resumen"></span>%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ESPACIOS DE ATENCIÓN DE PÚBLICO</td>
+                                                <td><span id="espacios_resumen"></span>%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>RUTA ACCESIBLE INTERIOR</td>
+                                                <td><span id="interior_resumen"></span>%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>CONEXIÓN VERTICAL: ESCALERA</td>
+                                                <td><span id="escalera_resumen"></span>%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>CONEXIÓN VERTICAL: ASCENSOR</td>
+                                                <td><span id="ascensor_resumen"></span>%</td>
+                                            </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -3119,14 +3477,6 @@
 
 
         //Estacionamiento
-
-
-
-
-
-
-
-
 
         $("#estacionamiento_1").change(function() {
             if ($("#estacionamiento_1").val() == "cumple") {
@@ -3228,7 +3578,9 @@
                 
             }
         })
+
         //INGRESOOOOO
+
         $("#ingreso_1").change(function() {
             if ($("#ingreso_1").val() == "cumple") {
                 $("#logro_ingreso_1").css("visibility", "visible");
@@ -3358,22 +3710,645 @@
             }
         })
 
+        //PUERTA
+
+        $("#puerta_1").change(function() {
+            if ($("#puerta_1").val() == "cumple") {
+                $("#logro_puerta_1").css("visibility", "visible");
+                $("#logro_puerta_1").attr("disabled",false);
+            }
+            if ($("#puerta_1").val() == "no_cumple") {
+                $("#logro_puerta_1").css("visibility", "visible");
+                $("#logro_puerta_1").val("0");
+                $("#logro_puerta_1").attr("disabled",true);
+            }
+            if ($("#puerta_1").val() == "no_aplica") {
+                $("#logro_puerta_1").css("visibility", "hidden");
+                $("#logro_puerta_1").val("");
+                
+            }
+        })
+        $("#puerta_2").change(function() {
+            if ($("#puerta_2").val() == "cumple") {
+                $("#logro_puerta_2").css("visibility", "visible");
+                $("#logro_puerta_2").attr("disabled",false);
+            }
+            if ($("#puerta_2").val() == "no_cumple") {
+                $("#logro_puerta_2").css("visibility", "visible");
+                $("#logro_puerta_2").val("0");
+                $("#logro_puerta_2").attr("disabled",true);
+            }
+            if ($("#puerta_2").val() == "no_aplica") {
+                $("#logro_puerta_2").css("visibility", "hidden");
+                $("#logro_puerta_2").val("");
+                
+            }
+        })
+        $("#puerta_3").change(function() {
+            if ($("#puerta_3").val() == "cumple") {
+                $("#logro_puerta_3").css("visibility", "visible");
+                $("#logro_puerta_3").attr("disabled",false);
+            }
+            if ($("#puerta_3").val() == "no_cumple") {
+                $("#logro_puerta_3").css("visibility", "visible");
+                $("#logro_puerta_3").val("0");
+                $("#logro_puerta_3").attr("disabled",true);
+            }
+            if ($("#puerta_3").val() == "no_aplica") {
+                $("#logro_puerta_3").css("visibility", "hidden");
+                $("#logro_puerta_3").val("");
+                
+            }
+        })
+        $("#puerta_4").change(function() {
+            if ($("#puerta_4").val() == "cumple") {
+                $("#logro_puerta_4").css("visibility", "visible");
+                $("#logro_puerta_4").attr("disabled",false);
+            }
+            if ($("#puerta_4").val() == "no_cumple") {
+                $("#logro_puerta_4").css("visibility", "visible");
+                $("#logro_puerta_4").val("0");
+                $("#logro_puerta_4").attr("disabled",true);
+            }
+            if ($("#puerta_4").val() == "no_aplica") {
+                $("#logro_puerta_4").css("visibility", "hidden");
+                $("#logro_puerta_4").val("");
+                
+            }
+        })
+        $("#puerta_5").change(function() {
+            if ($("#puerta_5").val() == "cumple") {
+                $("#logro_puerta_5").css("visibility", "visible");
+                $("#logro_puerta_5").attr("disabled",false);
+            }
+            if ($("#puerta_5").val() == "no_cumple") {
+                $("#logro_puerta_5").css("visibility", "visible");
+                $("#logro_puerta_5").val("0");
+                $("#logro_puerta_5").attr("disabled",true);
+            }
+            if ($("#puerta_5").val() == "no_aplica") {
+                $("#logro_puerta_5").css("visibility", "hidden");
+                $("#logro_puerta_5").val("");
+                
+            }
+        })
+
+        //EVACUACION
+
+        $("#evacuacion_1").change(function() {
+            if ($("#evacuacion_1").val() == "cumple") {
+                $("#logro_evacuacion_1").css("visibility", "visible");
+                $("#logro_evacuacion_1").attr("disabled",false);
+            }
+            if ($("#evacuacion_1").val() == "no_cumple") {
+                $("#logro_evacuacion_1").css("visibility", "visible");
+                $("#logro_evacuacion_1").val("0");
+                $("#logro_evacuacion_1").attr("disabled",true);
+            }
+            if ($("#evacuacion_1").val() == "no_aplica") {
+                $("#logro_evacuacion_1").css("visibility", "hidden");
+                $("#logro_evacuacion_1").val("");
+                
+            }
+        })
+        $("#evacuacion_2").change(function() {
+            if ($("#evacuacion_2").val() == "cumple") {
+                $("#logro_evacuacion_2").css("visibility", "visible");
+                $("#logro_evacuacion_2").attr("disabled",false);
+            }
+            if ($("#evacuacion_2").val() == "no_cumple") {
+                $("#logro_evacuacion_2").css("visibility", "visible");
+                $("#logro_evacuacion_2").val("0");
+                $("#logro_evacuacion_2").attr("disabled",true);
+            }
+            if ($("#evacuacion_2").val() == "no_aplica") {
+                $("#logro_evacuacion_2").css("visibility", "hidden");
+                $("#logro_evacuacion_2").val("");
+                
+            }
+        })
+        $("#evacuacion_3").change(function() {
+            if ($("#evacuacion_3").val() == "cumple") {
+                $("#logro_evacuacion_3").css("visibility", "visible");
+                $("#logro_evacuacion_3").attr("disabled",false);
+            }
+            if ($("#evacuacion_3").val() == "no_cumple") {
+                $("#logro_evacuacion_3").css("visibility", "visible");
+                $("#logro_evacuacion_3").val("0");
+                $("#logro_evacuacion_3").attr("disabled",true);
+            }
+            if ($("#evacuacion_3").val() == "no_aplica") {
+                $("#logro_evacuacion_3").css("visibility", "hidden");
+                $("#logro_evacuacion_3").val("");
+                
+            }
+        })
+        $("#evacuacion_4").change(function() {
+            if ($("#evacuacion_4").val() == "cumple") {
+                $("#logro_evacuacion_4").css("visibility", "visible");
+                $("#logro_evacuacion_4").attr("disabled",false);
+            }
+            if ($("#evacuacion_4").val() == "no_cumple") {
+                $("#logro_evacuacion_4").css("visibility", "visible");
+                $("#logro_evacuacion_4").val("0");
+                $("#logro_evacuacion_4").attr("disabled",true);
+            }
+            if ($("#evacuacion_4").val() == "no_aplica") {
+                $("#logro_evacuacion_4").css("visibility", "hidden");
+                $("#logro_evacuacion_4").val("");
+                
+            }
+        })
+        $("#evacuacion_5").change(function() {
+            if ($("#evacuacion_5").val() == "cumple") {
+                $("#logro_evacuacion_5").css("visibility", "visible");
+                $("#logro_evacuacion_5").attr("disabled",false);
+            }
+            if ($("#evacuacion_5").val() == "no_cumple") {
+                $("#logro_evacuacion_5").css("visibility", "visible");
+                $("#logro_evacuacion_5").val("0");
+                $("#logro_evacuacion_5").attr("disabled",true);
+            }
+            if ($("#evacuacion_5").val() == "no_aplica") {
+                $("#logro_evacuacion_5").css("visibility", "hidden");
+                $("#logro_evacuacion_5").val("");
+                
+            }
+        })
+        $("#evacuacion_6").change(function() {
+            if ($("#evacuacion_6").val() == "cumple") {
+                $("#logro_evacuacion_6").css("visibility", "visible");
+                $("#logro_evacuacion_6").attr("disabled",false);
+            }
+            if ($("#evacuacion_6").val() == "no_cumple") {
+                $("#logro_evacuacion_6").css("visibility", "visible");
+                $("#logro_evacuacion_6").val("0");
+                $("#logro_evacuacion_6").attr("disabled",true);
+            }
+            if ($("#evacuacion_6").val() == "no_aplica") {
+                $("#logro_evacuacion_6").css("visibility", "hidden");
+                $("#logro_evacuacion_6").val("");
+                
+            }
+        })
+        $("#evacuacion_7").change(function() {
+            if ($("#evacuacion_7").val() == "cumple") {
+                $("#logro_evacuacion_7").css("visibility", "visible");
+                $("#logro_evacuacion_7").attr("disabled",false);
+            }
+            if ($("#evacuacion_7").val() == "no_cumple") {
+                $("#logro_evacuacion_7").css("visibility", "visible");
+                $("#logro_evacuacion_7").val("0");
+                $("#logro_evacuacion_7").attr("disabled",true);
+            }
+            if ($("#evacuacion_7").val() == "no_aplica") {
+                $("#logro_evacuacion_7").css("visibility", "hidden");
+                $("#logro_evacuacion_7").val("");
+                
+            }
+        })
+        
+
+        //ESPACIOS
+
+        $("#espacios_1").change(function() {
+            if ($("#espacios_1").val() == "cumple") {
+                $("#logro_espacios_1").css("visibility", "visible");
+                $("#logro_espacios_1").attr("disabled",false);
+            }
+            if ($("#espacios_1").val() == "no_cumple") {
+                $("#logro_espacios_1").css("visibility", "visible");
+                $("#logro_espacios_1").val("0");
+                $("#logro_espacios_1").attr("disabled",true);
+            }
+            if ($("#espacios_1").val() == "no_aplica") {
+                $("#logro_espacios_1").css("visibility", "hidden");
+                $("#logro_espacios_1").val("");
+                
+            }
+        })
+        $("#espacios_2").change(function() {
+            if ($("#espacios_2").val() == "cumple") {
+                $("#logro_espacios_2").css("visibility", "visible");
+                $("#logro_espacios_2").attr("disabled",false);
+            }
+            if ($("#espacios_2").val() == "no_cumple") {
+                $("#logro_espacios_2").css("visibility", "visible");
+                $("#logro_espacios_2").val("0");
+                $("#logro_espacios_2").attr("disabled",true);
+            }
+            if ($("#espacios_2").val() == "no_aplica") {
+                $("#logro_espacios_2").css("visibility", "hidden");
+                $("#logro_espacios_2").val("");
+                
+            }
+        })
+        $("#espacios_3").change(function() {
+            if ($("#espacios_3").val() == "cumple") {
+                $("#logro_espacios_3").css("visibility", "visible");
+                $("#logro_espacios_3").attr("disabled",false);
+            }
+            if ($("#espacios_3").val() == "no_cumple") {
+                $("#logro_espacios_3").css("visibility", "visible");
+                $("#logro_espacios_3").val("0");
+                $("#logro_espacios_3").attr("disabled",true);
+            }
+            if ($("#espacios_3").val() == "no_aplica") {
+                $("#logro_espacios_3").css("visibility", "hidden");
+                $("#logro_espacios_3").val("");
+                
+            }
+        })
+        $("#espacios_4").change(function() {
+            if ($("#espacios_4").val() == "cumple") {
+                $("#logro_espacios_4").css("visibility", "visible");
+                $("#logro_espacios_4").attr("disabled",false);
+            }
+            if ($("#espacios_4").val() == "no_cumple") {
+                $("#logro_espacios_4").css("visibility", "visible");
+                $("#logro_espacios_4").val("0");
+                $("#logro_espacios_4").attr("disabled",true);
+            }
+            if ($("#espacios_4").val() == "no_aplica") {
+                $("#logro_espacios_4").css("visibility", "hidden");
+                $("#logro_espacios_4").val("");
+                
+            }
+        })
+        $("#espacios_5").change(function() {
+            if ($("#espacios_5").val() == "cumple") {
+                $("#logro_espacios_5").css("visibility", "visible");
+                $("#logro_espacios_5").attr("disabled",false);
+            }
+            if ($("#espacios_5").val() == "no_cumple") {
+                $("#logro_espacios_5").css("visibility", "visible");
+                $("#logro_espacios_5").val("0");
+                $("#logro_espacios_5").attr("disabled",true);
+            }
+            if ($("#espacios_5").val() == "no_aplica") {
+                $("#logro_espacios_5").css("visibility", "hidden");
+                $("#logro_espacios_5").val("");
+                
+            }
+        })
 
 
+        //INTERIOR
+
+        $("#interior_1").change(function() {
+            if ($("#interior_1").val() == "cumple") {
+                $("#logro_interior_1").css("visibility", "visible");
+                $("#logro_interior_1").attr("disabled",false);
+            }
+            if ($("#interior_1").val() == "no_cumple") {
+                $("#logro_interior_1").css("visibility", "visible");
+                $("#logro_interior_1").val("0");
+                $("#logro_interior_1").attr("disabled",true);
+            }
+            if ($("#interior_1").val() == "no_aplica") {
+                $("#logro_interior_1").css("visibility", "hidden");
+                $("#logro_interior_1").val("");
+                
+            }
+        })
+        $("#interior_2").change(function() {
+            if ($("#interior_2").val() == "cumple") {
+                $("#logro_interior_2").css("visibility", "visible");
+                $("#logro_interior_2").attr("disabled",false);
+            }
+            if ($("#interior_2").val() == "no_cumple") {
+                $("#logro_interior_2").css("visibility", "visible");
+                $("#logro_interior_2").val("0");
+                $("#logro_interior_2").attr("disabled",true);
+            }
+            if ($("#interior_2").val() == "no_aplica") {
+                $("#logro_interior_2").css("visibility", "hidden");
+                $("#logro_interior_2").val("");
+                
+            }
+        })
+        $("#interior_3").change(function() {
+            if ($("#interior_3").val() == "cumple") {
+                $("#logro_interior_3").css("visibility", "visible");
+                $("#logro_interior_3").attr("disabled",false);
+            }
+            if ($("#interior_3").val() == "no_cumple") {
+                $("#logro_interior_3").css("visibility", "visible");
+                $("#logro_interior_3").val("0");
+                $("#logro_interior_3").attr("disabled",true);
+            }
+            if ($("#interior_3").val() == "no_aplica") {
+                $("#logro_interior_3").css("visibility", "hidden");
+                $("#logro_interior_3").val("");
+                
+            }
+        })
+        $("#interior_4").change(function() {
+            if ($("#interior_4").val() == "cumple") {
+                $("#logro_interior_4").css("visibility", "visible");
+                $("#logro_interior_4").attr("disabled",false);
+            }
+            if ($("#interior_4").val() == "no_cumple") {
+                $("#logro_interior_4").css("visibility", "visible");
+                $("#logro_interior_4").val("0");
+                $("#logro_interior_4").attr("disabled",true);
+            }
+            if ($("#interior_4").val() == "no_aplica") {
+                $("#logro_interior_4").css("visibility", "hidden");
+                $("#logro_interior_4").val("");
+                
+            }
+        })
+        $("#interior_5").change(function() {
+            if ($("#interior_5").val() == "cumple") {
+                $("#logro_interior_5").css("visibility", "visible");
+                $("#logro_interior_5").attr("disabled",false);
+            }
+            if ($("#interior_5").val() == "no_cumple") {
+                $("#logro_interior_5").css("visibility", "visible");
+                $("#logro_interior_5").val("0");
+                $("#logro_interior_5").attr("disabled",true);
+            }
+            if ($("#interior_5").val() == "no_aplica") {
+                $("#logro_interior_5").css("visibility", "hidden");
+                $("#logro_interior_5").val("");
+                
+            }
+        })
+
+        //ESCALERA
+
+        $("#escalera_1").change(function() {
+            if ($("#escalera_1").val() == "cumple") {
+                $("#logro_escalera_1").css("visibility", "visible");
+                $("#logro_escalera_1").attr("disabled",false);
+            }
+            if ($("#escalera_1").val() == "no_cumple") {
+                $("#logro_escalera_1").css("visibility", "visible");
+                $("#logro_escalera_1").val("0");
+                $("#logro_escalera_1").attr("disabled",true);
+            }
+            if ($("#escalera_1").val() == "no_aplica") {
+                $("#logro_escalera_1").css("visibility", "hidden");
+                $("#logro_escalera_1").val("");
+                
+            }
+        })
+        $("#escalera_2").change(function() {
+            if ($("#escalera_2").val() == "cumple") {
+                $("#logro_escalera_2").css("visibility", "visible");
+                $("#logro_escalera_2").attr("disabled",false);
+            }
+            if ($("#escalera_2").val() == "no_cumple") {
+                $("#logro_escalera_2").css("visibility", "visible");
+                $("#logro_escalera_2").val("0");
+                $("#logro_escalera_2").attr("disabled",true);
+            }
+            if ($("#escalera_2").val() == "no_aplica") {
+                $("#logro_escalera_2").css("visibility", "hidden");
+                $("#logro_escalera_2").val("");
+                
+            }
+        })
+        $("#escalera_3").change(function() {
+            if ($("#escalera_3").val() == "cumple") {
+                $("#logro_escalera_3").css("visibility", "visible");
+                $("#logro_escalera_3").attr("disabled",false);
+            }
+            if ($("#escalera_3").val() == "no_cumple") {
+                $("#logro_escalera_3").css("visibility", "visible");
+                $("#logro_escalera_3").val("0");
+                $("#logro_escalera_3").attr("disabled",true);
+            }
+            if ($("#escalera_3").val() == "no_aplica") {
+                $("#logro_escalera_3").css("visibility", "hidden");
+                $("#logro_escalera_3").val("");
+                
+            }
+        })
+        $("#escalera_4").change(function() {
+            if ($("#escalera_4").val() == "cumple") {
+                $("#logro_escalera_4").css("visibility", "visible");
+                $("#logro_escalera_4").attr("disabled",false);
+            }
+            if ($("#escalera_4").val() == "no_cumple") {
+                $("#logro_escalera_4").css("visibility", "visible");
+                $("#logro_escalera_4").val("0");
+                $("#logro_escalera_4").attr("disabled",true);
+            }
+            if ($("#escalera_4").val() == "no_aplica") {
+                $("#logro_escalera_4").css("visibility", "hidden");
+                $("#logro_escalera_4").val("");
+                
+            }
+        })
+        $("#escalera_5").change(function() {
+            if ($("#escalera_5").val() == "cumple") {
+                $("#logro_escalera_5").css("visibility", "visible");
+                $("#logro_escalera_5").attr("disabled",false);
+            }
+            if ($("#escalera_5").val() == "no_cumple") {
+                $("#logro_escalera_5").css("visibility", "visible");
+                $("#logro_escalera_5").val("0");
+                $("#logro_escalera_5").attr("disabled",true);
+            }
+            if ($("#escalera_5").val() == "no_aplica") {
+                $("#logro_escalera_5").css("visibility", "hidden");
+                $("#logro_escalera_5").val("");
+                
+            }
+        })
+        $("#escalera_6").change(function() {
+            if ($("#escalera_6").val() == "cumple") {
+                $("#logro_escalera_6").css("visibility", "visible");
+                $("#logro_escalera_6").attr("disabled",false);
+            }
+            if ($("#escalera_6").val() == "no_cumple") {
+                $("#logro_escalera_6").css("visibility", "visible");
+                $("#logro_escalera_6").val("0");
+                $("#logro_escalera_6").attr("disabled",true);
+            }
+            if ($("#escalera_6").val() == "no_aplica") {
+                $("#logro_escalera_6").css("visibility", "hidden");
+                $("#logro_escalera_6").val("");
+                
+            }
+        })
+
+        //ASCENSOR
+
+        $("#ascensor_1").change(function() {
+            if ($("#ascensor_1").val() == "cumple") {
+                $("#logro_ascensor_1").css("visibility", "visible");
+                $("#logro_ascensor_1").attr("disabled",false);
+            }
+            if ($("#ascensor_1").val() == "no_cumple") {
+                $("#logro_ascensor_1").css("visibility", "visible");
+                $("#logro_ascensor_1").val("0");
+                $("#logro_ascensor_1").attr("disabled",true);
+            }
+            if ($("#ascensor_1").val() == "no_aplica") {
+                $("#logro_ascensor_1").css("visibility", "hidden");
+                $("#logro_ascensor_1").val("");
+                
+            }
+        })
+        $("#ascensor_2").change(function() {
+            if ($("#ascensor_2").val() == "cumple") {
+                $("#logro_ascensor_2").css("visibility", "visible");
+                $("#logro_ascensor_2").attr("disabled",false);
+            }
+            if ($("#ascensor_2").val() == "no_cumple") {
+                $("#logro_ascensor_2").css("visibility", "visible");
+                $("#logro_ascensor_2").val("0");
+                $("#logro_ascensor_2").attr("disabled",true);
+            }
+            if ($("#ascensor_2").val() == "no_aplica") {
+                $("#logro_ascensor_2").css("visibility", "hidden");
+                $("#logro_ascensor_2").val("");
+                
+            }
+        })
+        $("#ascensor_3").change(function() {
+            if ($("#ascensor_3").val() == "cumple") {
+                $("#logro_ascensor_3").css("visibility", "visible");
+                $("#logro_ascensor_3").attr("disabled",false);
+            }
+            if ($("#ascensor_3").val() == "no_cumple") {
+                $("#logro_ascensor_3").css("visibility", "visible");
+                $("#logro_ascensor_3").val("0");
+                $("#logro_ascensor_3").attr("disabled",true);
+            }
+            if ($("#ascensor_3").val() == "no_aplica") {
+                $("#logro_ascensor_3").css("visibility", "hidden");
+                $("#logro_ascensor_3").val("");
+                
+            }
+        })
+        $("#ascensor_4").change(function() {
+            if ($("#ascensor_4").val() == "cumple") {
+                $("#logro_ascensor_4").css("visibility", "visible");
+                $("#logro_ascensor_4").attr("disabled",false);
+            }
+            if ($("#ascensor_4").val() == "no_cumple") {
+                $("#logro_ascensor_4").css("visibility", "visible");
+                $("#logro_ascensor_4").val("0");
+                $("#logro_ascensor_4").attr("disabled",true);
+            }
+            if ($("#ascensor_4").val() == "no_aplica") {
+                $("#logro_ascensor_4").css("visibility", "hidden");
+                $("#logro_ascensor_4").val("");
+                
+            }
+        })
+        $("#ascensor_5").change(function() {
+            if ($("#ascensor_5").val() == "cumple") {
+                $("#logro_ascensor_5").css("visibility", "visible");
+                $("#logro_ascensor_5").attr("disabled",false);
+            }
+            if ($("#ascensor_5").val() == "no_cumple") {
+                $("#logro_ascensor_5").css("visibility", "visible");
+                $("#logro_ascensor_5").val("0");
+                $("#logro_ascensor_5").attr("disabled",true);
+            }
+            if ($("#ascensor_5").val() == "no_aplica") {
+                $("#logro_ascensor_5").css("visibility", "hidden");
+                $("#logro_ascensor_5").val("");
+                
+            }
+        })
+        $("#ascensor_6").change(function() {
+            if ($("#ascensor_6").val() == "cumple") {
+                $("#logro_ascensor_6").css("visibility", "visible");
+                $("#logro_ascensor_6").attr("disabled",false);
+            }
+            if ($("#ascensor_6").val() == "no_cumple") {
+                $("#logro_ascensor_6").css("visibility", "visible");
+                $("#logro_ascensor_6").val("0");
+                $("#logro_ascensor_6").attr("disabled",true);
+            }
+            if ($("#ascensor_6").val() == "no_aplica") {
+                $("#logro_ascensor_6").css("visibility", "hidden");
+                $("#logro_ascensor_6").val("");
+                
+            }
+        })
+        $("#ascensor_7").change(function() {
+            if ($("#ascensor_7").val() == "cumple") {
+                $("#logro_ascensor_7").css("visibility", "visible");
+                $("#logro_ascensor_7").attr("disabled",false);
+            }
+            if ($("#ascensor_7").val() == "no_cumple") {
+                $("#logro_ascensor_7").css("visibility", "visible");
+                $("#logro_ascensor_7").val("0");
+                $("#logro_ascensor_7").attr("disabled",true);
+            }
+            if ($("#ascensor_7").val() == "no_aplica") {
+                $("#logro_ascensor_7").css("visibility", "hidden");
+                $("#logro_ascensor_7").val("");
+                
+            }
+        })
+        $("#ascensor_8").change(function() {
+            if ($("#ascensor_8").val() == "cumple") {
+                $("#logro_ascensor_8").css("visibility", "visible");
+                $("#logro_ascensor_8").attr("disabled",false);
+            }
+            if ($("#ascensor_8").val() == "no_cumple") {
+                $("#logro_ascensor_8").css("visibility", "visible");
+                $("#logro_ascensor_8").val("0");
+                $("#logro_ascensor_8").attr("disabled",true);
+            }
+            if ($("#ascensor_8").val() == "no_aplica") {
+                $("#logro_ascensor_8").css("visibility", "hidden");
+                $("#logro_ascensor_8").val("");
+                
+            }
+        })
+        $("#ascensor_9").change(function() {
+            if ($("#ascensor_9").val() == "cumple") {
+                $("#logro_ascensor_9").css("visibility", "visible");
+                $("#logro_ascensor_9").attr("disabled",false);
+            }
+            if ($("#ascensor_9").val() == "no_cumple") {
+                $("#logro_ascensor_9").css("visibility", "visible");
+                $("#logro_ascensor_9").val("0");
+                $("#logro_ascensor_9").attr("disabled",true);
+            }
+            if ($("#ascensor_9").val() == "no_aplica") {
+                $("#logro_ascensor_9").css("visibility", "hidden");
+                $("#logro_ascensor_9").val("");
+                
+            }
+        })
+        $("#ascensor_10").change(function() {
+            if ($("#ascensor_10").val() == "cumple") {
+                $("#logro_ascensor_10").css("visibility", "visible");
+                $("#logro_ascensor_10").attr("disabled",false);
+            }
+            if ($("#ascensor_10").val() == "no_cumple") {
+                $("#logro_ascensor_10").css("visibility", "visible");
+                $("#logro_ascensor_10").val("0");
+                $("#logro_ascensor_10").attr("disabled",true);
+            }
+            if ($("#ascensor_10").val() == "no_aplica") {
+                $("#logro_ascensor_10").css("visibility", "hidden");
+                $("#logro_ascensor_10").val("");
+                
+            }
+        })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+        $("#contact8-tab").click(function(){
+            $("#estacionamiento_resumen").text(TotalEstacionamiento());
+            $("#ingreso_resumen").text(TotalIngreso());
+            $("#puerta_resumen").text(TotalPuerta());
+            $("#evacuacion_resumen").text(TotalEvacuacion());
+            $("#espacios_resumen").text(TotalEspacios());
+            $("#interior_resumen").text(TotalInterior());
+            $("#escalera_resumen").text(TotalEscalera());
+            $("#ascensor_resumen").text(TotalAscensor());
+        })
 
 
 
@@ -3459,13 +4434,14 @@
         }
         total = Aux2/Aux.length;
         $("#total_estacionamiento").text(total.toFixed());
+        return total.toFixed();
     }
     function TotalIngreso(){
 
 
         Aux = []
         Aux2 = 0;
-        for (let index = 1; index <= 6; index++) {
+        for (let index = 1; index <= 8; index++) {
             if($(`#logro_ingreso_${index}`).val() != null){
                 Aux.push($(`#logro_ingreso_${index}`).val())
                 Aux2 += parseInt($(`#logro_ingreso_${index}`).val())
@@ -3473,6 +4449,97 @@
         }
         total = Aux2/Aux.length;
         $("#total_ingreso").text(total.toFixed());
+        return total.toFixed();
+    }
+    function TotalPuerta(){
+
+
+        Aux = []
+        Aux2 = 0;
+        for (let index = 1; index <= 5; index++) {
+            if($(`#logro_puerta_${index}`).val() != null){
+                Aux.push($(`#logro_puerta_${index}`).val())
+                Aux2 += parseInt($(`#logro_puerta_${index}`).val())
+            }
+        }
+        total = Aux2/Aux.length;
+        $("#total_puerta").text(total.toFixed());
+        return total.toFixed();
+    }
+    function TotalEvacuacion(){
+
+
+        Aux = []
+        Aux2 = 0;
+        for (let index = 1; index <= 7; index++) {
+            if($(`#logro_evacuacion_${index}`).val() != null){
+                Aux.push($(`#logro_evacuacion_${index}`).val())
+                Aux2 += parseInt($(`#logro_evacuacion_${index}`).val())
+            }
+        }
+        total = Aux2/Aux.length;
+        $("#total_evacuacion").text(total.toFixed());
+        return total.toFixed();
+    }
+    function TotalEspacios(){
+
+
+        Aux = []
+        Aux2 = 0;
+        for (let index = 1; index <= 5; index++) {
+            if($(`#logro_espacios_${index}`).val() != null){
+                Aux.push($(`#logro_espacios_${index}`).val())
+                Aux2 += parseInt($(`#logro_espacios_${index}`).val())
+            }
+        }
+        total = Aux2/Aux.length;
+        $("#total_espacios").text(total.toFixed());
+        return total.toFixed();
+    }
+    function TotalInterior(){
+
+
+        Aux = []
+        Aux2 = 0;
+        for (let index = 1; index <= 5; index++) {
+            if($(`#logro_interior_${index}`).val() != null){
+                Aux.push($(`#logro_interior_${index}`).val())
+                Aux2 += parseInt($(`#logro_interior_${index}`).val())
+            }
+        }
+        total = Aux2/Aux.length;
+        $("#total_interior").text(total.toFixed());
+        return total.toFixed();
+    }
+    function TotalEscalera(){
+
+
+        Aux = []
+        Aux2 = 0;
+        for (let index = 1; index <= 6; index++) {
+            if($(`#logro_escalera_${index}`).val() != null){
+                Aux.push($(`#logro_escalera_${index}`).val())
+                Aux2 += parseInt($(`#logro_escalera_${index}`).val())
+            }
+        }
+        total = Aux2/Aux.length;
+        $("#total_escalera").text(total.toFixed());
+        return total.toFixed();
+    }
+    function TotalAscensor(){
+
+
+        Aux = []
+        Aux2 = 0;
+        for (let index = 1; index <= 10; index++) {
+            if($(`#logro_ascensor_${index}`).val() != null){
+                Aux.push($(`#logro_ascensor_${index}`).val())
+                Aux2 += parseInt($(`#logro_ascensor_${index}`).val())
+            }
+        }
+        total = Aux2/Aux.length;
+        $("#total_ascensor").text(total.toFixed());
+        return total.toFixed();
     }
 
     function AbrirInformeAPT(id) {

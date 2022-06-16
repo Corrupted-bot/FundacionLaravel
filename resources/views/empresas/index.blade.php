@@ -13,6 +13,7 @@
 
         #empresas_wrapper {
             width: fit-content;
+            margin-left: -20vh;
         }
 
         td {
@@ -55,9 +56,10 @@
                             <td>{{$empresa->dotacion}}</td>
                             <td>
                                 <div style="display: flex;align-items: center;">
-                                    <button class="btn btn-success" style="margin-right: 10px;width: max-content;" onclick="AbrirProyecto({{$empresa->id}})">Crear Proyecto <i class="fa-solid fa-folder"></i></button>
+                                    <button class="btn btn-success" style="margin-right: 10px;width: max-content;" onclick="AbrirProyecto({{$empresa->id}})">Proyecto <i class="fa-solid fa-folder"></i></button>
                                     <button class="btn btn-warning" style="margin-right: 10px;width: max-content;" onclick="AbrirEmpresa({{$empresa->id}})">Editar <i class="fa-solid fa-pencil"></i></button>
                                     <button class="btn btn-danger" style="margin-right: 10px;width: max-content;" onclick="AbrirEmpresaEliminar({{$empresa->id}})">Eliminar <i class="fa-solid fa-trash"></i></button>
+                                    <a class="btn btn-secondary" style="margin-right: 10px;width: max-content;" href="/asesoria/{{$empresa->id}}">Plan Anual Asesoría<br> e Inclusión</a>
                                 </div>
                             </td>
                         </tr>

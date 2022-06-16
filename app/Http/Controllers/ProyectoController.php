@@ -131,4 +131,12 @@ class ProyectoController extends Controller
         return response()->download(public_path('descargables/APT.docx'));
     }
 
+    public function MatrizEvaluacion(Request $request){
+        $templateWord = new TemplateProcessor(public_path('apt/Criterios de evaluación AU y plan anual asesoría e inclusión laboral.docx'));
+        $templateWord->setValue('criterio_estacionamiento_1',$request->estacionamiento_1);
+
+        $templateWord->saveAs('descargables/MatrizEvaluacion.docx');
+        return response()->download(public_path('descargables/MatrizEvaluacion.docx'));
+    }
+
 }

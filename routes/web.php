@@ -32,6 +32,7 @@ Route::middleware([
 Route::group(['middleware' => ['role:administrador' ]], function () {
     Route::get('/create/usuario', "App\Http\Controllers\UsuarioController@index")->name("crear-usuario");
     Route::post('/create/usuario', "App\Http\Controllers\UsuarioController@registerUsuario");
+
 });
 
  
@@ -43,11 +44,16 @@ Route::resource('empresas', EmpresaController::class, [
 ]);
 
 Route::get("/word/{id}","App\Http\Controllers\ProyectoController@word");
+Route::post("/matriz","App\Http\Controllers\ProyectoController@MatrizEvaluacion");
 
 Route::post("/editar-empresa",'App\Http\Controllers\EmpresaController@EditarEmpresa');
 Route::post("/eliminar-empresa",'App\Http\Controllers\EmpresaController@EliminarEmpresa');
 
-Route::resource('proyectos', ProyectoController::class,[    'names' => [
+Route::resource('proyectos', ProyectoController::class,['names' => [
     'index' => 'proyectos',
 ]]);
 Route::get('/empresas-datos', "App\Http\Controllers\EmpresaController@obtenerDatos");
+Route::get('/asesoria/{id}', "App\Http\Controllers\MatrizasesoriaController@index");
+
+
+

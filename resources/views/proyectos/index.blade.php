@@ -2040,7 +2040,7 @@
     <div class="modal fade" id="matriz" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
-                <form method="POST" action="">
+                <form method="POST" action="/matriz">
                     @csrf
                     <div class="modal-header text-center">
                         <h5 class="modal-title w-100" id="exampleModalLabel"><b>Matriz de evaluación de Accesibilidad
@@ -2096,14 +2096,14 @@
                                             <td>
                                                 <textarea></textarea>
                                             </td>
-                                            <td><select id="estacionamiento_1" class="form-select">
+                                            <td><select id="estacionamiento_1" class="form-select" name="estacionamiento_1">
                                                     <option selected disabled>Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_1" >
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_1" name="logro_estacionamiento_1">
                                                     @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
                                                         @endfor
 
@@ -2117,14 +2117,14 @@
                                             <td>
                                                 <textarea></textarea>
                                             </td>
-                                            <td><select id="estacionamiento_2" class="form-select">
+                                            <td><select id="estacionamiento_2" class="form-select" name="estacionamiento_2">
                                                     <option selected disabled>Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_2" >
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_2" name="logro_estacionamiento_2">
                                                     <option value="" selected disabled>Seleccionar logro</option>
 
                                                     @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
@@ -2142,14 +2142,14 @@
                                             <td>
                                                 <textarea></textarea>
                                             </td>
-                                            <td><select id="estacionamiento_3" class="form-select">
+                                            <td><select id="estacionamiento_3" class="form-select" name="estacionamiento_3">
                                                     <option selected disabled>Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_3" >
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_3" name="logro_estacionamiento_3">
                                                     <option value="" selected disabled>Seleccionar logro</option>
 
                                                     @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
@@ -2165,14 +2165,14 @@
                                             <td>
                                                 <textarea></textarea>
                                             </td>
-                                            <td><select id="estacionamiento_4" class="form-select">
+                                            <td><select id="estacionamiento_4" class="form-select" name="estacionamiento_4">
                                                     <option selected disabled>Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_4" >
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_4" name="logro_estacionamiento_4">
 
                                                     <option value="" selected disabled>Seleccionar logro</option>
                                                     @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
@@ -2189,14 +2189,14 @@
                                             <td>
                                                 <textarea></textarea>
                                             </td>
-                                            <td><select id="estacionamiento_5" class="form-select">
+                                            <td><select id="estacionamiento_5" class="form-select" name="estacionamiento_5">
                                                     <option selected disabled>Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_5" >
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_5" name="logro_estacionamiento_5">
                                                     <option value="" selected disabled>Seleccionar logro</option>
 
                                                     @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>
@@ -2214,14 +2214,14 @@
                                             <td>
                                                 <textarea></textarea>
                                             </td>
-                                            <td><select id="estacionamiento_6" class="form-select">
+                                            <td><select id="estacionamiento_6" class="form-select" name="estacionamiento_6">
                                                     <option selected disabled>Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_6" >
+                                                <select class="form-select" style="width:150px;text-align: center;visibility: hidden" id="logro_estacionamiento_6" name="logro_estacionamiento_6">
                                                     <option value="" selected disabled>Seleccionar logro</option>
 
                                                     @for ($i = 0; $i <= 100; $i++) <option value="{{$i}}">{{$i}}%</option>

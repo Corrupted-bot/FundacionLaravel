@@ -26,55 +26,55 @@
         </h2>
     </x-slot>
 
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="container mt-4" style="width: fit-content;">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="container mt-4" style="width: fit-content;">
 
-                <table id="empresas" class="table table-striped table-hover table-bordered " style="width:100%">
-                    <thead style="background-color: #2257a3;color: white;">
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Rut</th>
-                            <th>Email</th>
-                            <th>Teléfono</th>
-                            <th>Giro</th>
-                            <th>Dirección</th>
-                            <th>Cargo</th>
-                            <th>Dotación</th>
-                            <th style="text-align: center;">Herramientas</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($empresas as $empresa)
-                        <tr>
-                            <td>{{$empresa->nombre}}</td>
-                            <td>{{$empresa->rut}}</td>
-                            <td>{{$empresa->email}}</td>
-                            <td>{{$empresa->telefono}}</td>
-                            <td>{{$empresa->giro}}</td>
-                            <td>{{$empresa->direccion}}</td>
-                            <td>{{$empresa->cargo}}</td>
-                            <td>{{$empresa->dotacion}}</td>
-                            <td>
-                                <div style="display: flex;align-items: center;">
-                                    <button class="btn btn-success" style="margin-right: 10px;width: max-content;" onclick="AbrirProyecto({{$empresa->id}})">Proyecto <i class="fa-solid fa-folder"></i></button>
-                                    <button class="btn btn-warning" style="margin-right: 10px;width: max-content;" onclick="AbrirEmpresa({{$empresa->id}})">Editar <i class="fa-solid fa-pencil"></i></button>
-                                    <button class="btn btn-danger" style="margin-right: 10px;width: max-content;" onclick="AbrirEmpresaEliminar({{$empresa->id}})">Eliminar <i class="fa-solid fa-trash"></i></button>
-                                    <a class="btn btn-secondary" style="margin-right: 10px;width: max-content;" href="/asesoria/{{$empresa->id}}">Plan Anual Asesoría<br> e Inclusión</a>
-                                </div>
-                            </td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                @if(Session::has('message'))
+            <table id="empresas" class="table table-striped table-hover table-bordered " style="width:100%">
+                <thead style="background-color: #2257a3;color: white;">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Rut</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                        <th>Giro</th>
+                        <th>Dirección</th>
+                        <th>Cargo</th>
+                        <th>Dotación</th>
+                        <th style="text-align: center;">Herramientas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($empresas as $empresa)
+                    <tr>
+                        <td>{{$empresa->nombre}}</td>
+                        <td>{{$empresa->rut}}</td>
+                        <td>{{$empresa->email}}</td>
+                        <td>{{$empresa->telefono}}</td>
+                        <td>{{$empresa->giro}}</td>
+                        <td>{{$empresa->direccion}}</td>
+                        <td>{{$empresa->cargo}}</td>
+                        <td>{{$empresa->dotacion}}</td>
+                        <td>
+                            <div style="display: flex;align-items: center;">
+                                <button class="btn btn-success" style="margin-right: 10px;width: max-content;" onclick="AbrirProyecto({{$empresa->id}})">Proyecto <i class="fa-solid fa-folder"></i></button>
+                                <button class="btn btn-warning" style="margin-right: 10px;width: max-content;" onclick="AbrirEmpresa({{$empresa->id}})">Editar <i class="fa-solid fa-pencil"></i></button>
+                                <button class="btn btn-danger" style="margin-right: 10px;width: max-content;" onclick="AbrirEmpresaEliminar({{$empresa->id}})">Eliminar <i class="fa-solid fa-trash"></i></button>
+                                <a class="btn btn-secondary" style="margin-right: 10px;width: max-content;" href="/asesoria/{{$empresa->id}}">Plan Anual Asesoría<br> e Inclusión</a>
+                            </div>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+            @if(Session::has('message'))
 
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    {{ Session::get('message') }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                @endif
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ Session::get('message') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
+            @endif
         </div>
+    </div>
 
     <div class="modal fade" id="ProyectoModal" tabindex="-1" aria-labelledby="ProyectoModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -111,14 +111,14 @@
                     <h5 class="modal-title" id="EliminarModalLabel">¿Estas seguro que deseas eliminar la empresa?</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                    <form method="POST" action="/eliminar-empresa">
-                        @csrf
+                <form method="POST" action="/eliminar-empresa">
+                    @csrf
 
-                <div class="modal-footer" style="display: flex;justify-content: center;">
-                    <input type="text" id="idEmpresa_Eliminar" name="idEmpresa_Eliminar" hidden>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-danger">Eliminar</button>
-                </div>
+                    <div class="modal-footer" style="display: flex;justify-content: center;">
+                        <input type="text" id="idEmpresa_Eliminar" name="idEmpresa_Eliminar" hidden>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </div>
                 </form>
             </div>
         </div>

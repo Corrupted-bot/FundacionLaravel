@@ -14,4 +14,5 @@ class MatrizEvaluacion extends Model
      * @var string
      */
     protected $table = 'matriz_evaluacion';
+    protected $fillable = ['id_proyecto'];
 }

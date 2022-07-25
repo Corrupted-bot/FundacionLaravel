@@ -3153,7 +3153,7 @@
                                             </td>
                                             <td><select id="estacionamiento_1" class="form-select"
                                                     name="estacionamiento_1">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
@@ -3179,7 +3179,7 @@
                                             </td>
                                             <td><select id="estacionamiento_2" class="form-select"
                                                     name="estacionamiento_2">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
@@ -3210,7 +3210,7 @@
                                             </td>
                                             <td><select id="estacionamiento_3" class="form-select"
                                                     name="estacionamiento_3">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
@@ -3239,7 +3239,7 @@
                                             </td>
                                             <td><select id="estacionamiento_4" class="form-select"
                                                     name="estacionamiento_4">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
@@ -3269,7 +3269,7 @@
                                             </td>
                                             <td><select id="estacionamiento_5" class="form-select"
                                                     name="estacionamiento_5">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
@@ -3300,7 +3300,7 @@
                                             </td>
                                             <td><select id="estacionamiento_6" class="form-select"
                                                     name="estacionamiento_6">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
@@ -4818,7 +4818,15 @@
 
 
 
-
+            $("#matriz").on("hidden.bs.modal", function () {
+                // Aquí va el código a disparar en el evento
+                for (let index = 1; index <= 6; index++) {
+                    $(`#estacionamiento_${index}`).val("");
+                    $(`#estacionamiento_revision_${index}`).val("");
+                    $(`#logro_estacionamiento_${index}`).css("visibility", "hidden");
+                    $(`#logro_estacionamiento_${index}`).val("");
+                }
+            });
 
 
             //Estacionamiento

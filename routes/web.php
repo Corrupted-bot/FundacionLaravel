@@ -54,6 +54,7 @@ Route::resource('proyectos', ProyectoController::class,['names' => [
 ]]);
 Route::get('/empresas-datos', "App\Http\Controllers\EmpresaController@obtenerDatos");
 Route::get('/asesoria/{id}', "App\Http\Controllers\MatrizasesoriaController@index");
+Route::get('/matrizevaluacion/{id}','App\Http\Controllers\ProyectoController@getMatrizEvaluacion');
 
 
 

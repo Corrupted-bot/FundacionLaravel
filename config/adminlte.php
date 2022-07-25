@@ -231,7 +231,11 @@ return [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
-
+        [
+            'text'        => 'Dashboard',
+            'url'         => '/dashboard',
+            'icon'        => 'far fa-solid fa-gauge',
+        ],
         // Sidebar items:
         ['header' => 'Herramientas'],
 

@@ -7,13 +7,11 @@
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+    <p>Bienvenido al dashboard, aquí puede estar el resumen de todos los proyectos.Ademas de poder filtrar por empresa y ver el porcentaje de cumplimiento de ellos.</p>
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
 @stop

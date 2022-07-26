@@ -122,68 +122,68 @@
                                     <input type="text" placeholder="Descripcion Puesto disponible">
                                     <br />
                                     <label>Control Horario</label>
-                                    <select class="form-select" aria-label="Control Horario">
+                                    <select class="form-control" aria-label="Control Horario">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">SI</option>
                                         <option value="2">NO</option>
                                     </select>
 
-                                    <textarea type="text" placeholder="Detalles Control Horario" maxLength="500"> </textarea>
+                                    <textarea class="form-control" type="text" placeholder="Detalles Control Horario" maxLength="500"> </textarea>
                                     <br />
                                     <label> Normas de Vestuario </label>
-                                    <select class="form-select" aria-label="Normas de Vestuario">
+                                    <select class="form-control" aria-label="Normas de Vestuario">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">SI</option>
                                         <option value="2">NO</option>
                                     </select>
-                                    <textarea type="text" placeholder="Detalles de Normas de Vestuario" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Detalles de Normas de Vestuario" maxLength="500"></textarea>
                                     <br />
                                     <label> Formación en Casa </label>
-                                    <select class="form-select" aria-label="Formacion en Casa">
+                                    <select class="form-control" aria-label="Formacion en Casa">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">SI</option>
                                         <option value="2">NO</option>
                                     </select>
-                                    <textarea type="text" placeholder="Detalles Formacion en Casa" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Detalles Formacion en Casa" maxLength="500"></textarea>
 
                                     <br />
                                     <label> Pensión de Empresa </label>
-                                    <select class="form-select" aria-label="Pensión de empresa">
+                                    <select class="form-control" aria-label="Pensión de empresa">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">SI</option>
                                         <option value="2">NO</option>
                                     </select>
-                                    <textarea type="text" placeholder="Detalles Pension de Empresa" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Detalles Pension de Empresa" maxLength="500"></textarea>
 
                                     <br />
                                     <label>Relación con la familia</label>
-                                    <select class="form-select" aria-label="Relacion con la Familia">
+                                    <select class="form-control" aria-label="Relacion con la Familia">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">SI</option>
                                         <option value="2">NO</option>
                                     </select>
-                                    <textarea type="text" placeholder="Detalles Relacion Familia" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Detalles Relacion Familia" maxLength="500"></textarea>
 
                                     <br />
                                     <label>Seguro de enfermedad </label>
-                                    <select class="form-select" aria-label="Seguro de Enfermedad">
+                                    <select class="form-control" aria-label="Seguro de Enfermedad">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">SI</option>
                                         <option value="2">NO</option>
                                     </select>
 
-                                    <textarea type="text" placeholder="Detalles Seguro de Enfermedad" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Detalles Seguro de Enfermedad" maxLength="500"></textarea>
 
                                     <br />
 
                                     <label>Vacaciones </label>
-                                    <select class="form-select" aria-label="Vacaciones">
+                                    <select class="form-control" aria-label="Vacaciones">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">SI</option>
                                         <option value="2">NO</option>
                                     </select>
 
-                                    <textarea type="text" placeholder="Detalles Vacaciones" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Detalles Vacaciones" maxLength="500"></textarea>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="profile2" role="tabpanel" aria-labelledby="profile2-tab">
@@ -193,28 +193,28 @@
                                         <h1>SALUD Y SEGURIDAD</h1>
                                     </div>
                                     <label>Evaluacion de riesgo</label>
-                                    <select class="form-select" aria-label="Evaluacion de riesgo">
+                                    <select class="form-control" aria-label="Evaluacion de riesgo">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">SI</option>
                                         <option value="2">NO</option>
                                     </select>
 
-                                    <textarea type="text" placeholder="Detalles Evaluacion de Riesgo" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion de Riesgo" maxLength="500"></textarea>
                                     <br />
                                     <label>Evaluacion Realizada</label>
-                                    <select class="form-select" aria-label="Evaluacion Realizada">
+                                    <select class="form-control" aria-label="Evaluacion Realizada">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">SI</option>
                                         <option value="2">NO</option>
                                     </select>
 
-                                    <textarea type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
                                     <label>Promocion Laboral</label>
-                                    <textarea type="text" placeholder="Perspectiva de promocion Laboral" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Perspectiva de promocion Laboral" maxLength="500"></textarea>
                                     <div>
 
                                         <label>Flexibilidad Laboral</label>
-                                        <textarea type="text" placeholder="Flexibilidad Laboral" maxLength="500"></textarea>
+                                        <textarea class="form-control" type="text" placeholder="Flexibilidad Laboral" maxLength="500"></textarea>
 
                                     </div>
                                 </div>
@@ -225,93 +225,93 @@
                                     <h1>HABILIDAD FISICA</h1>
 
                                     <label>Estar de pie</label>
-                                    <select class="form-select" aria-label="Estar de pie">
+                                    <select class="form-control" aria-label="Estar de pie">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">SI</option>
                                         <option value="2">NO</option>
                                     </select>
                                     <label>Caminar</label>
-                                    <select class="form-select" aria-label="Caminar">
+                                    <select class="form-control" aria-label="Caminar">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">SI</option>
                                         <option value="2">NO</option>
                                     </select>
                                     <label>Estar Sentado</label>
-                                    <select class="form-select" aria-label="Estar Sentado">
+                                    <select class="form-control" aria-label="Estar Sentado">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">SI</option>
                                         <option value="2">NO</option>
                                     </select>
                                     <label>Levantar</label>
-                                    <select class="form-select" aria-label="Levantar">
+                                    <select class="form-control" aria-label="Levantar">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">SI</option>
                                         <option value="2">NO</option>
                                     </select>
                                     <label>Acarrear</label>
-                                    <select class="form-select" aria-label="Acarrear">
+                                    <select class="form-control" aria-label="Acarrear">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">SI</option>
                                         <option value="2">NO</option>
                                     </select>
                                     <label>Empujar</label>
-                                    <select class="form-select" aria-label="Empujar">
+                                    <select class="form-control" aria-label="Empujar">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">SI</option>
                                         <option value="2">NO</option>
                                     </select>
                                     <label>Subir</label>
-                                    <select class="form-select" aria-label="Subir">
+                                    <select class="form-control" aria-label="Subir">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">SI</option>
                                         <option value="2">NO</option>
                                     </select>
                                     <label>Mantener Equilibrio</label>
-                                    <select class="form-select" aria-label="Mantener Equilibrio">
+                                    <select class="form-control" aria-label="Mantener Equilibrio">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">SI</option>
                                         <option value="2">NO</option>
                                     </select>
                                     <label>Encorvarse</label>
-                                    <select class="form-select" aria-label="Encorvarse">
+                                    <select class="form-control" aria-label="Encorvarse">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">SI</option>
                                         <option value="2">NO</option>
                                     </select>
                                     <label>Arrodillarse</label>
-                                    <select class="form-select" aria-label="Arrodillarse">
+                                    <select class="form-control" aria-label="Arrodillarse">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">SI</option>
                                         <option value="2">NO</option>
                                     </select>
                                     <label>Manipular con las manos</label>
-                                    <select class="form-select" aria-label="Manipular con las manos">
+                                    <select class="form-control" aria-label="Manipular con las manos">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">UNA MANO</option>
                                         <option value="2">AMBAS MANOS</option>
                                     </select>
                                     <label>Manipular con destreza</label>
-                                    <select class="form-select" aria-label="Manipular con destreza">
+                                    <select class="form-control" aria-label="Manipular con destreza">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">FINA</option>
                                         <option value="2">GRUESA</option>
                                     </select>
                                     <label>Vision</label>
-                                    <select class="form-select" aria-label="Vision">
+                                    <select class="form-control" aria-label="Vision">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">SI</option>
                                         <option value="2">NO</option>
                                     </select>
                                     <label>Audicion</label>
-                                    <select class="form-select" aria-label="Audicion">
+                                    <select class="form-control" aria-label="Audicion">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">SI</option>
                                         <option value="2">NO</option>
                                     </select>
                                     <label>Requisitos de adaptacion</label>
-                                    <textarea type="text" placeholder="Requisitos de adaptacion" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Requisitos de adaptacion" maxLength="500"></textarea>
                                     <label>Expetativas de supervicion/ apoyo natural</label>
-                                    <textarea type="text" placeholder="Expetativas de supervicion/apoyo natural" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Expetativas de supervicion/apoyo natural" maxLength="500"></textarea>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="prueba" role="tabpanel" aria-labelledby="prueba-tab">
@@ -2932,53 +2932,53 @@
                                         <h1>Listado de comprobacion de necesidades de apoyo</h1>
                                     </div>
                                     <label>Cumplir el Horario</label>
-                                    <select class="form-select" aria-label="Evaluacion de riesgo">
+                                    <select class="form-control" aria-label="Evaluacion de riesgo">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">Necesita apoyo total</option>
                                         <option value="2">Necesita algun apoyo</option>
                                         <option value="3">No necesita apoyo</option>
                                     </select>
-                                    <textarea type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
                                     <label>Asistencia</label>
-                                    <select class="form-select" aria-label="Evaluacion de riesgo">
+                                    <select class="form-control" aria-label="Evaluacion de riesgo">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">Necesita apoyo total</option>
                                         <option value="2">Necesita algun apoyo</option>
                                         <option value="3">No necesita apoyo</option>
                                     </select>
-                                    <textarea type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
                                     <label>Comunicacion</label>
-                                    <select class="form-select" aria-label="Evaluacion de riesgo">
+                                    <select class="form-control" aria-label="Evaluacion de riesgo">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">Necesita apoyo total</option>
                                         <option value="2">Necesita algun apoyo</option>
                                         <option value="3">No necesita apoyo</option>
                                     </select>
-                                    <textarea type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
                                     <label>Conducta</label>
-                                    <select class="form-select" aria-label="Evaluacion de riesgo">
+                                    <select class="form-control" aria-label="Evaluacion de riesgo">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">Necesita apoyo total</option>
                                         <option value="2">Necesita algun apoyo</option>
                                         <option value="3">No necesita apoyo</option>
                                     </select>
-                                    <textarea type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
                                     <label>Vestido/apariencia</label>
-                                    <select class="form-select" aria-label="Evaluacion de riesgo">
+                                    <select class="form-control" aria-label="Evaluacion de riesgo">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">Necesita apoyo total</option>
                                         <option value="2">Necesita algun apoyo</option>
                                         <option value="3">No necesita apoyo</option>
                                     </select>
-                                    <textarea type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
                                     <label>Interaccion social</label>
-                                    <select class="form-select" aria-label="Evaluacion de riesgo">
+                                    <select class="form-control" aria-label="Evaluacion de riesgo">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">Necesita apoyo total</option>
                                         <option value="2">Necesita algun apoyo</option>
                                         <option value="3">No necesita apoyo</option>
                                     </select>
-                                    <textarea type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
                                     <div>
                                     </div>
                                 </div>
@@ -2990,61 +2990,61 @@
                                         <h1>Listado de comprobacion de necesidades de apoyo</h1>
                                     </div>
                                     <label>Motivacion</label>
-                                    <select class="form-select" aria-label="Evaluacion de riesgo">
+                                    <select class="form-control" aria-label="Evaluacion de riesgo">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">Necesita apoyo total</option>
                                         <option value="2">Necesita algun apoyo</option>
                                         <option value="3">No necesita apoyo</option>
                                     </select>
-                                    <textarea type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
                                     <label>Flexibilidad</label>
-                                    <select class="form-select" aria-label="Evaluacion de riesgo">
+                                    <select class="form-control" aria-label="Evaluacion de riesgo">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">Necesita apoyo total</option>
                                         <option value="2">Necesita algun apoyo</option>
                                         <option value="3">No necesita apoyo</option>
                                     </select>
-                                    <textarea type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
                                     <label>Iniciativa</label>
-                                    <select class="form-select" aria-label="Evaluacion de riesgo">
+                                    <select class="form-control" aria-label="Evaluacion de riesgo">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">Necesita apoyo total</option>
                                         <option value="2">Necesita algun apoyo</option>
                                         <option value="3">No necesita apoyo</option>
                                     </select>
-                                    <textarea type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
                                     <label>Trabajo en equipo</label>
-                                    <select class="form-select" aria-label="Evaluacion de riesgo">
+                                    <select class="form-control" aria-label="Evaluacion de riesgo">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">Necesita apoyo total</option>
                                         <option value="2">Necesita algun apoyo</option>
                                         <option value="3">No necesita apoyo</option>
                                     </select>
-                                    <textarea type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
                                     <label>Salud y seguridad</label>
-                                    <select class="form-select" aria-label="Evaluacion de riesgo">
+                                    <select class="form-control" aria-label="Evaluacion de riesgo">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">Necesita apoyo total</option>
                                         <option value="2">Necesita algun apoyo</option>
                                         <option value="3">No necesita apoyo</option>
                                     </select>
-                                    <textarea type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
                                     <label>Consistencia</label>
-                                    <select class="form-select" aria-label="Evaluacion de riesgo">
+                                    <select class="form-control" aria-label="Evaluacion de riesgo">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">Necesita apoyo total</option>
                                         <option value="2">Necesita algun apoyo</option>
                                         <option value="3">No necesita apoyo</option>
                                     </select>
-                                    <textarea type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
                                     <label>Trabajar con presion</label>
-                                    <select class="form-select" aria-label="Evaluacion de riesgo">
+                                    <select class="form-control" aria-label="Evaluacion de riesgo">
                                         <option value="DEFAULT" disabled>Seleccione una opción</option>
                                         <option value="1">Necesita apoyo total</option>
                                         <option value="2">Necesita algun apoyo</option>
                                         <option value="3">No necesita apoyo</option>
                                     </select>
-                                    <textarea type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
+                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
 
                                     <div>
                                     </div>
@@ -3149,9 +3149,9 @@
                                             <td>Ubicación: a) Es propio de la institución y se encuentra en el mismo
                                                 predio</td>
                                             <td>
-                                                <textarea id="estacionamiento_revision_1" name="estacionamiento_revision_1"></textarea>
+                                                <textarea class="form-control" id="estacionamiento_revision_1" name="estacionamiento_revision_1"></textarea>
                                             </td>
-                                            <td><select id="estacionamiento_1" class="form-select"
+                                            <td><select id="estacionamiento_1" class="form-control"
                                                     name="estacionamiento_1">
                                                     <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
@@ -3159,9 +3159,11 @@
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
                                                     id="logro_estacionamiento_1" name="logro_estacionamiento_1">
+                                                    <option value="" selected disabled>Seleccionar logro
+                                                    </option>
                                                     @for ($i = 0; $i <= 100; $i++)
                                                         <option value="{{ $i }}">{{ $i }}%
                                                         </option>
@@ -3175,9 +3177,9 @@
                                                 <br>de largo,mas una franja de circulacion segura de 1,1 metro de ancho.
                                             </td>
                                             <td>
-                                                <textarea id="estacionamiento_revision_2" name="estacionamiento_revision_2"></textarea>
+                                                <textarea class="form-control" id="estacionamiento_revision_2" name="estacionamiento_revision_2"></textarea>
                                             </td>
-                                            <td><select id="estacionamiento_2" class="form-select"
+                                            <td><select id="estacionamiento_2" class="form-control"
                                                     name="estacionamiento_2">
                                                     <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
@@ -3185,7 +3187,7 @@
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
                                                     id="logro_estacionamiento_2" name="logro_estacionamiento_2">
                                                     <option value="" selected disabled>Seleccionar logro
@@ -3206,9 +3208,9 @@
                                                 de tránsito peatonal
                                             </td>
                                             <td>
-                                                <textarea id="estacionamiento_revision_3" name="estacionamiento_revision_3"></textarea>
+                                                <textarea class="form-control" id="estacionamiento_revision_3" name="estacionamiento_revision_3"></textarea>
                                             </td>
-                                            <td><select id="estacionamiento_3" class="form-select"
+                                            <td><select id="estacionamiento_3" class="form-control"
                                                     name="estacionamiento_3">
                                                     <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
@@ -3216,7 +3218,7 @@
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
                                                     id="logro_estacionamiento_3" name="logro_estacionamiento_3">
                                                     <option value="" selected disabled>Seleccionar logro
@@ -3235,9 +3237,9 @@
                                             <td>Señalización Vertical: Se encuentra señalizado sobre poste o sujeto a
                                                 un<br> muro y tiene el Símbolo Internacional de Accesibilidad</td>
                                             <td>
-                                                <textarea id="estacionamiento_revision_4" name="estacionamiento_revision_4"></textarea>
+                                                <textarea class="form-control" id="estacionamiento_revision_4" name="estacionamiento_revision_4"></textarea>
                                             </td>
-                                            <td><select id="estacionamiento_4" class="form-select"
+                                            <td><select id="estacionamiento_4" class="form-control"
                                                     name="estacionamiento_4">
                                                     <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
@@ -3245,7 +3247,7 @@
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
                                                     id="logro_estacionamiento_4" name="logro_estacionamiento_4">
 
@@ -3265,9 +3267,9 @@
                                                 estacionamiento con el Símbolo Internacional de Accesibilidad (SIA)
                                                 en<br> blanco sobre un fondo azul</td>
                                             <td>
-                                                <textarea id="estacionamiento_revision_5" name="estacionamiento_revision_5"></textarea>
+                                                <textarea class="form-control" id="estacionamiento_revision_5" name="estacionamiento_revision_5"></textarea>
                                             </td>
-                                            <td><select id="estacionamiento_5" class="form-select"
+                                            <td><select id="estacionamiento_5" class="form-control"
                                                     name="estacionamiento_5">
                                                     <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
@@ -3275,7 +3277,7 @@
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
                                                     id="logro_estacionamiento_5" name="logro_estacionamiento_5">
                                                     <option value="" selected disabled>Seleccionar logro
@@ -3296,9 +3298,9 @@
                                                 peatonal de<br> ancho 1,10 mt (puede ser compartida con otro
                                                 estacionamiento)</td>
                                             <td>
-                                                <textarea id="estacionamiento_revision_6" name="estacionamiento_revision_6"></textarea>
+                                                <textarea class="form-control" id="estacionamiento_revision_6" name="estacionamiento_revision_6"></textarea>
                                             </td>
-                                            <td><select id="estacionamiento_6" class="form-select"
+                                            <td><select id="estacionamiento_6" class="form-control"
                                                     name="estacionamiento_6">
                                                     <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
@@ -3306,7 +3308,7 @@
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
                                                     id="logro_estacionamiento_6" name="logro_estacionamiento_6">
                                                     <option value="" selected disabled>Seleccionar logro
@@ -3349,16 +3351,16 @@
                                                 <td>Acceso plano: El acceso al edificio no presenta desniveles, o bien
                                                     tiene<br> un plano inclinado, es decir hasta un 5% de pendiente</td>
                                                 <td>
-                                                    <textarea id="ingreso_revision_1" name="ingreso_revision_1"></textarea>
+                                                    <textarea class="form-control" id="ingreso_revision_1" name="ingreso_revision_1"></textarea>
                                                 </td>
-                                                <td><select id="ingreso_1" class="form-select" name="ingreso_1">
-                                                        <option selected disabled>Seleccionar Criterio</option>
+                                                <td><select id="ingreso_1" class="form-control" name="ingreso_1">
+                                                        <option selected disabled value="">Seleccionar Criterio</option>
                                                         <option value="cumple">Cumple</option>
                                                         <option value="no_cumple">No Cumple</option>
                                                         <option value="no_aplica">No Aplica</option>
                                                     </select></td>
                                                 <td>
-                                                    <select class="form-select"
+                                                    <select class="form-control"
                                                         style="width:150px;text-align: center;visibility: hidden"
                                                         id="logro_ingreso_1" name="logro_ingreso_1">
                                                         <option value="" selected disabled>Seleccionar logro
@@ -3376,16 +3378,16 @@
                                                     (si tiene 8 cm de alto, la rampa mide mínimo un metro). La pendiente<br>
                                                     puede variar hasta un máximo de 12% cuando tiene 2 mt de largo)</td>
                                                 <td>
-                                                    <textarea id="ingreso_revision_2" name="ingreso_revision_2"></textarea>
+                                                    <textarea class="form-control" id="ingreso_revision_2" name="ingreso_revision_2"></textarea>
                                                 </td>
-                                                <td><select id="ingreso_2" class="form-select" name="ingreso_2">
-                                                        <option selected disabled>Seleccionar Criterio</option>
+                                                <td><select id="ingreso_2" class="form-control" name="ingreso_2">
+                                                        <option selected disabled value="">Seleccionar Criterio</option>
                                                         <option value="cumple">Cumple</option>
                                                         <option value="no_cumple">No Cumple</option>
                                                         <option value="no_aplica">No Aplica</option>
                                                     </select></td>
                                                 <td>
-                                                    <select class="form-select"
+                                                    <select class="form-control"
                                                         style="width:150px;text-align: center;visibility: hidden"
                                                         id="logro_ingreso_2" name="logro_ingreso_2">
                                                         <option value="" selected disabled>Seleccionar logro
@@ -3402,16 +3404,16 @@
                                                 <td>Acceso plano: El pavimento es homogéneo, estable, antideslizante en<br>
                                                     seco y en mojado</td>
                                                 <td>
-                                                    <textarea id="ingreso_revision_3" name="ingreso_revision_3"></textarea>
+                                                    <textarea class="form-control" id="ingreso_revision_3" name="ingreso_revision_3"></textarea>
                                                 </td>
-                                                <td><select id="ingreso_3" class="form-select" name="ingreso_3">
-                                                        <option selected disabled>Seleccionar Criterio</option>
+                                                <td><select id="ingreso_3" class="form-control" name="ingreso_3">
+                                                        <option selected disabled value="">Seleccionar Criterio</option>
                                                         <option value="cumple">Cumple</option>
                                                         <option value="no_cumple">No Cumple</option>
                                                         <option value="no_aplica">No Aplica</option>
                                                     </select></td>
                                                 <td>
-                                                    <select class="form-select"
+                                                    <select class="form-control"
                                                         style="width:150px;text-align: center;visibility: hidden"
                                                         id="logro_ingreso_3" name="logro_ingreso_3">
                                                         <option value="" selected disabled>Seleccionar logro
@@ -3429,16 +3431,16 @@
                                                     antideslizante en seco y en mojado (cumple atributos de ruta accesible)
                                                 </td>
                                                 <td>
-                                                    <textarea id="ingreso_revision_4" name="ingreso_revision_4"></textarea>
+                                                    <textarea class="form-control" id="ingreso_revision_4" name="ingreso_revision_4"></textarea>
                                                 </td>
-                                                <td><select id="ingreso_4" class="form-select" name="ingreso_4">
-                                                        <option selected disabled>Seleccionar Criterio</option>
+                                                <td><select id="ingreso_4" class="form-control" name="ingreso_4">
+                                                        <option selected disabled value="">Seleccionar Criterio</option>
                                                         <option value="cumple">Cumple</option>
                                                         <option value="no_cumple">No Cumple</option>
                                                         <option value="no_aplica">No Aplica</option>
                                                     </select></td>
                                                 <td>
-                                                    <select class="form-select"
+                                                    <select class="form-control"
                                                         style="width:150px;text-align: center;visibility: hidden"
                                                         id="logro_ingreso_4" name="logro_ingreso_4">
                                                         <option value="" selected disabled>Seleccionar logro
@@ -3457,16 +3459,16 @@
                                                     1,10 mt
                                                 </td>
                                                 <td>
-                                                    <textarea id="ingreso_revision_5" name="ingreso_revision_5"></textarea>
+                                                    <textarea class="form-control" id="ingreso_revision_5" name="ingreso_revision_5"></textarea>
                                                 </td>
-                                                <td><select id="ingreso_5" class="form-select" name="ingreso_5">
-                                                        <option selected disabled>Seleccionar Criterio</option>
+                                                <td><select id="ingreso_5" class="form-control" name="ingreso_5">
+                                                        <option selected disabled value="">Seleccionar Criterio</option>
                                                         <option value="cumple">Cumple</option>
                                                         <option value="no_cumple">No Cumple</option>
                                                         <option value="no_aplica">No Aplica</option>
                                                     </select></td>
                                                 <td>
-                                                    <select class="form-select"
+                                                    <select class="form-control"
                                                         style="width:150px;text-align: center;visibility: hidden"
                                                         id="logro_ingreso_5" name="logro_ingreso_5">
                                                         <option value="" selected disabled>Seleccionar logro
@@ -3483,16 +3485,16 @@
                                                 <td>Acceso por rampa: Longitud: La rampa tiene un largo máximo de 9,00<br>
                                                     mt sin descanso (puede tener mayor longitud considerando descanso)</td>
                                                 <td>
-                                                    <textarea id="ingreso_revision_6" name="ingreso_revision_6"></textarea>
+                                                    <textarea class="form-control" id="ingreso_revision_6" name="ingreso_revision_6"></textarea>
                                                 </td>
-                                                <td><select id="ingreso_6" class="form-select" name="ingreso_6">
-                                                        <option selected disabled>Seleccionar Criterio</option>
+                                                <td><select id="ingreso_6" class="form-control" name="ingreso_6">
+                                                        <option selected disabled value="">Seleccionar Criterio</option>
                                                         <option value="cumple">Cumple</option>
                                                         <option value="no_cumple">No Cumple</option>
                                                         <option value="no_aplica">No Aplica</option>
                                                     </select></td>
                                                 <td>
-                                                    <select class="form-select"
+                                                    <select class="form-control"
                                                         style="width:150px;text-align: center;visibility: hidden"
                                                         id="logro_ingreso_6" name="logro_ingreso_6">
                                                         <option value="" selected disabled>Seleccionar logro
@@ -3510,16 +3512,16 @@
                                                     mt<br> debe tener pasamanos doble a ambos costados de la rampa (0.70
                                                     mt<br> y 0,95 mt cada altura)"</td>
                                                 <td>
-                                                    <textarea id="ingreso_revision_7" name="ingreso_revision_7"></textarea>
+                                                    <textarea class="form-control" id="ingreso_revision_7" name="ingreso_revision_7"></textarea>
                                                 </td>
-                                                <td><select id="ingreso_7" class="form-select" name="ingreso_7">
-                                                        <option selected disabled>Seleccionar Criterio</option>
+                                                <td><select id="ingreso_7" class="form-control" name="ingreso_7">
+                                                        <option selected disabled value="">Seleccionar Criterio</option>
                                                         <option value="cumple">Cumple</option>
                                                         <option value="no_cumple">No Cumple</option>
                                                         <option value="no_aplica">No Aplica</option>
                                                     </select></td>
                                                 <td>
-                                                    <select class="form-select"
+                                                    <select class="form-control"
                                                         style="width:150px;text-align: center;visibility: hidden"
                                                         id="logro_ingreso_7" name="logro_ingreso_7">
                                                         <option value="" selected disabled>Seleccionar logro
@@ -3537,16 +3539,16 @@
                                                     circunscribir<br> un círculo de diámetro 1,50 mt que permita<br> un giro
                                                     en 360°"</td>
                                                 <td>
-                                                    <textarea id="ingreso_revision_8" name="ingreso_revision_8"></textarea>
+                                                    <textarea class="form-control" id="ingreso_revision_8" name="ingreso_revision_8"></textarea>
                                                 </td>
-                                                <td><select id="ingreso_8" class="form-select" name="ingreso_8">
-                                                        <option selected disabled>Seleccionar Criterio</option>
+                                                <td><select id="ingreso_8" class="form-control" name="ingreso_8">
+                                                        <option selected disabled value="">Seleccionar Criterio</option>
                                                         <option value="cumple">Cumple</option>
                                                         <option value="no_cumple">No Cumple</option>
                                                         <option value="no_aplica">No Aplica</option>
                                                     </select></td>
                                                 <td>
-                                                    <select class="form-select"
+                                                    <select class="form-control"
                                                         style="width:150px;text-align: center;visibility: hidden"
                                                         id="logro_ingreso_8" name="logro_ingreso_8">
                                                         <option value="" selected disabled>Seleccionar logro
@@ -3588,16 +3590,16 @@
                                             <td>Ancho puerta: El ancho libre de paso en puerta de ingreso, que no<br>
                                                 corresponda a puerta de evacuación, es de 0,90 mt mínimos</td>
                                             <td>
-                                                <textarea id="puerta_revision_1" name="puerta_revision_1"></textarea>
+                                                <textarea class="form-control" id="puerta_revision_1" name="puerta_revision_1"></textarea>
                                             </td>
-                                            <td><select id="puerta_1" class="form-select" name="puerta_1">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="puerta_1" class="form-control" name="puerta_1">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
                                                     id="logro_puerta_1" name="logro_puerta_1">
                                                     <option value="" selected disabled>Seleccionar logro
@@ -3615,16 +3617,16 @@
                                                 en<br> interior y exterior a ella, de mínimo 1,20 mt fuera del barrido
                                                 de la(s)<br> puerta(s)</td>
                                             <td>
-                                                <textarea id="puerta_revision_2" name="puerta_revision_2"></textarea>
+                                                <textarea class="form-control" id="puerta_revision_2" name="puerta_revision_2"></textarea>
                                             </td>
-                                            <td><select id="puerta_2" class="form-select" name="puerta_2">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="puerta_2" class="form-control" name="puerta_2">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
                                                     id="logro_puerta_2" name="logro_puerta_2">
                                                     <option value="" selected disabled>Seleccionar logro
@@ -3642,16 +3644,16 @@
                                                 empuje o con sensor, las manillas, o tiradores se encuentran a una<br>
                                                 altura entre 0,95 mt y 1,20 mt y son tipo barra o palanca (no pomo)</td>
                                             <td>
-                                                <textarea id="puerta_revision_3" name="puerta_revision_3"></textarea>
+                                                <textarea class="form-control" id="puerta_revision_3" name="puerta_revision_3"></textarea>
                                             </td>
-                                            <td><select id="puerta_3" class="form-select" name="puerta_3">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="puerta_3" class="form-control" name="puerta_3">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
                                                     id="logro_puerta_3" name="logro_puerta_3">
                                                     <option value="" selected disabled>Seleccionar logro
@@ -3669,16 +3671,16 @@
                                                 elementos<br> verticales adyacentes (Muros, paneles vidriados u otros)
                                             </td>
                                             <td>
-                                                <textarea id="puerta_revision_4" name="puerta_revision_4"></textarea>
+                                                <textarea class="form-control" id="puerta_revision_4" name="puerta_revision_4"></textarea>
                                             </td>
-                                            <td><select id="puerta_4" class="form-select" name="puerta_4">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="puerta_4" class="form-control" name="puerta_4">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
                                                     id="logro_puerta_4" name="logro_puerta_4">
                                                     <option value="" selected disabled>Seleccionar logro
@@ -3696,16 +3698,16 @@
                                                 de<br> puertas transparentes, cuenta con tratamiento adhesivo para su
                                                 clara<br> percepción</td>
                                             <td>
-                                                <textarea id="puerta_revision_5" name="puerta_revision_5"></textarea>
+                                                <textarea class="form-control" id="puerta_revision_5" name="puerta_revision_5"></textarea>
                                             </td>
-                                            <td><select id="puerta_5" class="form-select" name="puerta_5">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="puerta_5" class="form-control" name="puerta_5">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
                                                     id="logro_puerta_5" name="logro_puerta_5">
                                                     <option value="" selected disabled>Seleccionar logro
@@ -3747,18 +3749,18 @@
                                             <td>Ancho puertas de evacuación: El ancho libre de paso en puertas de<br>
                                                 evacuación es de 1,10 mt mínimos</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="evacuacion_revision_1" name="evacuacion_revision_1"></textarea>
                                             </td>
-                                            <td><select id="evacuacion_1" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="evacuacion_1" class="form-control" name="evacuacion_1">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_evacuacion_1">
+                                                    id="logro_evacuacion_1" name="logro_evacuacion_1">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -3773,18 +3775,18 @@
                                             <td>Puertas de Evacuación: La puerta es de fácil accionamiento es por
                                                 empuje<br> y su uso requiere un mínimo esfuerzo</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" name="evacuacion_revision_2" id="evacuacion_revision_2"></textarea>
                                             </td>
-                                            <td><select id="evacuacion_2" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="evacuacion_2" class="form-control" name="evacuacion_2">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_evacuacion_2">
+                                                    id="logro_evacuacion_2" name="logro_evacuacion_2">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -3800,18 +3802,18 @@
                                                 fácilmente localizable, conectada a la ruta accesible, se encuentra<br>
                                                 señalizada para su clara identificación</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="evacuacion_revision_3" name="evacuacion_revision_3"></textarea>
                                             </td>
-                                            <td><select id="evacuacion_3" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="evacuacion_3" class="form-control" name="evacuacion_3">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_evacuacion_3">
+                                                    id="logro_evacuacion_3" name="logro_evacuacion_3">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -3826,18 +3828,18 @@
                                             <td>Vías de evacuación: La vía de evacuación está conectada a la ruta<br>
                                                 accesible, y a su vez se encuentra conectada a zona de seguridad</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="evacuacion_revision_4" name="evacuacion_revision_4"></textarea>
                                             </td>
-                                            <td><select id="evacuacion_4" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="evacuacion_4" class="form-control" name="evacuacion_4">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_evacuacion_4">
+                                                    id="logro_evacuacion_4" name="logro_evacuacion_4">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -3853,18 +3855,18 @@
                                                 fácilmente<br> identificables, se encuentran señalizadas para su optimo
                                                 recorrido</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="evacuacion_revision_5" name="evacuacion_revision_5"></textarea>
                                             </td>
-                                            <td><select id="evacuacion_5" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="evacuacion_5" class="form-control" name="evacuacion_5">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_evacuacion_5">
+                                                    id="logro_evacuacion_5" name="logro_evacuacion_5">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -3880,18 +3882,18 @@
                                                 encuentra bien<br> iluminado. La iluminación es uniforme y<br>
                                                 homogénea."</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="evacuacion_revision_6" name="evacuacion_revision_6"></textarea>
                                             </td>
-                                            <td><select id="evacuacion_6" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="evacuacion_6" class="form-control" name="evacuacion_6">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_evacuacion_6">
+                                                    id="logro_evacuacion_6" name="logro_evacuacion_6">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -3907,18 +3909,18 @@
                                                 orientar<br> a público con discapacidad auditiva, visual o cognitiva en
                                                 caso de<br> emergencia</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="evacuacion_revision_7" name="evacuacion_revision_7"></textarea>
                                             </td>
-                                            <td><select id="evacuacion_7" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="evacuacion_7" class="form-control" name="evacuacion_7">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_evacuacion_7">
+                                                    id="logro_evacuacion_7" name="logro_evacuacion_7">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -3961,18 +3963,18 @@
                                                 mt<br> con espacio libre para la atención de una persona en silla de
                                                 ruedas. </td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="espacios_revision_1" name="espacios_revision_1"></textarea>
                                             </td>
-                                            <td><select id="espacios_1" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="espacios_1" class="form-control" name="espacios_1">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_espacios_1">
+                                                    id="logro_espacios_1" name="logro_espacios_1">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -3989,18 +3991,18 @@
                                                 diámetro<br> de 1,50 mt y tiene espacio libre bajo cubierta de altura
                                                 0,70 mt y mínimo<br> 0,60 mt profundidad"</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="espacios_revision_2" name="espacios_revision_2"></textarea>
                                             </td>
-                                            <td><select id="espacios_2" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="espacios_2" class="form-control" name="espacios_2">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_espacios_2">
+                                                    id="logro_espacios_2" name="logro_espacios_2">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4016,18 +4018,18 @@
                                                 preferencial a personas con discapacidad y personas con<br> movilidad
                                                 reducida"</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="espacios_revision_3" name="espacios_revision_3"></textarea>
                                             </td>
-                                            <td><select id="espacios_3" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="espacios_3" class="form-control" name="espacios_3">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_espacios_3">
+                                                    id="logro_espacios_3" name="logro_espacios_3">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4044,18 +4046,18 @@
                                                 0,90 mt<br> y tiene un espacio libre bajo cubierta de altura mínima 0,70
                                                 mt<br> y profundidad mínima 0,60 mt"</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="espacios_revision_4" name="espacios_revision_4"></textarea>
                                             </td>
-                                            <td><select id="espacios_4" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="espacios_4" class="form-control" name="espacios_4">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_espacios_4">
+                                                    id="logro_espacios_4" name="logro_espacios_4">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4070,18 +4072,18 @@
                                             <td>Zona de espera: Considera espacio libre señalizado para la silla de<br>
                                                 ruedas de mínimo 0,80 mt x 1,20 mt conectado a ruta accesible</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="espacios_revision_5" name="espacios_revision_5"></textarea>
                                             </td>
-                                            <td><select id="espacios_5" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="espacios_5" class="form-control" name="espacios_5" >
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_espacios_5">
+                                                    id="logro_espacios_5" name="logro_espacios_5">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4126,18 +4128,18 @@
                                                 son<br> salvados con rampas cumpliendo las mismas exigencias
                                                 establecidas en<br> la norma."</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="interior_revision_1" name="interior_revision_1"></textarea>
                                             </td>
-                                            <td><select id="interior_1" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="interior_1" class="form-control" name="interior_1">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_interior_1">
+                                                    id="logro_interior_1" name="logro_interior_1">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4152,18 +4154,18 @@
                                             <td>Pasillo: Pasillo más angosto de ancho mayor o igual a 1,50 mt. No<br>
                                                 incluye bodegas</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" name="interior_revision_2" id="interior_revision_2"></textarea>
                                             </td>
-                                            <td><select id="interior_2" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="interior_2" class="form-control" name="interior_2">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_interior_2">
+                                                    id="logro_interior_2" name="logro_interior_2">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4179,18 +4181,18 @@
                                                 elementos<br> que interfieran su ancho mínimo de 1,50 mt como
                                                 extintores, basureros<br>, muebles o elementos ornamentales</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="interior_revision_3" name="interior_revision_3"></textarea>
                                             </td>
-                                            <td><select id="interior_3" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="interior_3" class="form-control" name="interior_3">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_interior_3">
+                                                    id="logro_interior_3" name="logro_interior_3">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4206,18 +4208,18 @@
                                                 otros<br>, ubicados en la ruta accesible están a una altura mínima de
                                                 2,10 mt</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="interior_revision_4" name="interior_revision_4"></textarea>
                                             </td>
-                                            <td><select id="interior_4" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="interior_4" class="form-control" name="interior_4">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_interior_4">
+                                                    id="logro_interior_4" name="logro_interior_4">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4232,18 +4234,18 @@
                                             <td>Iluminación: La iluminación es uniforme y homogénea en todo su<br>
                                                 desarrollo no se generan zonas oscuras o de encandilamiento</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="interior_revision_5" name="interior_revision_5"></textarea>
                                             </td>
-                                            <td><select id="interior_5" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="interior_5" class="form-control" name="interior_5">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_interior_5">
+                                                    id="logro_interior_5" name="logro_interior_5">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4282,18 +4284,18 @@
                                         <tr>
                                             <td>Conexión: La escalera se encuentra conectada a la Ruta Accesible</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="escaleras_revision_1" name="escaleras_revision_1"></textarea>
                                             </td>
-                                            <td><select id="escaleras_1" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="escaleras_1" class="form-control" name="escaleras_1">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_escaleras_1">
+                                                    id="logro_escaleras_1" name="logro_escaleras_1">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4309,18 +4311,18 @@
                                                 diferenciación<br> entre la nariz de grada (punta del peldaño) y el
                                                 resto de la huella</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="escaleras_revision_2" name="escaleras_revision_2"></textarea>
                                             </td>
-                                            <td><select id="escaleras_2" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="escaleras_2" class="form-control" name="escaleras_2">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_escaleras_2">
+                                                    id="logro_escaleras_2" name="logro_escaleras_2">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4337,18 +4339,18 @@
                                                 considera doble pasamanos central dividiendo la<br> escalera en dos
                                                 secciones paralelas)"</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="escaleras_revision_3" name="escaleras_revision_3"></textarea>
                                             </td>
-                                            <td><select id="escaleras_3" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="escaleras_3" class="form-control" name="escaleras_3">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_escaleras_3">
+                                                    id="logro_escaleras_3" name="logro_escaleras_3">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4366,18 +4368,18 @@
                                                 descanso y término"
                                             </td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="escaleras_revision_4" name="escaleras_revision_4"></textarea>
                                             </td>
-                                            <td><select id="escaleras_4" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="escaleras_4" class="form-control" name="escaleras_4">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_escaleras_4">
+                                                    id="logro_escaleras_4" name="logro_escaleras_4">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4392,18 +4394,18 @@
                                             <td>Altura peldaños: La altura de los peldaños es regular y se encuentra
                                                 en<br> un rango entre 0,15 mt y 0,18 mt</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="escaleras_revision_5" name="escaleras_revision_5"></textarea>
                                             </td>
-                                            <td><select id="escaleras_5" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="escaleras_5" class="form-control" name="escaleras_5">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_escaleras_5">
+                                                    id="logro_escaleras_5" name="logro_escaleras_5">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4419,18 +4421,18 @@
                                                 protegida para impedir el tránsito, hasta cubrir la altura de 2,10 mt
                                             </td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="escaleras_revision_6" name="escaleras_revision_6"></textarea>
                                             </td>
-                                            <td><select id="escaleras_6" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="escaleras_6" class="form-control" name="escaleras_6">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_escaleras_6">
+                                                    id="logro_escaleras_6" name="logro_escaleras_6">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4473,18 +4475,18 @@
                                             <td>Conexión: El ascensor o salva escaleras/plataforma elevadora se<br>
                                                 encuentra conectado a la Ruta Accesible</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="ascensor_revision_1" name="ascensor_revision_1"></textarea>
                                             </td>
-                                            <td><select id="ascensor_1" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="ascensor_1" class="form-control" name="ascensor_1">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_ascensor_1">
+                                                    id="logro_ascensor_1" name="logro_ascensor_1">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4499,18 +4501,18 @@
                                             <td>"Puerta: El ancho libre de paso en la <br>puerta es de mínimo 0,90 mt"
                                             </td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="ascensor_revision_2" name="ascensor_revision_2"></textarea>
                                             </td>
-                                            <td><select id="ascensor_2" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="ascensor_2" class="form-control" name="ascensor_2">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_ascensor_2">
+                                                    id="logro_ascensor_2" name="logro_ascensor_2">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4526,18 +4528,18 @@
                                                 <br>de ancho por 1,40 mt de profundidad"
                                             </td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="ascensor_revision_3" name="ascensor_revision_3"></textarea>
                                             </td>
-                                            <td><select id="ascensor_3" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="ascensor_3" class="form-control" name="ascensor_3">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_ascensor_3">
+                                                    id="logro_ascensor_3" name="logro_ascensor_3">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4552,18 +4554,18 @@
                                             <td>"Zona exterior: El espacio exterior al acceso al ascensor permite giro
                                                 en 360°<br> considerando un diámetro de 1,50 mt"</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="ascensor_revision_4" name="ascensor_revision_4"></textarea>
                                             </td>
-                                            <td><select id="ascensor_4" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="ascensor_4" class="form-control" name="ascensor_4">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_ascensor_4">
+                                                    id="logro_ascensor_4" name="logro_ascensor_4">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4578,18 +4580,18 @@
                                             <td>"Pasamanos interior: Cuenta con pasamanos <br> a ambos costados de la
                                                 cabina"</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="ascensor_revision_5" name="ascensor_revision_5"></textarea>
                                             </td>
-                                            <td><select id="ascensor_5" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="ascensor_5" class="form-control" name="ascensor_5">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_ascensor_5">
+                                                    id="logro_ascensor_5" name="logro_ascensor_5">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4604,18 +4606,18 @@
                                             <td>Información táctil: Cuenta con botonera interior y exterior, con braille
                                                 y/o<br> sobre relieve</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="ascensor_revision_6" name="ascensor_revision_6"></textarea>
                                             </td>
-                                            <td><select id="ascensor_6" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="ascensor_6" class="form-control" name="ascensor_6">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_ascensor_6">
+                                                    id="logro_ascensor_6" name="logro_ascensor_6">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4629,18 +4631,18 @@
                                         <tr>
                                             <td>Botonera interior: Se encuentra a una altura entre 1 mt y 1,4 mt</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="ascensor_revision_7" name="ascensor_revision_7"></textarea>
                                             </td>
-                                            <td><select id="ascensor_7" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="ascensor_7" class="form-control" name="ascensor_7">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_ascensor_7">
+                                                    id="logro_ascensor_7" name="logro_ascensor_7">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4654,18 +4656,18 @@
                                         <tr>
                                             <td>Botonera exterior: Se encuentra a una altura entre 1 mt y 1,4 mt</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="ascensor_revision_8" name="ascensor_revision_8"></textarea>
                                             </td>
-                                            <td><select id="ascensor_8" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="ascensor_8" class="form-control" name="ascensor_8">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_ascensor_8">
+                                                    id="logro_ascensor_8" name="logro_ascensor_8">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4680,18 +4682,18 @@
                                             <td>Información sensorial: Cuenta con dispositivos audiovisuales que
                                                 indican<br> llegada al piso</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="ascensor_revision_9" name="ascensor_revision_9"></textarea>
                                             </td>
-                                            <td><select id="ascensor_9" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="ascensor_9" class="form-control" name="ascensor_9">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_ascensor_9">
+                                                    id="logro_ascensor_9" name="logro_ascensor_9">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4708,18 +4710,18 @@
                                                 o<br> salga durante el cierre. El sensor cubre un rango entre 0,70 mt y
                                                 1,50 mt</td>
                                             <td>
-                                                <textarea></textarea>
+                                                <textarea class="form-control" id="ascensor_revision_10" name="ascensor_revision_10"></textarea>
                                             </td>
-                                            <td><select id="ascensor_10" class="form-select">
-                                                    <option selected disabled>Seleccionar Criterio</option>
+                                            <td><select id="ascensor_10" class="form-control" name="ascensor_10">
+                                                    <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
                                                     <option value="no_aplica">No Aplica</option>
                                                 </select></td>
                                             <td>
-                                                <select class="form-select"
+                                                <select class="form-control"
                                                     style="width:150px;text-align: center;visibility: hidden"
-                                                    id="logro_ascensor_10">
+                                                    id="logro_ascensor_10" name="logro_ascensor_10">
                                                     <option value="" selected disabled>Seleccionar logro
                                                     </option>
 
@@ -4826,872 +4828,920 @@
                     $(`#logro_estacionamiento_${index}`).css("visibility", "hidden");
                     $(`#logro_estacionamiento_${index}`).val("");
                 }
+
+
+                for (let index = 1; index <= 8; index++) {
+                    $(`#ingreso_${index}`).val("");
+                    $(`#ingreso_revision_${index}`).val("");
+                    $(`#logro_ingreso_${index}`).css("visibility", "hidden");
+                    $(`#logro_ingreso_${index}`).val("");
+
+                }
+                for (let index = 1; index <= 5; index++) {
+                    $(`#puerta_${index}`).val("");
+                    $(`#puerta_revision_${index}`).val("");
+                    $(`#logro_puerta_${index}`).css("visibility", "hidden");
+                    $(`#logro_puerta_${index}`).val("");
+
+                }
+
+                for (let index = 1; index <= 7; index++) {
+                    $(`#evacuacion_revision_${index}`).val("");
+                    $(`#evacuacion_${index}`).val("");
+                    $(`#logro_evacuacion_${index}`).css("visibility", "hidden");
+                    $(`#logro_evacuacion_${index}`).val("");
+
+                }
+                for (let index = 1; index <= 5; index++) {
+                    $(`#espacios_${index}`).val("");
+                    $(`#espacios_revision_${index}`).val("");
+                    $(`#logro_espacios_${index}`).css("visibility", "hidden");
+                    $(`#logro_espacios_${index}`).val("")
+                }
+                for (let index = 1; index <= 5; index++) {
+                    $(`#interior_${index}`).val("");
+                    $(`#interior_revision_${index}`).val("");
+                    $(`#logro_interior_${index}`).css("visibility", "hidden");
+                    $(`#logro_interior_${index}`).val("")
+                }
+                for (let index = 1; index <= 6; index++) {
+                    $(`#escaleras_${index}`).val("");
+                    $(`#escaleras_revision_${index}`).val("");
+                    $(`#logro_escaleras_${index}`).css("visibility", "hidden");
+                    $(`#logro_escaleras_${index}`).val("")
+                }
+                for (let index = 1; index <= 10; index++) {
+                    $(`#ascensor_${index}`).val("");
+                    $(`#ascensor_revision_${index}`).val("");
+                    $(`#logro_ascensor_${index}`).css("visibility", "hidden");
+                    $(`#logro_ascensor_${index}`).val("")
+                }
             });
 
 
             //Estacionamiento
-
-            $("#estacionamiento_1").change(function() {
-                if ($("#estacionamiento_1").val() == "cumple") {
-                    $("#logro_estacionamiento_1").css("visibility", "visible");
-                    $("#logro_estacionamiento_1").attr("disabled", false);
-                }
-                if ($("#estacionamiento_1").val() == "no_cumple") {
-                    $("#logro_estacionamiento_1").css("visibility", "visible");
-                    $("#logro_estacionamiento_1").val("0");
-                    $("#logro_estacionamiento_1").attr("disabled", true);
-
-                }
-                if ($("#estacionamiento_1").val() == "no_aplica") {
-                    $("#logro_estacionamiento_1").css("visibility", "hidden");
-                    $("#logro_estacionamiento_1").val("");
-                }
-            })
-            $("#estacionamiento_2").change(function() {
-                if ($("#estacionamiento_2").val() == "cumple") {
-                    $("#logro_estacionamiento_2").css("visibility", "visible");
-                    $("#logro_estacionamiento_2").attr("disabled", false);
-
-                }
-                if ($("#estacionamiento_2").val() == "no_cumple") {
-                    $("#logro_estacionamiento_2").css("visibility", "visible");
-                    $("#logro_estacionamiento_2").val("0");
-                    $("#logro_estacionamiento_2").attr("disabled", true);
-                }
-                if ($("#estacionamiento_2").val() == "no_aplica") {
-                    $("#logro_estacionamiento_2").css("visibility", "hidden");
-                    $("#logro_estacionamiento_2").val("");
-
-                }
-            })
-            $("#estacionamiento_3").change(function() {
-                if ($("#estacionamiento_3").val() == "cumple") {
-                    $("#logro_estacionamiento_3").css("visibility", "visible");
-                    $("#logro_estacionamiento_3").attr("disabled", false);
-
-                }
-                if ($("#estacionamiento_3").val() == "no_cumple") {
-                    $("#logro_estacionamiento_3").css("visibility", "visible");
-                    $("#logro_estacionamiento_3").val("0");
-                    $("#logro_estacionamiento_3").attr("disabled", true);
-                }
-                if ($("#estacionamiento_3").val() == "no_aplica") {
-                    $("#logro_estacionamiento_3").css("visibility", "hidden");
-                    $("#logro_estacionamiento_3").val("");
-
-                }
-            })
-            $("#estacionamiento_4").change(function() {
-                if ($("#estacionamiento_4").val() == "cumple") {
-                    $("#logro_estacionamiento_4").css("visibility", "visible");
-                    $("#logro_estacionamiento_4").attr("disabled", false);
-
-                }
-                if ($("#estacionamiento_4").val() == "no_cumple") {
-                    $("#logro_estacionamiento_4").css("visibility", "visible");
-                    $("#logro_estacionamiento_4").val("0");
-                    $("#logro_estacionamiento_4").attr("disabled", true);
-                }
-                if ($("#estacionamiento_4").val() == "no_aplica") {
-                    $("#logro_estacionamiento_4").css("visibility", "hidden");
-                    $("#logro_estacionamiento_4").val("");
-
-                }
-            })
-            $("#estacionamiento_5").change(function() {
-                if ($("#estacionamiento_5").val() == "cumple") {
-                    $("#logro_estacionamiento_5").css("visibility", "visible");
-                    $("#logro_estacionamiento_5").attr("disabled", false);
-
-                }
-                if ($("#estacionamiento_5").val() == "no_cumple") {
-                    $("#logro_estacionamiento_5").css("visibility", "visible");
-                    $("#logro_estacionamiento_5").val("0");
-                    $("#logro_estacionamiento_5").attr("disabled", true);
-                }
-                if ($("#estacionamiento_5").val() == "no_aplica") {
-                    $("#logro_estacionamiento_5").css("visibility", "hidden");
-                    $("#logro_estacionamiento_5").val("");
-
-                }
-            })
-            $("#estacionamiento_6").change(function() {
-                if ($("#estacionamiento_6").val() == "cumple") {
-                    $("#logro_estacionamiento_6").css("visibility", "visible");
-                    $("#logro_estacionamiento_6").attr("disabled", false);
-                }
-                if ($("#estacionamiento_6").val() == "no_cumple") {
-                    $("#logro_estacionamiento_6").css("visibility", "visible");
-                    $("#logro_estacionamiento_6").val("0");
-                    $("#logro_estacionamiento_6").attr("disabled", true);
-                }
-                if ($("#estacionamiento_6").val() == "no_aplica") {
-                    $("#logro_estacionamiento_6").css("visibility", "hidden");
-                    $("#logro_estacionamiento_6").val("");
-
-                }
-            })
-
-            //INGRESOOOOO
-
-            $("#ingreso_1").change(function() {
-                if ($("#ingreso_1").val() == "cumple") {
-                    $("#logro_ingreso_1").css("visibility", "visible");
-                    $("#logro_ingreso_1").attr("disabled", false);
-                }
-                if ($("#ingreso_1").val() == "no_cumple") {
-                    $("#logro_ingreso_1").css("visibility", "visible");
-                    $("#logro_ingreso_1").val("0");
-                    $("#logro_ingreso_1").attr("disabled", true);
-                }
-                if ($("#ingreso_1").val() == "no_aplica") {
-                    $("#logro_ingreso_1").css("visibility", "hidden");
-                    $("#logro_ingreso_1").val("");
-
-                }
-            })
-            $("#ingreso_2").change(function() {
-                if ($("#ingreso_2").val() == "cumple") {
-                    $("#logro_ingreso_2").css("visibility", "visible");
-                    $("#logro_ingreso_2").attr("disabled", false);
-                }
-                if ($("#ingreso_2").val() == "no_cumple") {
-                    $("#logro_ingreso_2").css("visibility", "visible");
-                    $("#logro_ingreso_2").val("0");
-                    $("#logro_ingreso_2").attr("disabled", true);
-                }
-                if ($("#ingreso_2").val() == "no_aplica") {
-                    $("#logro_ingreso_2").css("visibility", "hidden");
-                    $("#logro_ingreso_2").val("");
-
-                }
-            })
-            $("#ingreso_3").change(function() {
-                if ($("#ingreso_3").val() == "cumple") {
-                    $("#logro_ingreso_3").css("visibility", "visible");
-                    $("#logro_ingreso_3").attr("disabled", false);
-                }
-                if ($("#ingreso_3").val() == "no_cumple") {
-                    $("#logro_ingreso_3").css("visibility", "visible");
-                    $("#logro_ingreso_3").val("0");
-                    $("#logro_ingreso_3").attr("disabled", true);
-                }
-                if ($("#ingreso_3").val() == "no_aplica") {
-                    $("#logro_ingreso_3").css("visibility", "hidden");
-                    $("#logro_ingreso_3").val("");
-
-                }
-            })
-            $("#ingreso_4").change(function() {
-                if ($("#ingreso_4").val() == "cumple") {
-                    $("#logro_ingreso_4").css("visibility", "visible");
-                    $("#logro_ingreso_4").attr("disabled", false);
-                }
-                if ($("#ingreso_4").val() == "no_cumple") {
-                    $("#logro_ingreso_4").css("visibility", "visible");
-                    $("#logro_ingreso_4").val("0");
-                    $("#logro_ingreso_4").attr("disabled", true);
-                }
-                if ($("#ingreso_4").val() == "no_aplica") {
-                    $("#logro_ingreso_4").css("visibility", "hidden");
-                    $("#logro_ingreso_4").val("");
-
-                }
-            })
-            $("#ingreso_5").change(function() {
-                if ($("#ingreso_5").val() == "cumple") {
-                    $("#logro_ingreso_5").css("visibility", "visible");
-                    $("#logro_ingreso_5").attr("disabled", false);
-                }
-                if ($("#ingreso_5").val() == "no_cumple") {
-                    $("#logro_ingreso_5").css("visibility", "visible");
-                    $("#logro_ingreso_5").val("0");
-                    $("#logro_ingreso_5").attr("disabled", true);
-                }
-                if ($("#ingreso_5").val() == "no_aplica") {
-                    $("#logro_ingreso_5").css("visibility", "hidden");
-                    $("#logro_ingreso_5").val("");
-
-                }
-            })
-            $("#ingreso_6").change(function() {
-                if ($("#ingreso_6").val() == "cumple") {
-                    $("#logro_ingreso_6").css("visibility", "visible");
-                    $("#logro_ingreso_6").attr("disabled", false);
-                }
-                if ($("#ingreso_6").val() == "no_cumple") {
-                    $("#logro_ingreso_6").css("visibility", "visible");
-                    $("#logro_ingreso_6").val("0");
-                    $("#logro_ingreso_6").attr("disabled", true);
-                }
-                if ($("#ingreso_6").val() == "no_aplica") {
-                    $("#logro_ingreso_6").css("visibility", "hidden");
-                    $("#logro_ingreso_6").val("");
-
-                }
-            })
-            $("#ingreso_7").change(function() {
-                if ($("#ingreso_7").val() == "cumple") {
-                    $("#logro_ingreso_7").css("visibility", "visible");
-                    $("#logro_ingreso_7").attr("disabled", false);
-                }
-                if ($("#ingreso_7").val() == "no_cumple") {
-                    $("#logro_ingreso_7").css("visibility", "visible");
-                    $("#logro_ingreso_7").val("0");
-                    $("#logro_ingreso_7").attr("disabled", true);
-                }
-                if ($("#ingreso_7").val() == "no_aplica") {
-                    $("#logro_ingreso_7").css("visibility", "hidden");
-                    $("#logro_ingreso_7").val("");
-
-                }
-            })
-            $("#ingreso_8").change(function() {
-                if ($("#ingreso_8").val() == "cumple") {
-                    $("#logro_ingreso_8").css("visibility", "visible");
-                    $("#logro_ingreso_8").attr("disabled", false);
-                }
-                if ($("#ingreso_8").val() == "no_cumple") {
-                    $("#logro_ingreso_8").css("visibility", "visible");
-                    $("#logro_ingreso_8").val("0");
-                    $("#logro_ingreso_8").attr("disabled", true);
-                }
-                if ($("#ingreso_8").val() == "no_aplica") {
-                    $("#logro_ingreso_8").css("visibility", "hidden");
-                    $("#logro_ingreso_8").val("");
-
-                }
-            })
-
-            //PUERTA
-
-            $("#puerta_1").change(function() {
-                if ($("#puerta_1").val() == "cumple") {
-                    $("#logro_puerta_1").css("visibility", "visible");
-                    $("#logro_puerta_1").attr("disabled", false);
-                }
-                if ($("#puerta_1").val() == "no_cumple") {
-                    $("#logro_puerta_1").css("visibility", "visible");
-                    $("#logro_puerta_1").val("0");
-                    $("#logro_puerta_1").attr("disabled", true);
-                }
-                if ($("#puerta_1").val() == "no_aplica") {
-                    $("#logro_puerta_1").css("visibility", "hidden");
-                    $("#logro_puerta_1").val("");
-
-                }
-            })
-            $("#puerta_2").change(function() {
-                if ($("#puerta_2").val() == "cumple") {
-                    $("#logro_puerta_2").css("visibility", "visible");
-                    $("#logro_puerta_2").attr("disabled", false);
-                }
-                if ($("#puerta_2").val() == "no_cumple") {
-                    $("#logro_puerta_2").css("visibility", "visible");
-                    $("#logro_puerta_2").val("0");
-                    $("#logro_puerta_2").attr("disabled", true);
-                }
-                if ($("#puerta_2").val() == "no_aplica") {
-                    $("#logro_puerta_2").css("visibility", "hidden");
-                    $("#logro_puerta_2").val("");
-
-                }
-            })
-            $("#puerta_3").change(function() {
-                if ($("#puerta_3").val() == "cumple") {
-                    $("#logro_puerta_3").css("visibility", "visible");
-                    $("#logro_puerta_3").attr("disabled", false);
-                }
-                if ($("#puerta_3").val() == "no_cumple") {
-                    $("#logro_puerta_3").css("visibility", "visible");
-                    $("#logro_puerta_3").val("0");
-                    $("#logro_puerta_3").attr("disabled", true);
-                }
-                if ($("#puerta_3").val() == "no_aplica") {
-                    $("#logro_puerta_3").css("visibility", "hidden");
-                    $("#logro_puerta_3").val("");
-
-                }
-            })
-            $("#puerta_4").change(function() {
-                if ($("#puerta_4").val() == "cumple") {
-                    $("#logro_puerta_4").css("visibility", "visible");
-                    $("#logro_puerta_4").attr("disabled", false);
-                }
-                if ($("#puerta_4").val() == "no_cumple") {
-                    $("#logro_puerta_4").css("visibility", "visible");
-                    $("#logro_puerta_4").val("0");
-                    $("#logro_puerta_4").attr("disabled", true);
-                }
-                if ($("#puerta_4").val() == "no_aplica") {
-                    $("#logro_puerta_4").css("visibility", "hidden");
-                    $("#logro_puerta_4").val("");
-
-                }
-            })
-            $("#puerta_5").change(function() {
-                if ($("#puerta_5").val() == "cumple") {
-                    $("#logro_puerta_5").css("visibility", "visible");
-                    $("#logro_puerta_5").attr("disabled", false);
-                }
-                if ($("#puerta_5").val() == "no_cumple") {
-                    $("#logro_puerta_5").css("visibility", "visible");
-                    $("#logro_puerta_5").val("0");
-                    $("#logro_puerta_5").attr("disabled", true);
-                }
-                if ($("#puerta_5").val() == "no_aplica") {
-                    $("#logro_puerta_5").css("visibility", "hidden");
-                    $("#logro_puerta_5").val("");
-
-                }
-            })
-
-            //EVACUACION
-
-            $("#evacuacion_1").change(function() {
-                if ($("#evacuacion_1").val() == "cumple") {
-                    $("#logro_evacuacion_1").css("visibility", "visible");
-                    $("#logro_evacuacion_1").attr("disabled", false);
-                }
-                if ($("#evacuacion_1").val() == "no_cumple") {
-                    $("#logro_evacuacion_1").css("visibility", "visible");
-                    $("#logro_evacuacion_1").val("0");
-                    $("#logro_evacuacion_1").attr("disabled", true);
-                }
-                if ($("#evacuacion_1").val() == "no_aplica") {
-                    $("#logro_evacuacion_1").css("visibility", "hidden");
-                    $("#logro_evacuacion_1").val("");
-
-                }
-            })
-            $("#evacuacion_2").change(function() {
-                if ($("#evacuacion_2").val() == "cumple") {
-                    $("#logro_evacuacion_2").css("visibility", "visible");
-                    $("#logro_evacuacion_2").attr("disabled", false);
-                }
-                if ($("#evacuacion_2").val() == "no_cumple") {
-                    $("#logro_evacuacion_2").css("visibility", "visible");
-                    $("#logro_evacuacion_2").val("0");
-                    $("#logro_evacuacion_2").attr("disabled", true);
-                }
-                if ($("#evacuacion_2").val() == "no_aplica") {
-                    $("#logro_evacuacion_2").css("visibility", "hidden");
-                    $("#logro_evacuacion_2").val("");
-
-                }
-            })
-            $("#evacuacion_3").change(function() {
-                if ($("#evacuacion_3").val() == "cumple") {
-                    $("#logro_evacuacion_3").css("visibility", "visible");
-                    $("#logro_evacuacion_3").attr("disabled", false);
-                }
-                if ($("#evacuacion_3").val() == "no_cumple") {
-                    $("#logro_evacuacion_3").css("visibility", "visible");
-                    $("#logro_evacuacion_3").val("0");
-                    $("#logro_evacuacion_3").attr("disabled", true);
-                }
-                if ($("#evacuacion_3").val() == "no_aplica") {
-                    $("#logro_evacuacion_3").css("visibility", "hidden");
-                    $("#logro_evacuacion_3").val("");
-
-                }
-            })
-            $("#evacuacion_4").change(function() {
-                if ($("#evacuacion_4").val() == "cumple") {
-                    $("#logro_evacuacion_4").css("visibility", "visible");
-                    $("#logro_evacuacion_4").attr("disabled", false);
-                }
-                if ($("#evacuacion_4").val() == "no_cumple") {
-                    $("#logro_evacuacion_4").css("visibility", "visible");
-                    $("#logro_evacuacion_4").val("0");
-                    $("#logro_evacuacion_4").attr("disabled", true);
-                }
-                if ($("#evacuacion_4").val() == "no_aplica") {
-                    $("#logro_evacuacion_4").css("visibility", "hidden");
-                    $("#logro_evacuacion_4").val("");
-
-                }
-            })
-            $("#evacuacion_5").change(function() {
-                if ($("#evacuacion_5").val() == "cumple") {
-                    $("#logro_evacuacion_5").css("visibility", "visible");
-                    $("#logro_evacuacion_5").attr("disabled", false);
-                }
-                if ($("#evacuacion_5").val() == "no_cumple") {
-                    $("#logro_evacuacion_5").css("visibility", "visible");
-                    $("#logro_evacuacion_5").val("0");
-                    $("#logro_evacuacion_5").attr("disabled", true);
-                }
-                if ($("#evacuacion_5").val() == "no_aplica") {
-                    $("#logro_evacuacion_5").css("visibility", "hidden");
-                    $("#logro_evacuacion_5").val("");
-
-                }
-            })
-            $("#evacuacion_6").change(function() {
-                if ($("#evacuacion_6").val() == "cumple") {
-                    $("#logro_evacuacion_6").css("visibility", "visible");
-                    $("#logro_evacuacion_6").attr("disabled", false);
-                }
-                if ($("#evacuacion_6").val() == "no_cumple") {
-                    $("#logro_evacuacion_6").css("visibility", "visible");
-                    $("#logro_evacuacion_6").val("0");
-                    $("#logro_evacuacion_6").attr("disabled", true);
-                }
-                if ($("#evacuacion_6").val() == "no_aplica") {
-                    $("#logro_evacuacion_6").css("visibility", "hidden");
-                    $("#logro_evacuacion_6").val("");
-
-                }
-            })
-            $("#evacuacion_7").change(function() {
-                if ($("#evacuacion_7").val() == "cumple") {
-                    $("#logro_evacuacion_7").css("visibility", "visible");
-                    $("#logro_evacuacion_7").attr("disabled", false);
-                }
-                if ($("#evacuacion_7").val() == "no_cumple") {
-                    $("#logro_evacuacion_7").css("visibility", "visible");
-                    $("#logro_evacuacion_7").val("0");
-                    $("#logro_evacuacion_7").attr("disabled", true);
-                }
-                if ($("#evacuacion_7").val() == "no_aplica") {
-                    $("#logro_evacuacion_7").css("visibility", "hidden");
-                    $("#logro_evacuacion_7").val("");
-
-                }
-            })
-
-
-            //ESPACIOS
-
-            $("#espacios_1").change(function() {
-                if ($("#espacios_1").val() == "cumple") {
-                    $("#logro_espacios_1").css("visibility", "visible");
-                    $("#logro_espacios_1").attr("disabled", false);
-                }
-                if ($("#espacios_1").val() == "no_cumple") {
-                    $("#logro_espacios_1").css("visibility", "visible");
-                    $("#logro_espacios_1").val("0");
-                    $("#logro_espacios_1").attr("disabled", true);
-                }
-                if ($("#espacios_1").val() == "no_aplica") {
-                    $("#logro_espacios_1").css("visibility", "hidden");
-                    $("#logro_espacios_1").val("");
-
-                }
-            })
-            $("#espacios_2").change(function() {
-                if ($("#espacios_2").val() == "cumple") {
-                    $("#logro_espacios_2").css("visibility", "visible");
-                    $("#logro_espacios_2").attr("disabled", false);
-                }
-                if ($("#espacios_2").val() == "no_cumple") {
-                    $("#logro_espacios_2").css("visibility", "visible");
-                    $("#logro_espacios_2").val("0");
-                    $("#logro_espacios_2").attr("disabled", true);
-                }
-                if ($("#espacios_2").val() == "no_aplica") {
-                    $("#logro_espacios_2").css("visibility", "hidden");
-                    $("#logro_espacios_2").val("");
-
-                }
-            })
-            $("#espacios_3").change(function() {
-                if ($("#espacios_3").val() == "cumple") {
-                    $("#logro_espacios_3").css("visibility", "visible");
-                    $("#logro_espacios_3").attr("disabled", false);
-                }
-                if ($("#espacios_3").val() == "no_cumple") {
-                    $("#logro_espacios_3").css("visibility", "visible");
-                    $("#logro_espacios_3").val("0");
-                    $("#logro_espacios_3").attr("disabled", true);
-                }
-                if ($("#espacios_3").val() == "no_aplica") {
-                    $("#logro_espacios_3").css("visibility", "hidden");
-                    $("#logro_espacios_3").val("");
-
-                }
-            })
-            $("#espacios_4").change(function() {
-                if ($("#espacios_4").val() == "cumple") {
-                    $("#logro_espacios_4").css("visibility", "visible");
-                    $("#logro_espacios_4").attr("disabled", false);
-                }
-                if ($("#espacios_4").val() == "no_cumple") {
-                    $("#logro_espacios_4").css("visibility", "visible");
-                    $("#logro_espacios_4").val("0");
-                    $("#logro_espacios_4").attr("disabled", true);
-                }
-                if ($("#espacios_4").val() == "no_aplica") {
-                    $("#logro_espacios_4").css("visibility", "hidden");
-                    $("#logro_espacios_4").val("");
-
-                }
-            })
-            $("#espacios_5").change(function() {
-                if ($("#espacios_5").val() == "cumple") {
-                    $("#logro_espacios_5").css("visibility", "visible");
-                    $("#logro_espacios_5").attr("disabled", false);
-                }
-                if ($("#espacios_5").val() == "no_cumple") {
-                    $("#logro_espacios_5").css("visibility", "visible");
-                    $("#logro_espacios_5").val("0");
-                    $("#logro_espacios_5").attr("disabled", true);
-                }
-                if ($("#espacios_5").val() == "no_aplica") {
-                    $("#logro_espacios_5").css("visibility", "hidden");
-                    $("#logro_espacios_5").val("");
-
-                }
-            })
-
-
-            //INTERIOR
-
-            $("#interior_1").change(function() {
-                if ($("#interior_1").val() == "cumple") {
-                    $("#logro_interior_1").css("visibility", "visible");
-                    $("#logro_interior_1").attr("disabled", false);
-                }
-                if ($("#interior_1").val() == "no_cumple") {
-                    $("#logro_interior_1").css("visibility", "visible");
-                    $("#logro_interior_1").val("0");
-                    $("#logro_interior_1").attr("disabled", true);
-                }
-                if ($("#interior_1").val() == "no_aplica") {
-                    $("#logro_interior_1").css("visibility", "hidden");
-                    $("#logro_interior_1").val("");
-
-                }
-            })
-            $("#interior_2").change(function() {
-                if ($("#interior_2").val() == "cumple") {
-                    $("#logro_interior_2").css("visibility", "visible");
-                    $("#logro_interior_2").attr("disabled", false);
-                }
-                if ($("#interior_2").val() == "no_cumple") {
-                    $("#logro_interior_2").css("visibility", "visible");
-                    $("#logro_interior_2").val("0");
-                    $("#logro_interior_2").attr("disabled", true);
-                }
-                if ($("#interior_2").val() == "no_aplica") {
-                    $("#logro_interior_2").css("visibility", "hidden");
-                    $("#logro_interior_2").val("");
-
-                }
-            })
-            $("#interior_3").change(function() {
-                if ($("#interior_3").val() == "cumple") {
-                    $("#logro_interior_3").css("visibility", "visible");
-                    $("#logro_interior_3").attr("disabled", false);
-                }
-                if ($("#interior_3").val() == "no_cumple") {
-                    $("#logro_interior_3").css("visibility", "visible");
-                    $("#logro_interior_3").val("0");
-                    $("#logro_interior_3").attr("disabled", true);
-                }
-                if ($("#interior_3").val() == "no_aplica") {
-                    $("#logro_interior_3").css("visibility", "hidden");
-                    $("#logro_interior_3").val("");
-
-                }
-            })
-            $("#interior_4").change(function() {
-                if ($("#interior_4").val() == "cumple") {
-                    $("#logro_interior_4").css("visibility", "visible");
-                    $("#logro_interior_4").attr("disabled", false);
-                }
-                if ($("#interior_4").val() == "no_cumple") {
-                    $("#logro_interior_4").css("visibility", "visible");
-                    $("#logro_interior_4").val("0");
-                    $("#logro_interior_4").attr("disabled", true);
-                }
-                if ($("#interior_4").val() == "no_aplica") {
-                    $("#logro_interior_4").css("visibility", "hidden");
-                    $("#logro_interior_4").val("");
-
-                }
-            })
-            $("#interior_5").change(function() {
-                if ($("#interior_5").val() == "cumple") {
-                    $("#logro_interior_5").css("visibility", "visible");
-                    $("#logro_interior_5").attr("disabled", false);
-                }
-                if ($("#interior_5").val() == "no_cumple") {
-                    $("#logro_interior_5").css("visibility", "visible");
-                    $("#logro_interior_5").val("0");
-                    $("#logro_interior_5").attr("disabled", true);
-                }
-                if ($("#interior_5").val() == "no_aplica") {
-                    $("#logro_interior_5").css("visibility", "hidden");
-                    $("#logro_interior_5").val("");
-
-                }
-            })
-
-            //ESCALERA
-
-            $("#escalera_1").change(function() {
-                if ($("#escalera_1").val() == "cumple") {
-                    $("#logro_escalera_1").css("visibility", "visible");
-                    $("#logro_escalera_1").attr("disabled", false);
-                }
-                if ($("#escalera_1").val() == "no_cumple") {
-                    $("#logro_escalera_1").css("visibility", "visible");
-                    $("#logro_escalera_1").val("0");
-                    $("#logro_escalera_1").attr("disabled", true);
-                }
-                if ($("#escalera_1").val() == "no_aplica") {
-                    $("#logro_escalera_1").css("visibility", "hidden");
-                    $("#logro_escalera_1").val("");
-
-                }
-            })
-            $("#escalera_2").change(function() {
-                if ($("#escalera_2").val() == "cumple") {
-                    $("#logro_escalera_2").css("visibility", "visible");
-                    $("#logro_escalera_2").attr("disabled", false);
-                }
-                if ($("#escalera_2").val() == "no_cumple") {
-                    $("#logro_escalera_2").css("visibility", "visible");
-                    $("#logro_escalera_2").val("0");
-                    $("#logro_escalera_2").attr("disabled", true);
-                }
-                if ($("#escalera_2").val() == "no_aplica") {
-                    $("#logro_escalera_2").css("visibility", "hidden");
-                    $("#logro_escalera_2").val("");
-
-                }
-            })
-            $("#escalera_3").change(function() {
-                if ($("#escalera_3").val() == "cumple") {
-                    $("#logro_escalera_3").css("visibility", "visible");
-                    $("#logro_escalera_3").attr("disabled", false);
-                }
-                if ($("#escalera_3").val() == "no_cumple") {
-                    $("#logro_escalera_3").css("visibility", "visible");
-                    $("#logro_escalera_3").val("0");
-                    $("#logro_escalera_3").attr("disabled", true);
-                }
-                if ($("#escalera_3").val() == "no_aplica") {
-                    $("#logro_escalera_3").css("visibility", "hidden");
-                    $("#logro_escalera_3").val("");
-
-                }
-            })
-            $("#escalera_4").change(function() {
-                if ($("#escalera_4").val() == "cumple") {
-                    $("#logro_escalera_4").css("visibility", "visible");
-                    $("#logro_escalera_4").attr("disabled", false);
-                }
-                if ($("#escalera_4").val() == "no_cumple") {
-                    $("#logro_escalera_4").css("visibility", "visible");
-                    $("#logro_escalera_4").val("0");
-                    $("#logro_escalera_4").attr("disabled", true);
-                }
-                if ($("#escalera_4").val() == "no_aplica") {
-                    $("#logro_escalera_4").css("visibility", "hidden");
-                    $("#logro_escalera_4").val("");
-
-                }
-            })
-            $("#escalera_5").change(function() {
-                if ($("#escalera_5").val() == "cumple") {
-                    $("#logro_escalera_5").css("visibility", "visible");
-                    $("#logro_escalera_5").attr("disabled", false);
-                }
-                if ($("#escalera_5").val() == "no_cumple") {
-                    $("#logro_escalera_5").css("visibility", "visible");
-                    $("#logro_escalera_5").val("0");
-                    $("#logro_escalera_5").attr("disabled", true);
-                }
-                if ($("#escalera_5").val() == "no_aplica") {
-                    $("#logro_escalera_5").css("visibility", "hidden");
-                    $("#logro_escalera_5").val("");
-
-                }
-            })
-            $("#escalera_6").change(function() {
-                if ($("#escalera_6").val() == "cumple") {
-                    $("#logro_escalera_6").css("visibility", "visible");
-                    $("#logro_escalera_6").attr("disabled", false);
-                }
-                if ($("#escalera_6").val() == "no_cumple") {
-                    $("#logro_escalera_6").css("visibility", "visible");
-                    $("#logro_escalera_6").val("0");
-                    $("#logro_escalera_6").attr("disabled", true);
-                }
-                if ($("#escalera_6").val() == "no_aplica") {
-                    $("#logro_escalera_6").css("visibility", "hidden");
-                    $("#logro_escalera_6").val("");
-
-                }
-            })
-
-            //ASCENSOR
-
-            $("#ascensor_1").change(function() {
-                if ($("#ascensor_1").val() == "cumple") {
-                    $("#logro_ascensor_1").css("visibility", "visible");
-                    $("#logro_ascensor_1").attr("disabled", false);
-                }
-                if ($("#ascensor_1").val() == "no_cumple") {
-                    $("#logro_ascensor_1").css("visibility", "visible");
-                    $("#logro_ascensor_1").val("0");
-                    $("#logro_ascensor_1").attr("disabled", true);
-                }
-                if ($("#ascensor_1").val() == "no_aplica") {
-                    $("#logro_ascensor_1").css("visibility", "hidden");
-                    $("#logro_ascensor_1").val("");
-
-                }
-            })
-            $("#ascensor_2").change(function() {
-                if ($("#ascensor_2").val() == "cumple") {
-                    $("#logro_ascensor_2").css("visibility", "visible");
-                    $("#logro_ascensor_2").attr("disabled", false);
-                }
-                if ($("#ascensor_2").val() == "no_cumple") {
-                    $("#logro_ascensor_2").css("visibility", "visible");
-                    $("#logro_ascensor_2").val("0");
-                    $("#logro_ascensor_2").attr("disabled", true);
-                }
-                if ($("#ascensor_2").val() == "no_aplica") {
-                    $("#logro_ascensor_2").css("visibility", "hidden");
-                    $("#logro_ascensor_2").val("");
-
-                }
-            })
-            $("#ascensor_3").change(function() {
-                if ($("#ascensor_3").val() == "cumple") {
-                    $("#logro_ascensor_3").css("visibility", "visible");
-                    $("#logro_ascensor_3").attr("disabled", false);
-                }
-                if ($("#ascensor_3").val() == "no_cumple") {
-                    $("#logro_ascensor_3").css("visibility", "visible");
-                    $("#logro_ascensor_3").val("0");
-                    $("#logro_ascensor_3").attr("disabled", true);
-                }
-                if ($("#ascensor_3").val() == "no_aplica") {
-                    $("#logro_ascensor_3").css("visibility", "hidden");
-                    $("#logro_ascensor_3").val("");
-
-                }
-            })
-            $("#ascensor_4").change(function() {
-                if ($("#ascensor_4").val() == "cumple") {
-                    $("#logro_ascensor_4").css("visibility", "visible");
-                    $("#logro_ascensor_4").attr("disabled", false);
-                }
-                if ($("#ascensor_4").val() == "no_cumple") {
-                    $("#logro_ascensor_4").css("visibility", "visible");
-                    $("#logro_ascensor_4").val("0");
-                    $("#logro_ascensor_4").attr("disabled", true);
-                }
-                if ($("#ascensor_4").val() == "no_aplica") {
-                    $("#logro_ascensor_4").css("visibility", "hidden");
-                    $("#logro_ascensor_4").val("");
-
-                }
-            })
-            $("#ascensor_5").change(function() {
-                if ($("#ascensor_5").val() == "cumple") {
-                    $("#logro_ascensor_5").css("visibility", "visible");
-                    $("#logro_ascensor_5").attr("disabled", false);
-                }
-                if ($("#ascensor_5").val() == "no_cumple") {
-                    $("#logro_ascensor_5").css("visibility", "visible");
-                    $("#logro_ascensor_5").val("0");
-                    $("#logro_ascensor_5").attr("disabled", true);
-                }
-                if ($("#ascensor_5").val() == "no_aplica") {
-                    $("#logro_ascensor_5").css("visibility", "hidden");
-                    $("#logro_ascensor_5").val("");
-
-                }
-            })
-            $("#ascensor_6").change(function() {
-                if ($("#ascensor_6").val() == "cumple") {
-                    $("#logro_ascensor_6").css("visibility", "visible");
-                    $("#logro_ascensor_6").attr("disabled", false);
-                }
-                if ($("#ascensor_6").val() == "no_cumple") {
-                    $("#logro_ascensor_6").css("visibility", "visible");
-                    $("#logro_ascensor_6").val("0");
-                    $("#logro_ascensor_6").attr("disabled", true);
-                }
-                if ($("#ascensor_6").val() == "no_aplica") {
-                    $("#logro_ascensor_6").css("visibility", "hidden");
-                    $("#logro_ascensor_6").val("");
-
-                }
-            })
-            $("#ascensor_7").change(function() {
-                if ($("#ascensor_7").val() == "cumple") {
-                    $("#logro_ascensor_7").css("visibility", "visible");
-                    $("#logro_ascensor_7").attr("disabled", false);
-                }
-                if ($("#ascensor_7").val() == "no_cumple") {
-                    $("#logro_ascensor_7").css("visibility", "visible");
-                    $("#logro_ascensor_7").val("0");
-                    $("#logro_ascensor_7").attr("disabled", true);
-                }
-                if ($("#ascensor_7").val() == "no_aplica") {
-                    $("#logro_ascensor_7").css("visibility", "hidden");
-                    $("#logro_ascensor_7").val("");
-
-                }
-            })
-            $("#ascensor_8").change(function() {
-                if ($("#ascensor_8").val() == "cumple") {
-                    $("#logro_ascensor_8").css("visibility", "visible");
-                    $("#logro_ascensor_8").attr("disabled", false);
-                }
-                if ($("#ascensor_8").val() == "no_cumple") {
-                    $("#logro_ascensor_8").css("visibility", "visible");
-                    $("#logro_ascensor_8").val("0");
-                    $("#logro_ascensor_8").attr("disabled", true);
-                }
-                if ($("#ascensor_8").val() == "no_aplica") {
-                    $("#logro_ascensor_8").css("visibility", "hidden");
-                    $("#logro_ascensor_8").val("");
-
-                }
-            })
-            $("#ascensor_9").change(function() {
-                if ($("#ascensor_9").val() == "cumple") {
-                    $("#logro_ascensor_9").css("visibility", "visible");
-                    $("#logro_ascensor_9").attr("disabled", false);
-                }
-                if ($("#ascensor_9").val() == "no_cumple") {
-                    $("#logro_ascensor_9").css("visibility", "visible");
-                    $("#logro_ascensor_9").val("0");
-                    $("#logro_ascensor_9").attr("disabled", true);
-                }
-                if ($("#ascensor_9").val() == "no_aplica") {
-                    $("#logro_ascensor_9").css("visibility", "hidden");
-                    $("#logro_ascensor_9").val("");
-
-                }
-            })
-            $("#ascensor_10").change(function() {
-                if ($("#ascensor_10").val() == "cumple") {
-                    $("#logro_ascensor_10").css("visibility", "visible");
-                    $("#logro_ascensor_10").attr("disabled", false);
-                }
-                if ($("#ascensor_10").val() == "no_cumple") {
-                    $("#logro_ascensor_10").css("visibility", "visible");
-                    $("#logro_ascensor_10").val("0");
-                    $("#logro_ascensor_10").attr("disabled", true);
-                }
-                if ($("#ascensor_10").val() == "no_aplica") {
-                    $("#logro_ascensor_10").css("visibility", "hidden");
-                    $("#logro_ascensor_10").val("");
-
-                }
-            })
-
-
+            if(true){
+                $("#estacionamiento_1").change(function() {
+                    if ($("#estacionamiento_1").val() == "cumple") {
+                        $("#logro_estacionamiento_1").css("visibility", "visible");
+                        $("#logro_estacionamiento_1").attr("disabled", false);
+                    }
+                    if ($("#estacionamiento_1").val() == "no_cumple") {
+                        $("#logro_estacionamiento_1").css("visibility", "visible");
+                        $("#logro_estacionamiento_1").val("0");
+                        $("#logro_estacionamiento_1").attr("disabled", true);
+
+                    }
+                    if ($("#estacionamiento_1").val() == "no_aplica") {
+                        $("#logro_estacionamiento_1").css("visibility", "hidden");
+                        $("#logro_estacionamiento_1").val("");
+                    }
+                })
+                $("#estacionamiento_2").change(function() {
+                    if ($("#estacionamiento_2").val() == "cumple") {
+                        $("#logro_estacionamiento_2").css("visibility", "visible");
+                        $("#logro_estacionamiento_2").attr("disabled", false);
+
+                    }
+                    if ($("#estacionamiento_2").val() == "no_cumple") {
+                        $("#logro_estacionamiento_2").css("visibility", "visible");
+                        $("#logro_estacionamiento_2").val("0");
+                        $("#logro_estacionamiento_2").attr("disabled", true);
+                    }
+                    if ($("#estacionamiento_2").val() == "no_aplica") {
+                        $("#logro_estacionamiento_2").css("visibility", "hidden");
+                        $("#logro_estacionamiento_2").val("");
+
+                    }
+                })
+                $("#estacionamiento_3").change(function() {
+                    if ($("#estacionamiento_3").val() == "cumple") {
+                        $("#logro_estacionamiento_3").css("visibility", "visible");
+                        $("#logro_estacionamiento_3").attr("disabled", false);
+
+                    }
+                    if ($("#estacionamiento_3").val() == "no_cumple") {
+                        $("#logro_estacionamiento_3").css("visibility", "visible");
+                        $("#logro_estacionamiento_3").val("0");
+                        $("#logro_estacionamiento_3").attr("disabled", true);
+                    }
+                    if ($("#estacionamiento_3").val() == "no_aplica") {
+                        $("#logro_estacionamiento_3").css("visibility", "hidden");
+                        $("#logro_estacionamiento_3").val("");
+
+                    }
+                })
+                $("#estacionamiento_4").change(function() {
+                    if ($("#estacionamiento_4").val() == "cumple") {
+                        $("#logro_estacionamiento_4").css("visibility", "visible");
+                        $("#logro_estacionamiento_4").attr("disabled", false);
+
+                    }
+                    if ($("#estacionamiento_4").val() == "no_cumple") {
+                        $("#logro_estacionamiento_4").css("visibility", "visible");
+                        $("#logro_estacionamiento_4").val("0");
+                        $("#logro_estacionamiento_4").attr("disabled", true);
+                    }
+                    if ($("#estacionamiento_4").val() == "no_aplica") {
+                        $("#logro_estacionamiento_4").css("visibility", "hidden");
+                        $("#logro_estacionamiento_4").val("");
+
+                    }
+                })
+                $("#estacionamiento_5").change(function() {
+                    if ($("#estacionamiento_5").val() == "cumple") {
+                        $("#logro_estacionamiento_5").css("visibility", "visible");
+                        $("#logro_estacionamiento_5").attr("disabled", false);
+
+                    }
+                    if ($("#estacionamiento_5").val() == "no_cumple") {
+                        $("#logro_estacionamiento_5").css("visibility", "visible");
+                        $("#logro_estacionamiento_5").val("0");
+                        $("#logro_estacionamiento_5").attr("disabled", true);
+                    }
+                    if ($("#estacionamiento_5").val() == "no_aplica") {
+                        $("#logro_estacionamiento_5").css("visibility", "hidden");
+                        $("#logro_estacionamiento_5").val("");
+
+                    }
+                })
+                $("#estacionamiento_6").change(function() {
+                    if ($("#estacionamiento_6").val() == "cumple") {
+                        $("#logro_estacionamiento_6").css("visibility", "visible");
+                        $("#logro_estacionamiento_6").attr("disabled", false);
+                    }
+                    if ($("#estacionamiento_6").val() == "no_cumple") {
+                        $("#logro_estacionamiento_6").css("visibility", "visible");
+                        $("#logro_estacionamiento_6").val("0");
+                        $("#logro_estacionamiento_6").attr("disabled", true);
+                    }
+                    if ($("#estacionamiento_6").val() == "no_aplica") {
+                        $("#logro_estacionamiento_6").css("visibility", "hidden");
+                        $("#logro_estacionamiento_6").val("");
+
+                    }
+                })
+
+                //INGRESOOOOO
+
+                $("#ingreso_1").change(function() {
+                    if ($("#ingreso_1").val() == "cumple") {
+                        $("#logro_ingreso_1").css("visibility", "visible");
+                        $("#logro_ingreso_1").attr("disabled", false);
+                    }
+                    if ($("#ingreso_1").val() == "no_cumple") {
+                        $("#logro_ingreso_1").css("visibility", "visible");
+                        $("#logro_ingreso_1").val("0");
+                        $("#logro_ingreso_1").attr("disabled", true);
+                    }
+                    if ($("#ingreso_1").val() == "no_aplica") {
+                        $("#logro_ingreso_1").css("visibility", "hidden");
+                        $("#logro_ingreso_1").val("");
+
+                    }
+                })
+                $("#ingreso_2").change(function() {
+                    if ($("#ingreso_2").val() == "cumple") {
+                        $("#logro_ingreso_2").css("visibility", "visible");
+                        $("#logro_ingreso_2").attr("disabled", false);
+                    }
+                    if ($("#ingreso_2").val() == "no_cumple") {
+                        $("#logro_ingreso_2").css("visibility", "visible");
+                        $("#logro_ingreso_2").val("0");
+                        $("#logro_ingreso_2").attr("disabled", true);
+                    }
+                    if ($("#ingreso_2").val() == "no_aplica") {
+                        $("#logro_ingreso_2").css("visibility", "hidden");
+                        $("#logro_ingreso_2").val("");
+
+                    }
+                })
+                $("#ingreso_3").change(function() {
+                    if ($("#ingreso_3").val() == "cumple") {
+                        $("#logro_ingreso_3").css("visibility", "visible");
+                        $("#logro_ingreso_3").attr("disabled", false);
+                    }
+                    if ($("#ingreso_3").val() == "no_cumple") {
+                        $("#logro_ingreso_3").css("visibility", "visible");
+                        $("#logro_ingreso_3").val("0");
+                        $("#logro_ingreso_3").attr("disabled", true);
+                    }
+                    if ($("#ingreso_3").val() == "no_aplica") {
+                        $("#logro_ingreso_3").css("visibility", "hidden");
+                        $("#logro_ingreso_3").val("");
+
+                    }
+                })
+                $("#ingreso_4").change(function() {
+                    if ($("#ingreso_4").val() == "cumple") {
+                        $("#logro_ingreso_4").css("visibility", "visible");
+                        $("#logro_ingreso_4").attr("disabled", false);
+                    }
+                    if ($("#ingreso_4").val() == "no_cumple") {
+                        $("#logro_ingreso_4").css("visibility", "visible");
+                        $("#logro_ingreso_4").val("0");
+                        $("#logro_ingreso_4").attr("disabled", true);
+                    }
+                    if ($("#ingreso_4").val() == "no_aplica") {
+                        $("#logro_ingreso_4").css("visibility", "hidden");
+                        $("#logro_ingreso_4").val("");
+
+                    }
+                })
+                $("#ingreso_5").change(function() {
+                    if ($("#ingreso_5").val() == "cumple") {
+                        $("#logro_ingreso_5").css("visibility", "visible");
+                        $("#logro_ingreso_5").attr("disabled", false);
+                    }
+                    if ($("#ingreso_5").val() == "no_cumple") {
+                        $("#logro_ingreso_5").css("visibility", "visible");
+                        $("#logro_ingreso_5").val("0");
+                        $("#logro_ingreso_5").attr("disabled", true);
+                    }
+                    if ($("#ingreso_5").val() == "no_aplica") {
+                        $("#logro_ingreso_5").css("visibility", "hidden");
+                        $("#logro_ingreso_5").val("");
+
+                    }
+                })
+                $("#ingreso_6").change(function() {
+                    if ($("#ingreso_6").val() == "cumple") {
+                        $("#logro_ingreso_6").css("visibility", "visible");
+                        $("#logro_ingreso_6").attr("disabled", false);
+                    }
+                    if ($("#ingreso_6").val() == "no_cumple") {
+                        $("#logro_ingreso_6").css("visibility", "visible");
+                        $("#logro_ingreso_6").val("0");
+                        $("#logro_ingreso_6").attr("disabled", true);
+                    }
+                    if ($("#ingreso_6").val() == "no_aplica") {
+                        $("#logro_ingreso_6").css("visibility", "hidden");
+                        $("#logro_ingreso_6").val("");
+
+                    }
+                })
+                $("#ingreso_7").change(function() {
+                    if ($("#ingreso_7").val() == "cumple") {
+                        $("#logro_ingreso_7").css("visibility", "visible");
+                        $("#logro_ingreso_7").attr("disabled", false);
+                    }
+                    if ($("#ingreso_7").val() == "no_cumple") {
+                        $("#logro_ingreso_7").css("visibility", "visible");
+                        $("#logro_ingreso_7").val("0");
+                        $("#logro_ingreso_7").attr("disabled", true);
+                    }
+                    if ($("#ingreso_7").val() == "no_aplica") {
+                        $("#logro_ingreso_7").css("visibility", "hidden");
+                        $("#logro_ingreso_7").val("");
+
+                    }
+                })
+                $("#ingreso_8").change(function() {
+                    if ($("#ingreso_8").val() == "cumple") {
+                        $("#logro_ingreso_8").css("visibility", "visible");
+                        $("#logro_ingreso_8").attr("disabled", false);
+                    }
+                    if ($("#ingreso_8").val() == "no_cumple") {
+                        $("#logro_ingreso_8").css("visibility", "visible");
+                        $("#logro_ingreso_8").val("0");
+                        $("#logro_ingreso_8").attr("disabled", true);
+                    }
+                    if ($("#ingreso_8").val() == "no_aplica") {
+                        $("#logro_ingreso_8").css("visibility", "hidden");
+                        $("#logro_ingreso_8").val("");
+
+                    }
+                })
+
+                //PUERTA
+
+                $("#puerta_1").change(function() {
+                    if ($("#puerta_1").val() == "cumple") {
+                        $("#logro_puerta_1").css("visibility", "visible");
+                        $("#logro_puerta_1").attr("disabled", false);
+                    }
+                    if ($("#puerta_1").val() == "no_cumple") {
+                        $("#logro_puerta_1").css("visibility", "visible");
+                        $("#logro_puerta_1").val("0");
+                        $("#logro_puerta_1").attr("disabled", true);
+                    }
+                    if ($("#puerta_1").val() == "no_aplica") {
+                        $("#logro_puerta_1").css("visibility", "hidden");
+                        $("#logro_puerta_1").val("");
+
+                    }
+                })
+                $("#puerta_2").change(function() {
+                    if ($("#puerta_2").val() == "cumple") {
+                        $("#logro_puerta_2").css("visibility", "visible");
+                        $("#logro_puerta_2").attr("disabled", false);
+                    }
+                    if ($("#puerta_2").val() == "no_cumple") {
+                        $("#logro_puerta_2").css("visibility", "visible");
+                        $("#logro_puerta_2").val("0");
+                        $("#logro_puerta_2").attr("disabled", true);
+                    }
+                    if ($("#puerta_2").val() == "no_aplica") {
+                        $("#logro_puerta_2").css("visibility", "hidden");
+                        $("#logro_puerta_2").val("");
+
+                    }
+                })
+                $("#puerta_3").change(function() {
+                    if ($("#puerta_3").val() == "cumple") {
+                        $("#logro_puerta_3").css("visibility", "visible");
+                        $("#logro_puerta_3").attr("disabled", false);
+                    }
+                    if ($("#puerta_3").val() == "no_cumple") {
+                        $("#logro_puerta_3").css("visibility", "visible");
+                        $("#logro_puerta_3").val("0");
+                        $("#logro_puerta_3").attr("disabled", true);
+                    }
+                    if ($("#puerta_3").val() == "no_aplica") {
+                        $("#logro_puerta_3").css("visibility", "hidden");
+                        $("#logro_puerta_3").val("");
+
+                    }
+                })
+                $("#puerta_4").change(function() {
+                    if ($("#puerta_4").val() == "cumple") {
+                        $("#logro_puerta_4").css("visibility", "visible");
+                        $("#logro_puerta_4").attr("disabled", false);
+                    }
+                    if ($("#puerta_4").val() == "no_cumple") {
+                        $("#logro_puerta_4").css("visibility", "visible");
+                        $("#logro_puerta_4").val("0");
+                        $("#logro_puerta_4").attr("disabled", true);
+                    }
+                    if ($("#puerta_4").val() == "no_aplica") {
+                        $("#logro_puerta_4").css("visibility", "hidden");
+                        $("#logro_puerta_4").val("");
+
+                    }
+                })
+                $("#puerta_5").change(function() {
+                    if ($("#puerta_5").val() == "cumple") {
+                        $("#logro_puerta_5").css("visibility", "visible");
+                        $("#logro_puerta_5").attr("disabled", false);
+                    }
+                    if ($("#puerta_5").val() == "no_cumple") {
+                        $("#logro_puerta_5").css("visibility", "visible");
+                        $("#logro_puerta_5").val("0");
+                        $("#logro_puerta_5").attr("disabled", true);
+                    }
+                    if ($("#puerta_5").val() == "no_aplica") {
+                        $("#logro_puerta_5").css("visibility", "hidden");
+                        $("#logro_puerta_5").val("");
+
+                    }
+                })
+
+                //EVACUACION
+
+                $("#evacuacion_1").change(function() {
+                    if ($("#evacuacion_1").val() == "cumple") {
+                        $("#logro_evacuacion_1").css("visibility", "visible");
+                        $("#logro_evacuacion_1").attr("disabled", false);
+                    }
+                    if ($("#evacuacion_1").val() == "no_cumple") {
+                        $("#logro_evacuacion_1").css("visibility", "visible");
+                        $("#logro_evacuacion_1").val("0");
+                        $("#logro_evacuacion_1").attr("disabled", true);
+                    }
+                    if ($("#evacuacion_1").val() == "no_aplica") {
+                        $("#logro_evacuacion_1").css("visibility", "hidden");
+                        $("#logro_evacuacion_1").val("");
+
+                    }
+                })
+                $("#evacuacion_2").change(function() {
+                    if ($("#evacuacion_2").val() == "cumple") {
+                        $("#logro_evacuacion_2").css("visibility", "visible");
+                        $("#logro_evacuacion_2").attr("disabled", false);
+                    }
+                    if ($("#evacuacion_2").val() == "no_cumple") {
+                        $("#logro_evacuacion_2").css("visibility", "visible");
+                        $("#logro_evacuacion_2").val("0");
+                        $("#logro_evacuacion_2").attr("disabled", true);
+                    }
+                    if ($("#evacuacion_2").val() == "no_aplica") {
+                        $("#logro_evacuacion_2").css("visibility", "hidden");
+                        $("#logro_evacuacion_2").val("");
+
+                    }
+                })
+                $("#evacuacion_3").change(function() {
+                    if ($("#evacuacion_3").val() == "cumple") {
+                        $("#logro_evacuacion_3").css("visibility", "visible");
+                        $("#logro_evacuacion_3").attr("disabled", false);
+                    }
+                    if ($("#evacuacion_3").val() == "no_cumple") {
+                        $("#logro_evacuacion_3").css("visibility", "visible");
+                        $("#logro_evacuacion_3").val("0");
+                        $("#logro_evacuacion_3").attr("disabled", true);
+                    }
+                    if ($("#evacuacion_3").val() == "no_aplica") {
+                        $("#logro_evacuacion_3").css("visibility", "hidden");
+                        $("#logro_evacuacion_3").val("");
+
+                    }
+                })
+                $("#evacuacion_4").change(function() {
+                    if ($("#evacuacion_4").val() == "cumple") {
+                        $("#logro_evacuacion_4").css("visibility", "visible");
+                        $("#logro_evacuacion_4").attr("disabled", false);
+                    }
+                    if ($("#evacuacion_4").val() == "no_cumple") {
+                        $("#logro_evacuacion_4").css("visibility", "visible");
+                        $("#logro_evacuacion_4").val("0");
+                        $("#logro_evacuacion_4").attr("disabled", true);
+                    }
+                    if ($("#evacuacion_4").val() == "no_aplica") {
+                        $("#logro_evacuacion_4").css("visibility", "hidden");
+                        $("#logro_evacuacion_4").val("");
+
+                    }
+                })
+                $("#evacuacion_5").change(function() {
+                    if ($("#evacuacion_5").val() == "cumple") {
+                        $("#logro_evacuacion_5").css("visibility", "visible");
+                        $("#logro_evacuacion_5").attr("disabled", false);
+                    }
+                    if ($("#evacuacion_5").val() == "no_cumple") {
+                        $("#logro_evacuacion_5").css("visibility", "visible");
+                        $("#logro_evacuacion_5").val("0");
+                        $("#logro_evacuacion_5").attr("disabled", true);
+                    }
+                    if ($("#evacuacion_5").val() == "no_aplica") {
+                        $("#logro_evacuacion_5").css("visibility", "hidden");
+                        $("#logro_evacuacion_5").val("");
+
+                    }
+                })
+                $("#evacuacion_6").change(function() {
+                    if ($("#evacuacion_6").val() == "cumple") {
+                        $("#logro_evacuacion_6").css("visibility", "visible");
+                        $("#logro_evacuacion_6").attr("disabled", false);
+                    }
+                    if ($("#evacuacion_6").val() == "no_cumple") {
+                        $("#logro_evacuacion_6").css("visibility", "visible");
+                        $("#logro_evacuacion_6").val("0");
+                        $("#logro_evacuacion_6").attr("disabled", true);
+                    }
+                    if ($("#evacuacion_6").val() == "no_aplica") {
+                        $("#logro_evacuacion_6").css("visibility", "hidden");
+                        $("#logro_evacuacion_6").val("");
+
+                    }
+                })
+                $("#evacuacion_7").change(function() {
+                    if ($("#evacuacion_7").val() == "cumple") {
+                        $("#logro_evacuacion_7").css("visibility", "visible");
+                        $("#logro_evacuacion_7").attr("disabled", false);
+                    }
+                    if ($("#evacuacion_7").val() == "no_cumple") {
+                        $("#logro_evacuacion_7").css("visibility", "visible");
+                        $("#logro_evacuacion_7").val("0");
+                        $("#logro_evacuacion_7").attr("disabled", true);
+                    }
+                    if ($("#evacuacion_7").val() == "no_aplica") {
+                        $("#logro_evacuacion_7").css("visibility", "hidden");
+                        $("#logro_evacuacion_7").val("");
+
+                    }
+                })
+
+
+                //ESPACIOS
+
+                $("#espacios_1").change(function() {
+                    if ($("#espacios_1").val() == "cumple") {
+                        $("#logro_espacios_1").css("visibility", "visible");
+                        $("#logro_espacios_1").attr("disabled", false);
+                    }
+                    if ($("#espacios_1").val() == "no_cumple") {
+                        $("#logro_espacios_1").css("visibility", "visible");
+                        $("#logro_espacios_1").val("0");
+                        $("#logro_espacios_1").attr("disabled", true);
+                    }
+                    if ($("#espacios_1").val() == "no_aplica") {
+                        $("#logro_espacios_1").css("visibility", "hidden");
+                        $("#logro_espacios_1").val("");
+
+                    }
+                })
+                $("#espacios_2").change(function() {
+                    if ($("#espacios_2").val() == "cumple") {
+                        $("#logro_espacios_2").css("visibility", "visible");
+                        $("#logro_espacios_2").attr("disabled", false);
+                    }
+                    if ($("#espacios_2").val() == "no_cumple") {
+                        $("#logro_espacios_2").css("visibility", "visible");
+                        $("#logro_espacios_2").val("0");
+                        $("#logro_espacios_2").attr("disabled", true);
+                    }
+                    if ($("#espacios_2").val() == "no_aplica") {
+                        $("#logro_espacios_2").css("visibility", "hidden");
+                        $("#logro_espacios_2").val("");
+
+                    }
+                })
+                $("#espacios_3").change(function() {
+                    if ($("#espacios_3").val() == "cumple") {
+                        $("#logro_espacios_3").css("visibility", "visible");
+                        $("#logro_espacios_3").attr("disabled", false);
+                    }
+                    if ($("#espacios_3").val() == "no_cumple") {
+                        $("#logro_espacios_3").css("visibility", "visible");
+                        $("#logro_espacios_3").val("0");
+                        $("#logro_espacios_3").attr("disabled", true);
+                    }
+                    if ($("#espacios_3").val() == "no_aplica") {
+                        $("#logro_espacios_3").css("visibility", "hidden");
+                        $("#logro_espacios_3").val("");
+
+                    }
+                })
+                $("#espacios_4").change(function() {
+                    if ($("#espacios_4").val() == "cumple") {
+                        $("#logro_espacios_4").css("visibility", "visible");
+                        $("#logro_espacios_4").attr("disabled", false);
+                    }
+                    if ($("#espacios_4").val() == "no_cumple") {
+                        $("#logro_espacios_4").css("visibility", "visible");
+                        $("#logro_espacios_4").val("0");
+                        $("#logro_espacios_4").attr("disabled", true);
+                    }
+                    if ($("#espacios_4").val() == "no_aplica") {
+                        $("#logro_espacios_4").css("visibility", "hidden");
+                        $("#logro_espacios_4").val("");
+
+                    }
+                })
+                $("#espacios_5").change(function() {
+                    if ($("#espacios_5").val() == "cumple") {
+                        $("#logro_espacios_5").css("visibility", "visible");
+                        $("#logro_espacios_5").attr("disabled", false);
+                    }
+                    if ($("#espacios_5").val() == "no_cumple") {
+                        $("#logro_espacios_5").css("visibility", "visible");
+                        $("#logro_espacios_5").val("0");
+                        $("#logro_espacios_5").attr("disabled", true);
+                    }
+                    if ($("#espacios_5").val() == "no_aplica") {
+                        $("#logro_espacios_5").css("visibility", "hidden");
+                        $("#logro_espacios_5").val("");
+
+                    }
+                })
+
+
+                //INTERIOR
+
+                $("#interior_1").change(function() {
+                    if ($("#interior_1").val() == "cumple") {
+                        $("#logro_interior_1").css("visibility", "visible");
+                        $("#logro_interior_1").attr("disabled", false);
+                    }
+                    if ($("#interior_1").val() == "no_cumple") {
+                        $("#logro_interior_1").css("visibility", "visible");
+                        $("#logro_interior_1").val("0");
+                        $("#logro_interior_1").attr("disabled", true);
+                    }
+                    if ($("#interior_1").val() == "no_aplica") {
+                        $("#logro_interior_1").css("visibility", "hidden");
+                        $("#logro_interior_1").val("");
+
+                    }
+                })
+                $("#interior_2").change(function() {
+                    if ($("#interior_2").val() == "cumple") {
+                        $("#logro_interior_2").css("visibility", "visible");
+                        $("#logro_interior_2").attr("disabled", false);
+                    }
+                    if ($("#interior_2").val() == "no_cumple") {
+                        $("#logro_interior_2").css("visibility", "visible");
+                        $("#logro_interior_2").val("0");
+                        $("#logro_interior_2").attr("disabled", true);
+                    }
+                    if ($("#interior_2").val() == "no_aplica") {
+                        $("#logro_interior_2").css("visibility", "hidden");
+                        $("#logro_interior_2").val("");
+
+                    }
+                })
+                $("#interior_3").change(function() {
+                    if ($("#interior_3").val() == "cumple") {
+                        $("#logro_interior_3").css("visibility", "visible");
+                        $("#logro_interior_3").attr("disabled", false);
+                    }
+                    if ($("#interior_3").val() == "no_cumple") {
+                        $("#logro_interior_3").css("visibility", "visible");
+                        $("#logro_interior_3").val("0");
+                        $("#logro_interior_3").attr("disabled", true);
+                    }
+                    if ($("#interior_3").val() == "no_aplica") {
+                        $("#logro_interior_3").css("visibility", "hidden");
+                        $("#logro_interior_3").val("");
+
+                    }
+                })
+                $("#interior_4").change(function() {
+                    if ($("#interior_4").val() == "cumple") {
+                        $("#logro_interior_4").css("visibility", "visible");
+                        $("#logro_interior_4").attr("disabled", false);
+                    }
+                    if ($("#interior_4").val() == "no_cumple") {
+                        $("#logro_interior_4").css("visibility", "visible");
+                        $("#logro_interior_4").val("0");
+                        $("#logro_interior_4").attr("disabled", true);
+                    }
+                    if ($("#interior_4").val() == "no_aplica") {
+                        $("#logro_interior_4").css("visibility", "hidden");
+                        $("#logro_interior_4").val("");
+
+                    }
+                })
+                $("#interior_5").change(function() {
+                    if ($("#interior_5").val() == "cumple") {
+                        $("#logro_interior_5").css("visibility", "visible");
+                        $("#logro_interior_5").attr("disabled", false);
+                    }
+                    if ($("#interior_5").val() == "no_cumple") {
+                        $("#logro_interior_5").css("visibility", "visible");
+                        $("#logro_interior_5").val("0");
+                        $("#logro_interior_5").attr("disabled", true);
+                    }
+                    if ($("#interior_5").val() == "no_aplica") {
+                        $("#logro_interior_5").css("visibility", "hidden");
+                        $("#logro_interior_5").val("");
+
+                    }
+                })
+
+                //ESCALERA
+
+                $("#escaleras_1").change(function() {
+                    if ($("#escaleras_1").val() == "cumple") {
+                        $("#logro_escaleras_1").css("visibility", "visible");
+                        $("#logro_escaleras_1").attr("disabled", false);
+                    }
+                    if ($("#escaleras_1").val() == "no_cumple") {
+                        $("#logro_escaleras_1").css("visibility", "visible");
+                        $("#logro_escaleras_1").val("0");
+                        $("#logro_escaleras_1").attr("disabled", true);
+                    }
+                    if ($("#escaleras_1").val() == "no_aplica") {
+                        $("#logro_escaleras_1").css("visibility", "hidden");
+                        $("#logro_escaleras_1").val("");
+
+                    }
+                })
+                $("#escaleras_2").change(function() {
+                    if ($("#escaleras_2").val() == "cumple") {
+                        $("#logro_escaleras_2").css("visibility", "visible");
+                        $("#logro_escaleras_2").attr("disabled", false);
+                    }
+                    if ($("#escaleras_2").val() == "no_cumple") {
+                        $("#logro_escaleras_2").css("visibility", "visible");
+                        $("#logro_escaleras_2").val("0");
+                        $("#logro_escaleras_2").attr("disabled", true);
+                    }
+                    if ($("#escaleras_2").val() == "no_aplica") {
+                        $("#logro_escaleras_2").css("visibility", "hidden");
+                        $("#logro_escaleras_2").val("");
+
+                    }
+                })
+                $("#escaleras_3").change(function() {
+                    if ($("#escaleras_3").val() == "cumple") {
+                        $("#logro_escaleras_3").css("visibility", "visible");
+                        $("#logro_escaleras_3").attr("disabled", false);
+                    }
+                    if ($("#escaleras_3").val() == "no_cumple") {
+                        $("#logro_escaleras_3").css("visibility", "visible");
+                        $("#logro_escaleras_3").val("0");
+                        $("#logro_escaleras_3").attr("disabled", true);
+                    }
+                    if ($("#escaleras_3").val() == "no_aplica") {
+                        $("#logro_escaleras_3").css("visibility", "hidden");
+                        $("#logro_escaleras_3").val("");
+
+                    }
+                })
+                $("#escaleras_4").change(function() {
+                    if ($("#escaleras_4").val() == "cumple") {
+                        $("#logro_escaleras_4").css("visibility", "visible");
+                        $("#logro_escaleras_4").attr("disabled", false);
+                    }
+                    if ($("#escaleras_4").val() == "no_cumple") {
+                        $("#logro_escaleras_4").css("visibility", "visible");
+                        $("#logro_escaleras_4").val("0");
+                        $("#logro_escaleras_4").attr("disabled", true);
+                    }
+                    if ($("#escaleras_4").val() == "no_aplica") {
+                        $("#logro_escaleras_4").css("visibility", "hidden");
+                        $("#logro_escaleras_4").val("");
+
+                    }
+                })
+                $("#escaleras_5").change(function() {
+                    if ($("#escaleras_5").val() == "cumple") {
+                        $("#logro_escaleras_5").css("visibility", "visible");
+                        $("#logro_escaleras_5").attr("disabled", false);
+                    }
+                    if ($("#escaleras_5").val() == "no_cumple") {
+                        $("#logro_escaleras_5").css("visibility", "visible");
+                        $("#logro_escaleras_5").val("0");
+                        $("#logro_escaleras_5").attr("disabled", true);
+                    }
+                    if ($("#escaleras_5").val() == "no_aplica") {
+                        $("#logro_escaleras_5").css("visibility", "hidden");
+                        $("#logro_escaleras_5").val("");
+
+                    }
+                })
+                $("#escaleras_6").change(function() {
+                    if ($("#escaleras_6").val() == "cumple") {
+                        $("#logro_escaleras_6").css("visibility", "visible");
+                        $("#logro_escaleras_6").attr("disabled", false);
+                    }
+                    if ($("#escaleras_6").val() == "no_cumple") {
+                        $("#logro_escaleras_6").css("visibility", "visible");
+                        $("#logro_escaleras_6").val("0");
+                        $("#logro_escaleras_6").attr("disabled", true);
+                    }
+                    if ($("#escaleras_6").val() == "no_aplica") {
+                        $("#logro_escaleras_6").css("visibility", "hidden");
+                        $("#logro_escaleras_6").val("");
+
+                    }
+                })
+
+                //ASCENSOR
+
+                $("#ascensor_1").change(function() {
+                    if ($("#ascensor_1").val() == "cumple") {
+                        $("#logro_ascensor_1").css("visibility", "visible");
+                        $("#logro_ascensor_1").attr("disabled", false);
+                    }
+                    if ($("#ascensor_1").val() == "no_cumple") {
+                        $("#logro_ascensor_1").css("visibility", "visible");
+                        $("#logro_ascensor_1").val("0");
+                        $("#logro_ascensor_1").attr("disabled", true);
+                    }
+                    if ($("#ascensor_1").val() == "no_aplica") {
+                        $("#logro_ascensor_1").css("visibility", "hidden");
+                        $("#logro_ascensor_1").val("");
+
+                    }
+                })
+                $("#ascensor_2").change(function() {
+                    if ($("#ascensor_2").val() == "cumple") {
+                        $("#logro_ascensor_2").css("visibility", "visible");
+                        $("#logro_ascensor_2").attr("disabled", false);
+                    }
+                    if ($("#ascensor_2").val() == "no_cumple") {
+                        $("#logro_ascensor_2").css("visibility", "visible");
+                        $("#logro_ascensor_2").val("0");
+                        $("#logro_ascensor_2").attr("disabled", true);
+                    }
+                    if ($("#ascensor_2").val() == "no_aplica") {
+                        $("#logro_ascensor_2").css("visibility", "hidden");
+                        $("#logro_ascensor_2").val("");
+
+                    }
+                })
+                $("#ascensor_3").change(function() {
+                    if ($("#ascensor_3").val() == "cumple") {
+                        $("#logro_ascensor_3").css("visibility", "visible");
+                        $("#logro_ascensor_3").attr("disabled", false);
+                    }
+                    if ($("#ascensor_3").val() == "no_cumple") {
+                        $("#logro_ascensor_3").css("visibility", "visible");
+                        $("#logro_ascensor_3").val("0");
+                        $("#logro_ascensor_3").attr("disabled", true);
+                    }
+                    if ($("#ascensor_3").val() == "no_aplica") {
+                        $("#logro_ascensor_3").css("visibility", "hidden");
+                        $("#logro_ascensor_3").val("");
+
+                    }
+                })
+                $("#ascensor_4").change(function() {
+                    if ($("#ascensor_4").val() == "cumple") {
+                        $("#logro_ascensor_4").css("visibility", "visible");
+                        $("#logro_ascensor_4").attr("disabled", false);
+                    }
+                    if ($("#ascensor_4").val() == "no_cumple") {
+                        $("#logro_ascensor_4").css("visibility", "visible");
+                        $("#logro_ascensor_4").val("0");
+                        $("#logro_ascensor_4").attr("disabled", true);
+                    }
+                    if ($("#ascensor_4").val() == "no_aplica") {
+                        $("#logro_ascensor_4").css("visibility", "hidden");
+                        $("#logro_ascensor_4").val("");
+
+                    }
+                })
+                $("#ascensor_5").change(function() {
+                    if ($("#ascensor_5").val() == "cumple") {
+                        $("#logro_ascensor_5").css("visibility", "visible");
+                        $("#logro_ascensor_5").attr("disabled", false);
+                    }
+                    if ($("#ascensor_5").val() == "no_cumple") {
+                        $("#logro_ascensor_5").css("visibility", "visible");
+                        $("#logro_ascensor_5").val("0");
+                        $("#logro_ascensor_5").attr("disabled", true);
+                    }
+                    if ($("#ascensor_5").val() == "no_aplica") {
+                        $("#logro_ascensor_5").css("visibility", "hidden");
+                        $("#logro_ascensor_5").val("");
+
+                    }
+                })
+                $("#ascensor_6").change(function() {
+                    if ($("#ascensor_6").val() == "cumple") {
+                        $("#logro_ascensor_6").css("visibility", "visible");
+                        $("#logro_ascensor_6").attr("disabled", false);
+                    }
+                    if ($("#ascensor_6").val() == "no_cumple") {
+                        $("#logro_ascensor_6").css("visibility", "visible");
+                        $("#logro_ascensor_6").val("0");
+                        $("#logro_ascensor_6").attr("disabled", true);
+                    }
+                    if ($("#ascensor_6").val() == "no_aplica") {
+                        $("#logro_ascensor_6").css("visibility", "hidden");
+                        $("#logro_ascensor_6").val("");
+
+                    }
+                })
+                $("#ascensor_7").change(function() {
+                    if ($("#ascensor_7").val() == "cumple") {
+                        $("#logro_ascensor_7").css("visibility", "visible");
+                        $("#logro_ascensor_7").attr("disabled", false);
+                    }
+                    if ($("#ascensor_7").val() == "no_cumple") {
+                        $("#logro_ascensor_7").css("visibility", "visible");
+                        $("#logro_ascensor_7").val("0");
+                        $("#logro_ascensor_7").attr("disabled", true);
+                    }
+                    if ($("#ascensor_7").val() == "no_aplica") {
+                        $("#logro_ascensor_7").css("visibility", "hidden");
+                        $("#logro_ascensor_7").val("");
+
+                    }
+                })
+                $("#ascensor_8").change(function() {
+                    if ($("#ascensor_8").val() == "cumple") {
+                        $("#logro_ascensor_8").css("visibility", "visible");
+                        $("#logro_ascensor_8").attr("disabled", false);
+                    }
+                    if ($("#ascensor_8").val() == "no_cumple") {
+                        $("#logro_ascensor_8").css("visibility", "visible");
+                        $("#logro_ascensor_8").val("0");
+                        $("#logro_ascensor_8").attr("disabled", true);
+                    }
+                    if ($("#ascensor_8").val() == "no_aplica") {
+                        $("#logro_ascensor_8").css("visibility", "hidden");
+                        $("#logro_ascensor_8").val("");
+
+                    }
+                })
+                $("#ascensor_9").change(function() {
+                    if ($("#ascensor_9").val() == "cumple") {
+                        $("#logro_ascensor_9").css("visibility", "visible");
+                        $("#logro_ascensor_9").attr("disabled", false);
+                    }
+                    if ($("#ascensor_9").val() == "no_cumple") {
+                        $("#logro_ascensor_9").css("visibility", "visible");
+                        $("#logro_ascensor_9").val("0");
+                        $("#logro_ascensor_9").attr("disabled", true);
+                    }
+                    if ($("#ascensor_9").val() == "no_aplica") {
+                        $("#logro_ascensor_9").css("visibility", "hidden");
+                        $("#logro_ascensor_9").val("");
+
+                    }
+                })
+                $("#ascensor_10").change(function() {
+                    if ($("#ascensor_10").val() == "cumple") {
+                        $("#logro_ascensor_10").css("visibility", "visible");
+                        $("#logro_ascensor_10").attr("disabled", false);
+                    }
+                    if ($("#ascensor_10").val() == "no_cumple") {
+                        $("#logro_ascensor_10").css("visibility", "visible");
+                        $("#logro_ascensor_10").val("0");
+                        $("#logro_ascensor_10").attr("disabled", true);
+                    }
+                    if ($("#ascensor_10").val() == "no_aplica") {
+                        $("#logro_ascensor_10").css("visibility", "hidden");
+                        $("#logro_ascensor_10").val("");
+
+                    }
+                })
+
+            }
             $("#contact8-tab").click(function() {
                 $("#estacionamiento_resumen").text(TotalEstacionamiento());
                 $("#ingreso_resumen").text(TotalIngreso());
@@ -5761,7 +5811,6 @@
                 var datos = [];
                 $.get(`/proyectos/${$('.empresas').val()}`, function(data) {
 
-                    console.log(data);
                     data.forEach(element => {
                         $('#proyectos').dataTable().fnAddData([{
                             id: element.id,
@@ -5927,8 +5976,11 @@
             $("#id_proyecto").val(id);
 
             $.get(`/matrizevaluacion/${id}`, function(data) {
+                
                 //ESTACIONAMIENTO
-                for (let index = 1; index <= 6; index++) {
+                
+                if(data.length != 0){
+                    for (let index = 1; index <= 6; index++) {
                     $(`#estacionamiento_revision_${index}`).val(data[0][`estacionamiento_revision_${index}`]);
                     $(`#estacionamiento_${index}`).val(data[0][`estacionamiento_criterio_${index}`]);
                     setMatriz(index, data[0][`estacionamiento_criterio_${index}`], data[0][
@@ -5948,6 +6000,39 @@
                         "puerta");
                 }
 
+                for (let index = 1; index <= 7; index++) {
+                    $(`#evacuacion_revision_${index}`).val(data[0][`evacuacion_revision_${index}`]);
+                    $(`#evacuacion_${index}`).val(data[0][`evacuacion_criterio_${index}`]);
+                    setMatriz(index, data[0][`evacuacion_criterio_${index}`], data[0][`evacuacion_logro_${index}`],
+                        "evacuacion");
+                }
+                for (let index = 1; index <= 5; index++) {
+                    $(`#espacios_revision_${index}`).val(data[0][`espacios_revision_${index}`]);
+                    $(`#espacios_${index}`).val(data[0][`espacios_criterio_${index}`]);
+                    setMatriz(index, data[0][`espacios_criterio_${index}`], data[0][`espacios_logro_${index}`],
+                        "espacios");
+                }
+                for (let index = 1; index <= 5; index++) {
+                    $(`#interior_revision_${index}`).val(data[0][`interior_revision_${index}`]);
+                    $(`#interior_${index}`).val(data[0][`interior_criterio_${index}`]);
+                    setMatriz(index, data[0][`interior_criterio_${index}`], data[0][`interior_logro_${index}`],
+                        "interior");
+                }
+                for (let index = 1; index <= 6; index++) {
+                    $(`#escaleras_revision_${index}`).val(data[0][`escaleras_revision_${index}`]);
+                    $(`#escaleras_${index}`).val(data[0][`escaleras_criterio_${index}`]);
+                    setMatriz(index, data[0][`escaleras_criterio_${index}`], data[0][`escaleras_logro_${index}`],
+                        "escaleras");
+                }
+                for (let index = 1; index <= 10; index++) {
+                    $(`#ascensor_revision_${index}`).val(data[0][`ascensor_revision_${index}`]);
+                    $(`#ascensor_${index}`).val(data[0][`ascensor_criterio_${index}`]);
+                    setMatriz(index, data[0][`ascensor_criterio_${index}`], data[0][`ascensor_logro_${index}`],
+                        "ascensor");
+                }
+
+                }
+                
 
             })
             $("#matriz").modal('show');

@@ -2,11 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AscensorMatriz;
+use App\Models\EscalerasMatriz;
+use App\Models\EspaciosMatriz;
+use App\Models\EstacionamientoMatriz;
+use App\Models\EvacuacionMatriz;
+use App\Models\IngresoMatriz;
+use App\Models\InteriorMatriz;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Session;
 use App\Models\Proyecto;
 use App\Models\MatrizEvaluacion;
+use App\Models\PuertaMatriz;
 use DB;
 use PhpOffice\PhpWord\TemplateProcessor;
 use PhpOffice\PhpWord\IOFactory;
@@ -58,7 +66,6 @@ class ProyectoController extends Controller
 
         Session::flash('message', "Se creo correctamente el proyecto.");
         return Redirect::back();
-
     }
 
     /**
@@ -70,7 +77,7 @@ class ProyectoController extends Controller
     public function show($id)
     {
         // return response()->json(Proyecto::find($id));
-        $dato = DB::table("proyectos")->where("idEmpresa","=",$id)->get();
+        $dato = DB::table("proyectos")->where("idEmpresa", "=", $id)->get();
         return $dato;
     }
 
@@ -108,10 +115,11 @@ class ProyectoController extends Controller
         //
     }
 
-    public function word($id){
+    public function word($id)
+    {
 
-        $proyecto = DB::table("proyectos")->where("id","=",$id)->get();
-        $empresa = DB::table("empresas")->where("id","=",$proyecto[0]->idEmpresa)->get();
+        $proyecto = DB::table("proyectos")->where("id", "=", $id)->get();
+        $empresa = DB::table("empresas")->where("id", "=", $proyecto[0]->idEmpresa)->get();
 
         // // Make sure you have `dompdf/dompdf` in your composer dependencies.
         // Settings::setPdfRendererName(Settings::PDF_RENDERER_DOMPDF);
@@ -122,17 +130,20 @@ class ProyectoController extends Controller
         // $phpWord->save(public_path('descargables/APT.pdf'), 'PDF');
 
         $templateWord = new TemplateProcessor(public_path('apt/Ficha de Análisis del Puesto de trabajo (APT).docx'));
-        $templateWord->setValue('nombre_empresa',$empresa[0]->nombre);
-        $templateWord->setValue('direccion_empresa',$empresa[0]->direccion);
-        $templateWord->setValue('telefono_empresa',$empresa[0]->telefono);
-        $templateWord->setValue('email_empresa',$empresa[0]->email);
-        $templateWord->setValue('cargo_empresa',$empresa[0]->cargo);
-        $templateWord->setValue('dotacion_empresa',$empresa[0]->dotacion);
+        $templateWord->setValue('nombre_empresa', $empresa[0]->nombre);
+        $templateWord->setValue('direccion_empresa', $empresa[0]->direccion);
+        $templateWord->setValue('telefono_empresa', $empresa[0]->telefono);
+        $templateWord->setValue('email_empresa', $empresa[0]->email);
+        $templateWord->setValue('cargo_empresa', $empresa[0]->cargo);
+        $templateWord->setValue('dotacion_empresa', $empresa[0]->dotacion);
         $templateWord->saveAs('descargables/APT.docx');
         return response()->download(public_path('descargables/APT.docx'));
     }
 
-    public function MatrizEvaluacion(Request $request){
+
+
+    public function MatrizEvaluacion(Request $request)
+    {
 
         // $templateWord = new TemplateProcessor(public_path('apt/Criterios de evaluación AU y plan anual asesoría e inclusión laboral.docx'));
         // $templateWord->setValue('criterio_estacionamiento_1',$request->estacionamiento_1);
@@ -140,92 +151,86 @@ class ProyectoController extends Controller
         // $templateWord->saveAs('descargables/MatrizEvaluacion.docx');
         // return response()->download(public_path('descargables/MatrizEvaluacion.docx'));
 
+
+        $datos = [["estacionamiento", 6], ["ingreso", 8], ["puerta", 5], ["evacuacion", 7], ["espacios", 5], ["interior", 5], ["escaleras", 6], ["ascensor", 10]];
         $matrizevaluacion = MatrizEvaluacion::firstOrCreate(['id_proyecto' => $request->id_proyecto]);
         $matrizevaluacion->id_proyecto = $request->id_proyecto;
-        
         //ESTACIONAMIENTO
-        $matrizevaluacion->estacionamiento_revision_1 = $request->estacionamiento_revision_1;
-        $matrizevaluacion->estacionamiento_revision_2 = $request->estacionamiento_revision_2;
-        $matrizevaluacion->estacionamiento_revision_3 = $request->estacionamiento_revision_3;
-        $matrizevaluacion->estacionamiento_revision_4 = $request->estacionamiento_revision_4;
-        $matrizevaluacion->estacionamiento_revision_5 = $request->estacionamiento_revision_5;
-        $matrizevaluacion->estacionamiento_revision_6 = $request->estacionamiento_revision_6;
-
-
-        $matrizevaluacion->estacionamiento_criterio_1 = $request->estacionamiento_1;
-        $matrizevaluacion->estacionamiento_criterio_2 = $request->estacionamiento_2;
-        $matrizevaluacion->estacionamiento_criterio_3 = $request->estacionamiento_3;
-        $matrizevaluacion->estacionamiento_criterio_4 = $request->estacionamiento_4;
-        $matrizevaluacion->estacionamiento_criterio_5 = $request->estacionamiento_5;
-        $matrizevaluacion->estacionamiento_criterio_6 = $request->estacionamiento_6;
-
-
-        $matrizevaluacion->estacionamiento_logro_1 = $request->logro_estacionamiento_1;
-        $matrizevaluacion->estacionamiento_logro_2 = $request->logro_estacionamiento_2;
-        $matrizevaluacion->estacionamiento_logro_3 = $request->logro_estacionamiento_3;
-        $matrizevaluacion->estacionamiento_logro_4 = $request->logro_estacionamiento_4;
-        $matrizevaluacion->estacionamiento_logro_5 = $request->logro_estacionamiento_5;
-        $matrizevaluacion->estacionamiento_logro_6 = $request->logro_estacionamiento_6;
-
-
+        $estacionamiento = EstacionamientoMatriz::firstOrCreate(['id' => $matrizevaluacion->id_estacionamiento]);
+        $matrizevaluacion->id_estacionamiento = $estacionamiento->id;
         //INGRESO
-
-        $matrizevaluacion->ingreso_revision_1 = $request->ingreso_revision_1;
-        $matrizevaluacion->ingreso_revision_2 = $request->ingreso_revision_2;
-        $matrizevaluacion->ingreso_revision_3 = $request->ingreso_revision_3;
-        $matrizevaluacion->ingreso_revision_4 = $request->ingreso_revision_4;
-        $matrizevaluacion->ingreso_revision_5 = $request->ingreso_revision_5;
-        $matrizevaluacion->ingreso_revision_6 = $request->ingreso_revision_6;
-        $matrizevaluacion->ingreso_revision_7 = $request->ingreso_revision_7;
-        $matrizevaluacion->ingreso_revision_8 = $request->ingreso_revision_8;
-
-
-        $matrizevaluacion->ingreso_criterio_1 = $request->ingreso_1;
-        $matrizevaluacion->ingreso_criterio_2 = $request->ingreso_2;
-        $matrizevaluacion->ingreso_criterio_3 = $request->ingreso_3;
-        $matrizevaluacion->ingreso_criterio_4 = $request->ingreso_4;
-        $matrizevaluacion->ingreso_criterio_5 = $request->ingreso_5;
-        $matrizevaluacion->ingreso_criterio_6 = $request->ingreso_6;
-        $matrizevaluacion->ingreso_criterio_7 = $request->ingreso_7;
-        $matrizevaluacion->ingreso_criterio_8 = $request->ingreso_8;
-
-
-        $matrizevaluacion->ingreso_logro_1 = $request->logro_ingreso_1;
-        $matrizevaluacion->ingreso_logro_2 = $request->logro_ingreso_2;
-        $matrizevaluacion->ingreso_logro_3 = $request->logro_ingreso_3;
-        $matrizevaluacion->ingreso_logro_4 = $request->logro_ingreso_4;
-        $matrizevaluacion->ingreso_logro_5 = $request->logro_ingreso_5;
-        $matrizevaluacion->ingreso_logro_6 = $request->logro_ingreso_6;
-        $matrizevaluacion->ingreso_logro_7 = $request->logro_ingreso_7;
-        $matrizevaluacion->ingreso_logro_8 = $request->logro_ingreso_8;
-
+        $ingreso = IngresoMatriz::firstOrCreate(['id' => $matrizevaluacion->id_ingreso]);
+        $matrizevaluacion->id_ingreso = $ingreso->id;
         //PUERTA
-        $matrizevaluacion->puerta_revision_1 = $request->puerta_revision_1;
-        $matrizevaluacion->puerta_revision_2 = $request->puerta_revision_2;
-        $matrizevaluacion->puerta_revision_3 = $request->puerta_revision_3;
-        $matrizevaluacion->puerta_revision_4 = $request->puerta_revision_4;
-        $matrizevaluacion->puerta_revision_5 = $request->puerta_revision_5;
+        $puerta = PuertaMatriz::firstOrCreate(['id' => $matrizevaluacion->id_puerta]);
+        $matrizevaluacion->id_puerta = $puerta->id;
+        //EVACUACION
+        $evacuacion = EvacuacionMatriz::firstOrCreate(['id' => $matrizevaluacion->id_evacuacion]);
+        $matrizevaluacion->id_evacuacion = $evacuacion->id;
+        //ESPACIOS
+        $espacios = EspaciosMatriz::firstOrCreate(['id' => $matrizevaluacion->id_espacios]);
+        $matrizevaluacion->id_espacios = $espacios->id;
+        //INTERIOR
+        $interior = InteriorMatriz::firstOrCreate(['id' => $matrizevaluacion->id_interior]);
+        $matrizevaluacion->id_interior = $interior->id;
+        //ESCALERAS
+        $escaleras = EscalerasMatriz::firstOrCreate(['id' => $matrizevaluacion->id_escaleras]);
+        $matrizevaluacion->id_escaleras = $escaleras->id;
+        //ASCENSOR
+        $ascensor = AscensorMatriz::firstOrCreate(['id' => $matrizevaluacion->id_ascensor]);
+        $matrizevaluacion->id_ascensor = $ascensor->id;
 
-        $matrizevaluacion->puerta_criterio_1 = $request->puerta_1;
-        $matrizevaluacion->puerta_criterio_2 = $request->puerta_2;
-        $matrizevaluacion->puerta_criterio_3 = $request->puerta_3;
-        $matrizevaluacion->puerta_criterio_4 = $request->puerta_4;
-        $matrizevaluacion->puerta_criterio_5 = $request->puerta_5;
 
-        $matrizevaluacion->puerta_logro_1 = $request->logro_puerta_1;
-        $matrizevaluacion->puerta_logro_2 = $request->logro_puerta_2;
-        $matrizevaluacion->puerta_logro_3 = $request->logro_puerta_3;
-        $matrizevaluacion->puerta_logro_4 = $request->logro_puerta_4;
-        $matrizevaluacion->puerta_logro_5 = $request->logro_puerta_5;
-
+        foreach ($datos as $data) {
+            if ($data[0] == "estacionamiento") {
+                $matrizevaluacion->AgregarMatriz($data[0], $data[1], $estacionamiento, $request->all());
+            }
+            if ($data[0] == "ingreso") {
+                $matrizevaluacion->AgregarMatriz($data[0], $data[1], $ingreso, $request->all());
+            }
+            if ($data[0] == "puerta") {
+                $matrizevaluacion->AgregarMatriz($data[0], $data[1], $puerta, $request->all());
+            }
+            if ($data[0] == "evacuacion") {
+                $matrizevaluacion->AgregarMatriz($data[0], $data[1], $evacuacion, $request->all());
+            }
+            if ($data[0] == "espacios") {
+                $matrizevaluacion->AgregarMatriz($data[0], $data[1], $espacios, $request->all());
+            }
+            if ($data[0] == "interior") {
+                $matrizevaluacion->AgregarMatriz($data[0], $data[1], $interior, $request->all());
+            }
+            if ($data[0] == "escaleras") {
+                $matrizevaluacion->AgregarMatriz($data[0], $data[1], $escaleras, $request->all());
+            }
+            if ($data[0] == "ascensor") {
+                $matrizevaluacion->AgregarMatriz($data[0], $data[1], $ascensor, $request->all());
+            }
+        }
         $matrizevaluacion->save();
 
-        return $request->all();
+        // return redirect("/proyectos"); 
+
     }
     public function getMatrizEvaluacion($id)
     {
-        $matrizevaluacion = MatrizEvaluacion::where("id_proyecto",$id)->get();
-        return $matrizevaluacion;
-    }
+        // $matrizevaluacion = MatrizEvaluacion::where("id_proyecto", $id)->get();
+        // return $matrizevaluacion;
 
+        $matrizevaluacion = DB::table('matriz_evaluacion')
+        ->where('id_proyecto', '=', $id)
+        ->join('estacionamiento', 'matriz_evaluacion.id_estacionamiento', '=', 'estacionamiento.id')
+        ->join('ingreso', 'matriz_evaluacion.id_ingreso', '=', 'ingreso.id')
+        ->join('puerta', 'matriz_evaluacion.id_puerta', '=', 'puerta.id')
+        ->join('evacuacion', 'matriz_evaluacion.id_evacuacion', '=', 'evacuacion.id')
+        ->join('espacios', 'matriz_evaluacion.id_espacios', '=', 'espacios.id')
+        ->join('interior', 'matriz_evaluacion.id_interior', '=', 'interior.id')
+        ->join('escaleras', 'matriz_evaluacion.id_escaleras', '=', 'escaleras.id')
+        ->join('ascensor', 'matriz_evaluacion.id_ascensor', '=', 'ascensor.id')
+        ->select('matriz_evaluacion.*', 'estacionamiento.*','ingreso.*','puerta.*','evacuacion.*','espacios.*','interior.*','escaleras.*','ascensor.*')
+        ->get();
+        return $matrizevaluacion;
+
+
+    }
 }

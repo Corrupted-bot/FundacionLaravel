@@ -28,9 +28,7 @@
         </div>
         <div class="col-10">
             <div class="card">
-                <div class="card-header">
-                    Proyectos
-                </div>
+                <div class="card-header">Proyectos</div>
                 <div class="card-body">
                     <table id="proyectos" class="table table-striped table-hover " style="width:100%">
                         <thead style="background-color: #2257a3;color: white;">
@@ -45,9 +43,11 @@
                         </tbody>
                     </table>
                     @if (Session::has('message'))
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
                             {{ Session::get('message') }}
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
                     @endif
                 </div>
@@ -3069,15 +3069,10 @@
                     @csrf
                     <input id="id_proyecto" name="id_proyecto" type="text" hidden>
                     <div class="modal-header text-center">
-                        <h5 class="modal-title w-100" id="exampleModalLabel"><b>Matriz de evaluación de
-                                Accesibilidad
-                                Universal</b></h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                        <h5 class="modal-title w-100" id="exampleModalLabel"><b>Matriz de evaluación de AccesibilidadUniversal</b></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
-
                         <ul class="nav nav-tabs" id="myTab" role="tablist" style="margin-bottom: 20px;">
                             <li class="nav-item" role="presentation">
 
@@ -4732,9 +4727,6 @@
                                                 </select>
                                             </td>
                                         </tr>
-
-
-
                                     </tbody>
                                     <tfoot>
                                         <tr>
@@ -4794,9 +4786,6 @@
                                 </table>
                             </div>
                         </div>
-
-
-
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -4810,7 +4799,20 @@
 @stop
 
 @section('css')
-
+<style>
+    /* Media Query for Mobile Devices */
+    @media only screen and (max-width: 767px) {
+        .col-10{
+            flex: none;
+            max-width: 100%;
+        }
+        .col-auto{
+            width: 100%;
+            max-width: 100%;
+            flex: 0 0 auto;
+        }
+    }
+</style>
 @stop
 
 @section('js')

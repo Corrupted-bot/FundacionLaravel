@@ -118,8 +118,8 @@ class ProyectoController extends Controller
     public function word($id)
     {
 
-        $proyecto = DB::table("proyectos")->where("id", "=", $id)->get();
-        $empresa = DB::table("empresas")->where("id", "=", $proyecto[0]->idEmpresa)->get();
+        // $proyecto = DB::table("proyectos")->where("id", "=", $id)->get();
+        $empresa = DB::table("empresas")->where("id", "=", 6)->get();
 
         // // Make sure you have `dompdf/dompdf` in your composer dependencies.
         // Settings::setPdfRendererName(Settings::PDF_RENDERER_DOMPDF);

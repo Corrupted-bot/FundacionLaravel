@@ -26,7 +26,7 @@
             </div>
 
         </div>
-        <div class="col-10">
+        <div class="col-9">
             <div class="card">
                 <div class="card-header">Proyectos</div>
                 <div class="card-body">
@@ -3069,7 +3069,7 @@
                     @csrf
                     <input id="id_proyecto" name="id_proyecto" type="text" hidden>
                     <div class="modal-header text-center">
-                        <h5 class="modal-title w-100" id="exampleModalLabel"><b>Matriz de evaluación de AccesibilidadUniversal</b></h5>
+                        <h5 class="modal-title w-100" id="exampleModalLabel"><b>Matriz de evaluación de Accesibilidad Universal</b></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
@@ -4789,7 +4789,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="submit" class="btn btn-success">Crear Matriz</button>
+                        <button type="submit" class="btn btn-success">Guardar Matriz</button>
                     </div>
                 </form>
             </div>
@@ -5751,7 +5751,7 @@
                 $("#evacuacion_resumen").text(TotalEvacuacion());
                 $("#espacios_resumen").text(TotalEspacios());
                 $("#interior_resumen").text(TotalInterior());
-                $("#escalera_resumen").text(TotalEscalera());
+                $("#escalera_resumen").text(TotalEscaleras());
                 $("#ascensor_resumen").text(TotalAscensor());
             })
 
@@ -5779,9 +5779,11 @@
                         "data": null,
                         render: function(data, type, row, meta) {
                             return type === 'display' ?
-                                `<a  class="btn btn-success" style="width: max-content;" onClick=AbrirInformeAPT(${data.id})>Informe APT </a>
+                                `<div style="display:flex;gap:2px;">
+                                <a  class="btn btn-success" style="width: max-content;" onClick=AbrirInformeAPT(${data.id})>Informe APT </a>
                             <a  class="btn btn-warning" style="width: max-content;" onClick=AbrirMatriz(${data.id})>Matriz de Evaluacion</a>
-                            ` :
+                            
+                            </div>` :
                                 data;
                         }
                     }
@@ -5925,19 +5927,19 @@
             return total.toFixed();
         }
 
-        function TotalEscalera() {
+        function TotalEscaleras() {
 
 
             Aux = []
             Aux2 = 0;
             for (let index = 1; index <= 6; index++) {
-                if ($(`#logro_escalera_${index}`).val() != null) {
-                    Aux.push($(`#logro_escalera_${index}`).val())
-                    Aux2 += parseInt($(`#logro_escalera_${index}`).val())
+                if ($(`#logro_escaleras_${index}`).val() != null) {
+                    Aux.push($(`#logro_escaleras_${index}`).val())
+                    Aux2 += parseInt($(`#logro_escaleras_${index}`).val())
                 }
             }
             total = Aux2 / Aux.length;
-            $("#total_escalera").text(total.toFixed());
+            $("#total_escaleras").text(total.toFixed());
             return total.toFixed();
         }
 

@@ -263,17 +263,13 @@
                             </style>
                             <ul class="nav nav-tabs" id="myTab" role="tablist" style="margin-bottom: 20px;">
                                 <li class="nav-item" role="presentation">
-                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" type="button" role="tab" aria-controls="home" aria-selected="true">DIAGNÓSTICO INSTITUCIONAL </a>
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" type="button" role="tab" aria-controls="home" aria-selected="true">DIAGNÓSTICO INSTITUCIONAL</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">ASESORÍA EN INTERMEDIACIÓN LABORAL</a>
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">GESTIÓN DE LA INCLUSIÓN LABORAL</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">ASESORÍA EN POSTULACIÓN AL SELLO CHILE INCLUSIVO</a>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link" id="contact3-tab" data-toggle="tab" href="#contact3" type="button" role="tab" aria-controls="contact3" aria-selected="false">SERVICIO DE CAPACITACIÓN Y ASESORÍA EN COMUNICACIÓN
-                                    </a>
+                                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">PLAN DE CAPACITACIÓN</a>
                                 </li>
 
                             </ul>
@@ -670,86 +666,7 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <div class="tab-pane fade" id="contact3" role="tabpanel" aria-labelledby="contact3-tab">
-                                    <table id="empresas" class="table table-striped table-hover table-bordered my-custom-scrollbar table-wrapper-scroll-y" style="width:100%">
-                                        <thead style="background-color: #2257a3;color: white;">
-                                            <tr>
-                                                <th colspan="9" class="text-center">SERVICIO DE CAPACITACIÓN Y ASESORÍA EN COMUNICACIÓN</th>
-                                            </tr>
-                                            <tr>
-                                                <th>ESTRATEGIA</th>
-                                                <th>ACCIÓN</th>
-                                                <th>RESPONSABLE</th>
-                                                <th style="text-align: center;">Herramientas</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class='FilaPrincipal'>
-                                                <td rowspan='5'>1. Capacitaciones Técnicas para las distintas áreas para Sello Chile Inclusivo
-                                                </td>
-                                                <td rowspan='1'>Ajuste Razonable en Reclutamiento y Selección 
-                                                </td>
-                                                <td rowspan='5'>
-                                                    <div class="mb-3">
-                                                        <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-                                                        <input type="text" class="form-control" id="exampleFormControlInput1">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="exampleFormControlInput1" class="form-label">Cargo</label>
-                                                        <input type="text" class="form-control" id="exampleFormControlInput1">
-                                                    </div>
 
-                                                </td>
-                                                <td rowspan='5'>
-                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                        Asignar Fecha
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td rowspan='1'>Prevención de Riesgo (Evacuación Inclusiva)</td>
-                                            </tr>
-                                            <tr>
-                                                <td rowspan='1'>Ajueste Razonable en Evaluación de desempeño</td>
-                                            </tr>
-                                            <tr>
-                                                <td rowspan='1'>Ajustes Razonables en Promociones o Ascenso</td>
-                                            </tr>
-                                            <tr>
-                                                <td rowspan='1'>Ajustes Razonables en Capacitación </td>
-                                            </tr>
-                                            <tr class='FilaPrincipal'>
-                                                <td rowspan='3'>2. Cultura Inclusiva
-                                                </td>
-                                                <td rowspan='1'>Charlas de sensibilización (4 Mensuales)</td>
-
-                                                <td rowspan='3'>
-                                                    <div class="mb-3">
-                                                        <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-                                                        <input type="text" class="form-control" id="exampleFormControlInput1">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="exampleFormControlInput1" class="form-label">Cargo</label>
-                                                        <input type="text" class="form-control" id="exampleFormControlInput1">
-                                                    </div>
-
-                                                </td>
-                                                <td rowspan='3'>
-                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                        Asignar Fecha
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td rowspan='1'>Talleres de Liderazgo Inclusivo (2 Mensuales)</td>
-                                            </tr>
-                                            <tr>
-                                                <td rowspan='1'>Asesoría Comunicacional</td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
-                                </div>
                             </div>
                         </div>
                     </div>

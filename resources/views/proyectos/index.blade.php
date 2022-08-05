@@ -58,2993 +58,1123 @@
 
 
     <div class="modal fade" id="informaApt" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <style>
+            .form-control {
+                margin-bottom: 0.7rem !important;
+            }
+        </style>
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
-                <form method="POST" action="">
+                <form method="POST" action="/informe-apt">
                     @csrf
+                    <input type="hidden" name="id_proyecto_apt" id="id_proyecto_apt">
                     <div class="modal-header text-center">
                         <h5 class="modal-title w-100" id="exampleModalLabel"><b>Informe APT</b></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body" style="padding: 0rem!important;">
-                        <ul class="nav nav-tabs bg-dark2" id="myTab2" role="tablist">
+                    <div class="modal-body">
+                        <ul class="nav nav-tabs " id="myTab2" role="tablist" style="margin-bottom: 20px;">
 
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link nav-link2 " id="puesto-trabajo" data-bs-toggle="tab"
-                                    data-bs-target="#trabajo" type="button" role="tab" aria-controls="puestoTrabajo"
-                                    aria-selected="true">Puesto de Trabajo</button>
+
+                                <a class="nav-link active" id="puesto-trabajo" data-toggle="pill" href="#trabajo"
+                                    role="tab" aria-controls="puestoTrabajo" aria-selected="true">Puesto de Trabajo</a>
+
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="profile2-tab" data-toggle="pill" href="#profile2" role="tab"
+                                    aria-controls="profile2" aria-selected="false">Salud y Seguridad</a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link nav-link2 " id="profile2-tab" data-bs-toggle="tab"
-                                    data-bs-target="#profile2" type="button" role="tab" aria-controls="profile2"
-                                    aria-selected="false">Salud y Seguridad</button>
+
+
+                                <a class="nav-link" id="contact2-tab" data-toggle="pill" href="#contact2" role="tab"
+                                    aria-controls="contact2" aria-selected="false">Habilidad Fisica</a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link nav-link2" id="contact2-tab" data-bs-toggle="tab"
-                                    data-bs-target="#contact2" type="button" role="tab" aria-controls="contact2"
-                                    aria-selected="false">Habilidad Fisica</button>
+
+                                <a class="nav-link" id="prueba-tab" data-toggle="pill" href="#prueba" role="tab"
+                                    aria-controls="prueba" aria-selected="false">Trabajo</a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link nav-link2" id="prueba-tab" data-bs-toggle="tab"
-                                    data-bs-target="#prueba" type="button" role="tab" aria-controls="prueba"
-                                    aria-selected="false">Trabajo</button>
+
+
+                                <a class="nav-link" id="prueba-tab2" data-toggle="pill" href="#prueba2" role="tab"
+                                    aria-controls="prueba2" aria-selected="false">Habilidades Requeridas</a>
+
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link nav-link2" id="prueba-tab2" data-bs-toggle="tab"
-                                    data-bs-target="#prueba2" type="button" role="tab" aria-controls="prueba2"
-                                    aria-selected="false">Habilidades Requeridas</button>
+
+
+                                <a class="nav-link" id="prueba-tab3" data-toggle="pill" href="#prueba3" role="tab"
+                                    aria-controls="prueba3" aria-selected="false">Apoyo</a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link nav-link2" id="prueba-tab3" data-bs-toggle="tab"
-                                    data-bs-target="#prueba3" type="button" role="tab" aria-controls="prueba3"
-                                    aria-selected="false">Apoyo</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link nav-link2" id="prueba-tab4" data-bs-toggle="tab"
-                                    data-bs-target="#prueba4" type="button" role="tab" aria-controls="prueba4"
-                                    aria-selected="false">Apoyo 2</button>
+
+
+                                <a class="nav-link" id="prueba-tab4" data-toggle="pill" href="#prueba4" role="tab"
+                                    aria-controls="prueba4" aria-selected="false">Apoyo 2</a>
                             </li>
                         </ul>
+
+
                         <div class="tab-content estilos" id="myTabContent2">
                             <div class="tab-pane fade show active" id="trabajo" role="tabpanel"
                                 aria-labelledby="puesto-trabajo">
-                                <div style="width: 900px; height: 600px"
-                                    class="formulario-2 formulario centro my-custom-scrollbar">
-                                    <div>
-                                        <h1>Puesto de Trabajo</h1>
+                                <div class="my-custom-scrollbar table-wrapper-scroll-y">
+                                    <div class="card ">
+
+                                        <div class="card-header text-center mb-2"
+                                            style="background-color: #2257a3;color: white;            position: sticky;
+                                            top: 0;
+                                            z-index: 1;">
+                                            <h3>Puesto de Trabajo</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="form-group">
+                                                <label>Nombre de Puesto </label>
+                                                <input type="text" class="form-control" name="nombre_puesto"
+                                                    id="nombre_puesto">
+                                                <label>Descripción del Puesto</label>
+                                                <input type="text" class="form-control" name="descripcion_puesto"
+                                                    id="descripcion_puesto">
+                                                <label>Control Horario</label>
+                                                <select class="form-control" aria-label="Control Horario" id="horario"
+                                                    name="horario">
+                                                    <option value="" disabled selected>Seleccione una opción</option>
+                                                    <option value="1">SI</option>
+                                                    <option value="2">NO</option>
+                                                </select>
+                                                <textarea class="form-control" type="text" placeholder="Detalles Control Horario" maxLength="500"
+                                                    id="detalles_horario" name="detalles_horario"></textarea>
+
+                                                <label> Normas de Vestuario </label>
+                                                <select class="form-control" aria-label="Normas de Vestuario"
+                                                    id="vestuario" name="vestuario">
+                                                    <option value="" disabled selected>Seleccione una opción</option>
+                                                    <option value="1">SI</option>
+                                                    <option value="2">NO</option>
+                                                </select>
+                                                <textarea class="form-control" type="text" placeholder="Detalles de Normas de Vestuario" maxLength="500"
+                                                    id="detalles_vestuario" name="detalles_vestuario"></textarea>
+                                                <label> Formación en Casa </label>
+                                                <select class="form-control" aria-label="Formacion en Casa"
+                                                    id="formacion_casa" name="formacion_casa">
+                                                    <option value="" disabled selected>Seleccione una opción</option>
+                                                    <option value="1">SI</option>
+                                                    <option value="2">NO</option>
+                                                </select>
+                                                <textarea class="form-control" type="text" placeholder="Detalles Formacion en Casa" maxLength="500"
+                                                    id="detalles_formacion_casa" name="detalles_formacion_casa"></textarea>
+
+                                                <label> Pensión de Empresa </label>
+                                                <select class="form-control" aria-label="Pensión de empresa"
+                                                    id="pension_empresa" name="pension_empresa">
+                                                    <option value="" disabled selected>Seleccione una opción</option>
+                                                    <option value="1">SI</option>
+                                                    <option value="2">NO</option>
+                                                </select>
+                                                <textarea class="form-control" type="text" placeholder="Detalles Pension de Empresa" maxLength="500"
+                                                    id="detalles_pension_empresa" name="detalles_pension_empresa"></textarea>
+
+                                                <label>Relación con la familia</label>
+                                                <select class="form-control" aria-label="Relacion con la Familia"
+                                                    id="relacion_familia" name="relacion_familia">
+                                                    <option value="" disabled selected>Seleccione una opción</option>
+                                                    <option value="1">SI</option>
+                                                    <option value="2">NO</option>
+                                                </select>
+                                                <textarea class="form-control" type="text" placeholder="Detalles Relacion Familia" maxLength="500"
+                                                    id="detalles_relacion_familia" name="detalles_relacion_familia"></textarea>
+
+                                                <label>Seguro de enfermedad </label>
+                                                <select class="form-control" aria-label="Seguro de Enfermedad"
+                                                    id="seguro_enfermedad" name="seguro_enfermedad">
+                                                    <option value="" disabled selected>Seleccione una opción</option>
+                                                    <option value="1">SI</option>
+                                                    <option value="2">NO</option>
+                                                </select>
+
+                                                <textarea class="form-control" type="text" placeholder="Detalles Seguro de Enfermedad" maxLength="500"
+                                                    id="detalles_seguro_enfermedad" name="detalles_seguro_enfermedad"></textarea>
+
+
+                                                <label>Vacaciones </label>
+                                                <select class="form-control" aria-label="Vacaciones" id="vacaciones"
+                                                    name="vacaciones">
+                                                    <option value="" disabled selected>Seleccione una opción</option>
+                                                    <option value="1">SI</option>
+                                                    <option value="2">NO</option>
+                                                </select>
+
+                                                <textarea class="form-control" type="text" placeholder="Detalles Vacaciones" maxLength="500"
+                                                    id="detalles_vacaciones" name="detalles_vacaciones"></textarea>
+                                            </div>
+
+                                        </div>
                                     </div>
-                                    <label>Nombre de Puesto </label>
-                                    <input type="text" placeholder="Nombre del puesto">
-                                    <br />
-                                    <label>Descripción del Puesto</label>
-                                    <input type="text" placeholder="Descripcion Puesto disponible">
-                                    <br />
-                                    <label>Control Horario</label>
-                                    <select class="form-control" aria-label="Control Horario">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">SI</option>
-                                        <option value="2">NO</option>
-                                    </select>
-
-                                    <textarea class="form-control" type="text" placeholder="Detalles Control Horario" maxLength="500"> </textarea>
-                                    <br />
-                                    <label> Normas de Vestuario </label>
-                                    <select class="form-control" aria-label="Normas de Vestuario">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">SI</option>
-                                        <option value="2">NO</option>
-                                    </select>
-                                    <textarea class="form-control" type="text" placeholder="Detalles de Normas de Vestuario" maxLength="500"></textarea>
-                                    <br />
-                                    <label> Formación en Casa </label>
-                                    <select class="form-control" aria-label="Formacion en Casa">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">SI</option>
-                                        <option value="2">NO</option>
-                                    </select>
-                                    <textarea class="form-control" type="text" placeholder="Detalles Formacion en Casa" maxLength="500"></textarea>
-
-                                    <br />
-                                    <label> Pensión de Empresa </label>
-                                    <select class="form-control" aria-label="Pensión de empresa">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">SI</option>
-                                        <option value="2">NO</option>
-                                    </select>
-                                    <textarea class="form-control" type="text" placeholder="Detalles Pension de Empresa" maxLength="500"></textarea>
-
-                                    <br />
-                                    <label>Relación con la familia</label>
-                                    <select class="form-control" aria-label="Relacion con la Familia">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">SI</option>
-                                        <option value="2">NO</option>
-                                    </select>
-                                    <textarea class="form-control" type="text" placeholder="Detalles Relacion Familia" maxLength="500"></textarea>
-
-                                    <br />
-                                    <label>Seguro de enfermedad </label>
-                                    <select class="form-control" aria-label="Seguro de Enfermedad">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">SI</option>
-                                        <option value="2">NO</option>
-                                    </select>
-
-                                    <textarea class="form-control" type="text" placeholder="Detalles Seguro de Enfermedad" maxLength="500"></textarea>
-
-                                    <br />
-
-                                    <label>Vacaciones </label>
-                                    <select class="form-control" aria-label="Vacaciones">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">SI</option>
-                                        <option value="2">NO</option>
-                                    </select>
-
-                                    <textarea class="form-control" type="text" placeholder="Detalles Vacaciones" maxLength="500"></textarea>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="profile2" role="tabpanel" aria-labelledby="profile2-tab">
-                                <div class="formulario-2 formulario centro my-custom-scrollbar"
-                                    style="width: 900px ; height: 600px">
-                                    <div>
-                                        <h1>SALUD Y SEGURIDAD</h1>
-                                    </div>
-                                    <label>Evaluacion de riesgo</label>
-                                    <select class="form-control" aria-label="Evaluacion de riesgo">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">SI</option>
-                                        <option value="2">NO</option>
-                                    </select>
+                                <div class="my-custom-scrollbar table-wrapper-scroll-y">
+                                    <div class="card">
+                                        <div class="card-header text-center mb-2"
+                                            style="background-color: #2257a3;color: white;            position: sticky;
+                                            top: 0;
+                                            z-index: 1;">
+                                            <h3>Salud Y Seguridad</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <label>Evaluacion de riesgo</label>
+                                            <select class="form-control" aria-label="Evaluacion de riesgo"
+                                                id="evaluacion_riesgo" name="evaluacion_riesgo">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">SI</option>
+                                                <option value="2">NO</option>
+                                            </select>
+                                            <textarea class="form-control" type="text" placeholder="Detalles Evaluacion de Riesgo" maxLength="500"
+                                                id="detalles_evaluacion_riesgo" name="detalles_evaluacion_riesgo"></textarea>
 
-                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion de Riesgo" maxLength="500"></textarea>
-                                    <br />
-                                    <label>Evaluacion Realizada</label>
-                                    <select class="form-control" aria-label="Evaluacion Realizada">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">SI</option>
-                                        <option value="2">NO</option>
-                                    </select>
+                                            <label>Evaluacion Realizada</label>
+                                            <select class="form-control" aria-label="Evaluacion Realizada"
+                                                id="evaluacion_realizada" name="evaluacion_realizada">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">SI</option>
+                                                <option value="2">NO</option>
+                                            </select>
+                                            <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"
+                                                id="detalles_evaluacion_realizada" name="detalles_evaluacion_realizada"></textarea>
 
-                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
-                                    <label>Promocion Laboral</label>
-                                    <textarea class="form-control" type="text" placeholder="Perspectiva de promocion Laboral" maxLength="500"></textarea>
-                                    <div>
+                                            <label>Promocion Laboral</label>
+                                            <textarea class="form-control" type="text" placeholder="Perspectiva de promocion Laboral" maxLength="500"
+                                                id="promocion_laboral" name="promocion_laboral"></textarea>
+                                            <label>Flexibilidad Laboral</label>
+                                            <textarea class="form-control" type="text" placeholder="Flexibilidad Laboral" maxLength="500"
+                                                id="flexibilidad_laboral" name="flexibilidad_laboral"></textarea>
+                                        </div>
 
-                                        <label>Flexibilidad Laboral</label>
-                                        <textarea class="form-control" type="text" placeholder="Flexibilidad Laboral" maxLength="500"></textarea>
 
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="contact2" role="tabpanel" aria-labelledby="contact2-tab">
-                                <div style=" width: 900px; height: 600px"
-                                    class="formulario-2 formulario centro my-custom-scrollbar">
-                                    <h1>HABILIDAD FISICA</h1>
+                                <div class="my-custom-scrollbar table-wrapper-scroll-y">
 
-                                    <label>Estar de pie</label>
-                                    <select class="form-control" aria-label="Estar de pie">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">SI</option>
-                                        <option value="2">NO</option>
-                                    </select>
-                                    <label>Caminar</label>
-                                    <select class="form-control" aria-label="Caminar">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">SI</option>
-                                        <option value="2">NO</option>
-                                    </select>
-                                    <label>Estar Sentado</label>
-                                    <select class="form-control" aria-label="Estar Sentado">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">SI</option>
-                                        <option value="2">NO</option>
-                                    </select>
-                                    <label>Levantar</label>
-                                    <select class="form-control" aria-label="Levantar">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">SI</option>
-                                        <option value="2">NO</option>
-                                    </select>
-                                    <label>Acarrear</label>
-                                    <select class="form-control" aria-label="Acarrear">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">SI</option>
-                                        <option value="2">NO</option>
-                                    </select>
-                                    <label>Empujar</label>
-                                    <select class="form-control" aria-label="Empujar">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">SI</option>
-                                        <option value="2">NO</option>
-                                    </select>
-                                    <label>Subir</label>
-                                    <select class="form-control" aria-label="Subir">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">SI</option>
-                                        <option value="2">NO</option>
-                                    </select>
-                                    <label>Mantener Equilibrio</label>
-                                    <select class="form-control" aria-label="Mantener Equilibrio">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">SI</option>
-                                        <option value="2">NO</option>
-                                    </select>
-                                    <label>Encorvarse</label>
-                                    <select class="form-control" aria-label="Encorvarse">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">SI</option>
-                                        <option value="2">NO</option>
-                                    </select>
-                                    <label>Arrodillarse</label>
-                                    <select class="form-control" aria-label="Arrodillarse">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">SI</option>
-                                        <option value="2">NO</option>
-                                    </select>
-                                    <label>Manipular con las manos</label>
-                                    <select class="form-control" aria-label="Manipular con las manos">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">UNA MANO</option>
-                                        <option value="2">AMBAS MANOS</option>
-                                    </select>
-                                    <label>Manipular con destreza</label>
-                                    <select class="form-control" aria-label="Manipular con destreza">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">FINA</option>
-                                        <option value="2">GRUESA</option>
-                                    </select>
-                                    <label>Vision</label>
-                                    <select class="form-control" aria-label="Vision">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">SI</option>
-                                        <option value="2">NO</option>
-                                    </select>
-                                    <label>Audicion</label>
-                                    <select class="form-control" aria-label="Audicion">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">SI</option>
-                                        <option value="2">NO</option>
-                                    </select>
-                                    <label>Requisitos de adaptacion</label>
-                                    <textarea class="form-control" type="text" placeholder="Requisitos de adaptacion" maxLength="500"></textarea>
-                                    <label>Expetativas de supervicion/ apoyo natural</label>
-                                    <textarea class="form-control" type="text" placeholder="Expetativas de supervicion/apoyo natural" maxLength="500"></textarea>
+                                    <div class="card">
+                                        <div class="card-header text-center mb-2"
+                                            style="background-color: #2257a3;color: white;            position: sticky;
+                                            top: 0;
+                                            z-index: 1;">
+                                            <h3>Habilidad Fisica</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <label>Estar de pie</label>
+                                            <select class="form-control" aria-label="Estar de pie" id="estar_pie"
+                                                name="estar_pie">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">SI</option>
+                                                <option value="2">NO</option>
+                                            </select>
+                                            <label>Caminar</label>
+                                            <select class="form-control" aria-label="Caminar" id="caminar"
+                                                name="caminar">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">SI</option>
+                                                <option value="2">NO</option>
+                                            </select>
+                                            <label>Estar Sentado</label>
+                                            <select class="form-control" aria-label="Estar Sentado" id="estar_sentado"
+                                                name="estar_sentado">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">SI</option>
+                                                <option value="2">NO</option>
+                                            </select>
+                                            <label>Levantar</label>
+                                            <select class="form-control" aria-label="Levantar" id="levantar"
+                                                name="levantar">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">SI</option>
+                                                <option value="2">NO</option>
+                                            </select>
+                                            <label>Acarrear</label>
+                                            <select class="form-control" aria-label="Acarrear" id="acarrear"
+                                                name="acarrear">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">SI</option>
+                                                <option value="2">NO</option>
+                                            </select>
+                                            <label>Empujar</label>
+                                            <select class="form-control" aria-label="Empujar" id="empujar"
+                                                name="empujar">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">SI</option>
+                                                <option value="2">NO</option>
+                                            </select>
+                                            <label>Subir</label>
+                                            <select class="form-control" aria-label="Subir" id="subir"
+                                                name="subir">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">SI</option>
+                                                <option value="2">NO</option>
+                                            </select>
+                                            <label>Mantener Equilibrio</label>
+                                            <select class="form-control" aria-label="Mantener Equilibrio"
+                                                id="mantener_equilibrio" name="mantener_equilibrio">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">SI</option>
+                                                <option value="2">NO</option>
+                                            </select>
+                                            <label>Encorvarse</label>
+                                            <select class="form-control" aria-label="Encorvarse" id="encorvarse"
+                                                name="encorvarse">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">SI</option>
+                                                <option value="2">NO</option>
+                                            </select>
+                                            <label>Arrodillarse</label>
+                                            <select class="form-control" aria-label="Arrodillarse" id="arrodillarse"
+                                                name="arrodillarse">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">SI</option>
+                                                <option value="2">NO</option>
+                                            </select>
+                                            <label>Manipular con las manos</label>
+                                            <select class="form-control" aria-label="Manipular con las manos"
+                                                id="manipular_manos" name="manipular_manos">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">UNA MANO</option>
+                                                <option value="2">AMBAS MANOS</option>
+                                            </select>
+                                            <label>Manipular con destreza</label>
+                                            <select class="form-control" aria-label="Manipular con destreza"
+                                                id="manipular_destreza" name="manipular_destreza">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">FINA</option>
+                                                <option value="2">GRUESA</option>
+                                            </select>
+                                            <label>Vision</label>
+                                            <select class="form-control" aria-label="Vision" id="vision"
+                                                name="vision">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">SI</option>
+                                                <option value="2">NO</option>
+                                            </select>
+                                            <label>Audicion</label>
+                                            <select class="form-control" aria-label="Audicion" id="audicion"
+                                                name="audicion">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">SI</option>
+                                                <option value="2">NO</option>
+                                            </select>
+                                            <label>Requisitos de adaptacion</label>
+                                            <textarea class="form-control" type="text" placeholder="Requisitos de adaptacion" maxLength="500"
+                                                id="requisitos_adaptacion" name="requisitos_adaptacion"></textarea>
+                                            <label>Expetativas de supervicion/ apoyo natural</label>
+                                            <textarea class="form-control" type="text" placeholder="Expetativas de supervicion/apoyo natural" maxLength="500"
+                                                id="apoyo_natural" name="apoyo_natural"></textarea>
+                                        </div>
+                                    </div>
+
+
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="prueba" role="tabpanel" aria-labelledby="prueba-tab">
-                                <div style="width: 900px; height: 600px"
-                                    class="formulario-2 formulario centro my-custom-scrollbar">
-                                    <h1>El trabajo es:</h1>
-                                    <table class="table-dark table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col"></th>
-                                                <th scope="col">1</th>
-                                                <th scope="col">2</th>
-                                                <th scope="col">3</th>
-                                                <th scope="col">4</th>
-                                                <th scope="col">5</th>
-                                                <th scope="col">6</th>
-                                                <th scope="col">7</th>
-                                                <th scope="col">8</th>
-                                                <th scope="col">9</th>
-                                                <th scope="col"></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">Jornada Completa</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options0"
-                                                            id="inlineRadio1" value="1"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options0"
-                                                            id="inlineRadio1" value="2"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options0"
-                                                            id="inlineRadio1" value="3"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options0"
-                                                            id="inlineRadio1" value="4"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options0"
-                                                            id="inlineRadio1" value="5"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options0"
-                                                            id="inlineRadio1" value="6"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options0"
-                                                            id="inlineRadio1" value="7"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options0"
-                                                            id="inlineRadio1" value="8"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options0"
-                                                            id="inlineRadio1" value="9"></div>
-                                                </td>
-                                                <th scope="row">Media Jornada</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Dentro</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options1"
-                                                            id="inlineRadio1" value="1"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options1"
-                                                            id="inlineRadio1" value="2"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options1"
-                                                            id="inlineRadio1" value="3"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options1"
-                                                            id="inlineRadio1" value="4"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options1"
-                                                            id="inlineRadio1" value="5"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options1"
-                                                            id="inlineRadio1" value="6"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options1"
-                                                            id="inlineRadio1" value="7"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options1"
-                                                            id="inlineRadio1" value="8"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options1"
-                                                            id="inlineRadio1" value="9"></div>
-                                                </td>
-                                                <th scope="row">En el exterior</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Estando en un lugar</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options2"
-                                                            id="inlineRadio1" value="1"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options2"
-                                                            id="inlineRadio1" value="2"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options2"
-                                                            id="inlineRadio1" value="3"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options2"
-                                                            id="inlineRadio1" value="4"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options2"
-                                                            id="inlineRadio1" value="5"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options2"
-                                                            id="inlineRadio1" value="6"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options2"
-                                                            id="inlineRadio1" value="7"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options2"
-                                                            id="inlineRadio1" value="8"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options2"
-                                                            id="inlineRadio1" value="9"></div>
-                                                </td>
-                                                <th scope="row">Cambiando de lugar</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Donde haya mucha actividad</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options3"
-                                                            id="inlineRadio1" value="1"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options3"
-                                                            id="inlineRadio1" value="2"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options3"
-                                                            id="inlineRadio1" value="3"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options3"
-                                                            id="inlineRadio1" value="4"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options3"
-                                                            id="inlineRadio1" value="5"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options3"
-                                                            id="inlineRadio1" value="6"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options3"
-                                                            id="inlineRadio1" value="7"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options3"
-                                                            id="inlineRadio1" value="8"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options3"
-                                                            id="inlineRadio1" value="9"></div>
-                                                </td>
-                                                <th scope="row">Donde haya poca actividad</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Donde haga calor</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options4"
-                                                            id="inlineRadio1" value="1"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options4"
-                                                            id="inlineRadio1" value="2"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options4"
-                                                            id="inlineRadio1" value="3"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options4"
-                                                            id="inlineRadio1" value="4"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options4"
-                                                            id="inlineRadio1" value="5"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options4"
-                                                            id="inlineRadio1" value="6"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options4"
-                                                            id="inlineRadio1" value="7"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options4"
-                                                            id="inlineRadio1" value="8"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options4"
-                                                            id="inlineRadio1" value="9"></div>
-                                                </td>
-                                                <th scope="row">Donde haga frío</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">En un lugar ruidoso</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options5"
-                                                            id="inlineRadio1" value="1"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options5"
-                                                            id="inlineRadio1" value="2"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options5"
-                                                            id="inlineRadio1" value="3"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options5"
-                                                            id="inlineRadio1" value="4"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options5"
-                                                            id="inlineRadio1" value="5"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options5"
-                                                            id="inlineRadio1" value="6"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options5"
-                                                            id="inlineRadio1" value="7"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options5"
-                                                            id="inlineRadio1" value="8"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options5"
-                                                            id="inlineRadio1" value="9"></div>
-                                                </td>
-                                                <th scope="row">En un lugar silencioso</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">En un sitio limpio</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options6"
-                                                            id="inlineRadio1" value="1"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options6"
-                                                            id="inlineRadio1" value="2"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options6"
-                                                            id="inlineRadio1" value="3"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options6"
-                                                            id="inlineRadio1" value="4"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options6"
-                                                            id="inlineRadio1" value="5"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options6"
-                                                            id="inlineRadio1" value="6"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options6"
-                                                            id="inlineRadio1" value="7"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options6"
-                                                            id="inlineRadio1" value="8"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options6"
-                                                            id="inlineRadio1" value="9"></div>
-                                                </td>
-                                                <th scope="row">En un sitio desaliñado, sucio</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Una tarea constante</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options7"
-                                                            id="inlineRadio1" value="1"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options7"
-                                                            id="inlineRadio1" value="2"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options7"
-                                                            id="inlineRadio1" value="3"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options7"
-                                                            id="inlineRadio1" value="4"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options7"
-                                                            id="inlineRadio1" value="5"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options7"
-                                                            id="inlineRadio1" value="6"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options7"
-                                                            id="inlineRadio1" value="7"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options7"
-                                                            id="inlineRadio1" value="8"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options7"
-                                                            id="inlineRadio1" value="9"></div>
-                                                </td>
-                                                <th scope="row">Haciendo diferentes tareas</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">En un espacio grande</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options8"
-                                                            id="inlineRadio1" value="1"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options8"
-                                                            id="inlineRadio1" value="2"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options8"
-                                                            id="inlineRadio1" value="3"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options8"
-                                                            id="inlineRadio1" value="4"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options8"
-                                                            id="inlineRadio1" value="5"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options8"
-                                                            id="inlineRadio1" value="6"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options8"
-                                                            id="inlineRadio1" value="7"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options8"
-                                                            id="inlineRadio1" value="8"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options8"
-                                                            id="inlineRadio1" value="9"></div>
-                                                </td>
-                                                <th scope="row">En un espacio pequeño</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Principalmente con hombres</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options9"
-                                                            id="inlineRadio1" value="1"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options9"
-                                                            id="inlineRadio1" value="2"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options9"
-                                                            id="inlineRadio1" value="3"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options9"
-                                                            id="inlineRadio1" value="4"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options9"
-                                                            id="inlineRadio1" value="5"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options9"
-                                                            id="inlineRadio1" value="6"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options9"
-                                                            id="inlineRadio1" value="7"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options9"
-                                                            id="inlineRadio1" value="8"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options9"
-                                                            id="inlineRadio1" value="9"></div>
-                                                </td>
-                                                <th scope="row">Principalmente con mujeres</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Con uniforme</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options10"
-                                                            id="inlineRadio1" value="1"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options10"
-                                                            id="inlineRadio1" value="2"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options10"
-                                                            id="inlineRadio1" value="3"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options10"
-                                                            id="inlineRadio1" value="4"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options10"
-                                                            id="inlineRadio1" value="5"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options10"
-                                                            id="inlineRadio1" value="6"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options10"
-                                                            id="inlineRadio1" value="7"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options10"
-                                                            id="inlineRadio1" value="8"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options10"
-                                                            id="inlineRadio1" value="9"></div>
-                                                </td>
-                                                <th scope="row">Sin uniforme</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Con palabras / libros</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options11"
-                                                            id="inlineRadio1" value="1"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options11"
-                                                            id="inlineRadio1" value="2"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options11"
-                                                            id="inlineRadio1" value="3"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options11"
-                                                            id="inlineRadio1" value="4"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options11"
-                                                            id="inlineRadio1" value="5"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options11"
-                                                            id="inlineRadio1" value="6"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options11"
-                                                            id="inlineRadio1" value="7"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options11"
-                                                            id="inlineRadio1" value="8"></div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options11"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No con palabras ni libros</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Con números</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options12"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options12"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options12"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options12"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options12"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options12"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options12"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options12"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options12"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No con números</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Utilizando transporte público</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options13"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options13"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options13"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options13"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options13"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options13"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options13"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options13"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options13"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">Sin usar transporte público</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Con otros</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options14"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options14"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options14"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options14"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options14"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options14"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options14"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options14"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options14"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No con otros</th>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="my-custom-scrollbar table-wrapper-scroll-y">
+                                    <div class="card">
+                                        <div class="card-header text-center mb-2"
+                                            style="background-color: #2257a3;color: white;            position: sticky;
+                                            top: 0;
+                                            z-index: 1;">
+                                            <h3>El trabajo es:</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col"></th>
+                                                        <th scope="col">1</th>
+                                                        <th scope="col">2</th>
+                                                        <th scope="col">3</th>
+                                                        <th scope="col">4</th>
+                                                        <th scope="col">5</th>
+                                                        <th scope="col">6</th>
+                                                        <th scope="col">7</th>
+                                                        <th scope="col">8</th>
+                                                        <th scope="col">9</th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Jornada Completa</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option0" id="jornada{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">Media Jornada</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Dentro</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option1" id="dentro{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">En el exterior</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Estando en un lugar</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option2" id="lugar{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+
+                                                        <th scope="row">Cambiando de lugar</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Donde haya mucha actividad</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option3" id="actividad{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">Donde haya poca actividad</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Donde haga calor</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option4" id="calor{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">Donde haga frío</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">En un lugar ruidoso</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option5" id="ruidoso{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">En un lugar silencioso</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">En un sitio limpio</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option6" id="limpio{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">En un sitio desaliñado, sucio</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Una tarea constante</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option7" id="constante{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">Haciendo diferentes tareas</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">En un espacio grande</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option8" id="espacio{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">En un espacio pequeño</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Principalmente con hombres</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option9"
+                                                                        id="principalmente{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">Principalmente con mujeres</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Con uniforme</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option10" id="uniforme{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">Sin uniforme</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Con palabras / libros</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option11" id="palabras{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No con palabras ni libros</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Con números</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option12" id="numeros{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No con números</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Utilizando transporte público</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option13"
+                                                                        id="transporte{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">Sin usar transporte público</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Con otros</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option14" id="otros{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No con otros</th>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+
+
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="prueba2" role="tabpanel" aria-labelledby="prueba-tab2">
-                                <div style="width: 900px; height: 600px"
-                                    class="formulario-2 formulario centro my-custom-scrollbar">
-                                    <h1>Habilidades Requeridas</h1>
-                                    <table class="table-dark table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col"></th>
-                                                <th scope="col">1</th>
-                                                <th scope="col">2</th>
-                                                <th scope="col">3</th>
-                                                <th scope="col">4</th>
-                                                <th scope="col">5</th>
-                                                <th scope="col">6</th>
-                                                <th scope="col">7</th>
-                                                <th scope="col">8</th>
-                                                <th scope="col">9</th>
-                                                <th scope="col"></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">Usar manos</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options0"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options0"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options0"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options0"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options0"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options0"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options0"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options0"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options0"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Buena visión</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options1"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options1"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options1"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options1"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options1"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options1"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options1"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options1"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options1"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Buen oido</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options2"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options2"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options2"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options2"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options2"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options2"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options2"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options2"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options2"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Comunicarse bien</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options3"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options3"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options3"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options3"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options3"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options3"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options3"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options3"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options3"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Levantar pesos</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options4"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options4"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options4"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options4"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options4"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options4"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options4"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options4"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options4"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Tener fuerza</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options5"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options5"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options5"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options5"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options5"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options5"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options5"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options5"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options5"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Poder Leer</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options6"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options6"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options6"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options6"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options6"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options6"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options6"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options6"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options6"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Poder usar números</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options7"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options7"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options7"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options7"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options7"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options7"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options7"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options7"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options7"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Poder usar dinero</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options8"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options8"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options8"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options8"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options8"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options8"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options8"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options8"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options8"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Saber decir la hora</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options9"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options9"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options9"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options9"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options9"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options9"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options9"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options9"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options9"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Saber trabajar rapido</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options10"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options10"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options10"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options10"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options10"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options10"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options10"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options10"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options10"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Saber conseguir calidad</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options11"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options11"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options11"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options11"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options11"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options11"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options11"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options11"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options11"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Concentrarse + de 2 hs</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options12"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options12"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options12"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options12"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options12"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options12"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options12"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options12"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options12"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Poder hacer varias tareas</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options13"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options13"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options13"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options13"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options13"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options13"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options13"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options13"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options13"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">Solo 1 ó 2 tareas</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Tener buen equilibrio</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options14"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options14"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options14"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options14"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options14"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options14"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options14"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options14"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options14"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Poder andar</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options15"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options15"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options15"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options15"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options15"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options15"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options15"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options15"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options15"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Poder estar de pie + de 2 hs</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options16"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options16"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options16"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options16"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options16"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options16"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options16"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options16"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options16"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Poder estar sentado + de 2 hs</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options17"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options17"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options17"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options17"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options17"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options17"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options17"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options17"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options17"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Poder utilizar escaleras</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options18"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options18"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options18"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options18"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options18"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options18"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options18"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options18"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options18"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">No enfadarse a menudo</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options19"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options19"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options19"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options19"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options19"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options19"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options19"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options19"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options19"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Poder recordar instrucciones</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options20"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options20"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options20"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options20"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options20"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options20"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options20"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options20"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options20"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Saber utilizar el teléfono</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options21"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options21"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options21"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options21"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options21"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options21"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options21"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options21"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options21"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Saber conducir</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options22"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options22"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options22"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options22"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options22"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options22"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options22"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options22"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options22"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Saber utilizar el ordenador</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options23"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options23"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options23"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options23"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options23"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options23"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options23"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options23"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options23"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Saber deletrear</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options24"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options24"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options24"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options24"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options24"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options24"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options24"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options24"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options24"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Tener buena letra</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options25"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options25"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options25"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options25"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options25"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options25"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options25"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options25"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options25"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Tener opinion,criterio,juicio</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options26"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options26"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options26"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options26"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options26"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options26"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options26"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options26"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options26"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Poder trabajar sin apoyo</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options27"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options27"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options27"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options27"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options27"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options27"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options27"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options27"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options27"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">Se requiere apoyo directo</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Tener iniciativa</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options28"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options28"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options28"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options28"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options28"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options28"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options28"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options28"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options28"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Saber cuidar su apariencia</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options29"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options29"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options29"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options29"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options29"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options29"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options29"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options29"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options29"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Tener buena higiene personal</th>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options30"
-                                                            id="inlineRadio1" value="1">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options30"
-                                                            id="inlineRadio1" value="2">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options30"
-                                                            id="inlineRadio1" value="3">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options30"
-                                                            id="inlineRadio1" value="4">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options30"
-                                                            id="inlineRadio1" value="5">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options30"
-                                                            id="inlineRadio1" value="6">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options30"
-                                                            id="inlineRadio1" value="7">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options30"
-                                                            id="inlineRadio1" value="8">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-check form-check-inline"><input
-                                                            class="form-check-input" type="radio" name="options30"
-                                                            id="inlineRadio1" value="9">
-                                                    </div>
-                                                </td>
-                                                <th scope="row">No requerida</th>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="my-custom-scrollbar table-wrapper-scroll-y">
+
+                                    <div class="card">
+                                        <div class="card-header text-center mb-2"
+                                            style="background-color: #2257a3;color: white;            position: sticky;
+                                        top: 0;
+                                        z-index: 1;">
+                                            <h3>Habilidades Requeridas</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col"></th>
+                                                        <th scope="col">1</th>
+                                                        <th scope="col">2</th>
+                                                        <th scope="col">3</th>
+                                                        <th scope="col">4</th>
+                                                        <th scope="col">5</th>
+                                                        <th scope="col">6</th>
+                                                        <th scope="col">7</th>
+                                                        <th scope="col">8</th>
+                                                        <th scope="col">9</th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Usar manos</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option15" id="manos{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Buena visión</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option16" id="vision{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Buen oido</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option17" id="oido{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Comunicarse bien</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option18"
+                                                                        id="comunicarse{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Levantar pesos</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option19" id="levantar{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Tener fuerza</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option20" id="fuerza{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Poder Leer</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option21" id="leer{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Poder usar números</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option22" id="numeros{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Poder usar dinero</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option23" id="dinero{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Saber decir la hora</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option24" id="hora{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Saber trabajar rapido</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option25"
+                                                                        id="trabajar-rapido{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Saber conseguir calidad</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option26" id="calidad{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Concentrarse + de 2 hs</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option27"
+                                                                        id="concentrarse{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Poder hacer varias tareas</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option28"
+                                                                        id="varias-tareas{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">Solo 1 ó 2 tareas</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Tener buen equilibrio</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option29"
+                                                                        id="equilibrio{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Poder andar</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option30"
+                                                                        id="andar-bien{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Poder estar de pie + de 2 hs</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option31" id="estar-pie{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Poder estar sentado + de 2 hs</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option32"
+                                                                        id="estar-sentado{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Poder utilizar escaleras</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option33"
+                                                                        id="usar-escaleras{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">No enfadarse a menudo</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option34"
+                                                                        id="no-enfadarse{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Poder recordar instrucciones</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option35"
+                                                                        id="recordar-instrucciones{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Saber utilizar el teléfono</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option36"
+                                                                        id="usar-telefono{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Saber conducir</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option37" id="conducir{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Saber utilizar el ordenador</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option38" id="ordenador{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Saber deletrear</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option39" id="deletrear{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Tener buena letra</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option40"
+                                                                        id="buena-letra{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Tener opinion,criterio,juicio</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option41" id="opinion{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Poder trabajar sin apoyo</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option42"
+                                                                        id="trabajar-apoyo{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">Se requiere apoyo directo</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Tener iniciativa</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option43"
+                                                                        id="iniciativa{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Saber cuidar su apariencia</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option44"
+                                                                        id="apariencia{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Tener buena higiene personal</th>
+                                                        @for ($i = 1; $i <= 9; $i++)
+                                                            <td>
+                                                                <div class="form-check form-check-inline"><input
+                                                                        class="form-check-input" type="radio"
+                                                                        name="option45" id="higiene{{ $i }}"
+                                                                        value="{{ $i }}"></div>
+                                                            </td>
+                                                        @endfor
+                                                        <th scope="row">No requerida</th>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="prueba3" role="tabpanel" aria-labelledby="prueba-tab3">
-                                <div style="width: 900px; height: 600px"
-                                    class="formulario-2 formulario centro my-custom-scrollbar">
-                                    <div>
-                                        <h1>Listado de comprobacion de necesidades de apoyo</h1>
+                                <div class="my-custom-scrollbar table-wrapper-scroll-y">
+
+
+                                    <div class="card">
+                                        <div class="card-header text-center mb-2"
+                                            style="background-color: #2257a3;color: white;position: sticky;top: 0;z-index: 1;">
+                                            <h3>Listado de comprobacion de necesidades de apoyo</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <label>Cumplir el Horario</label>
+                                            <select class="form-control" id="cumplir_horario" name="cumplir_horario">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">Necesita apoyo total</option>
+                                                <option value="2">Necesita algun apoyo</option>
+                                                <option value="3">No necesita apoyo</option>
+                                            </select>
+                                            <textarea class="form-control" type="text" placeholder="Detalles" maxLength="500" id="detalles_cumplir_horario"
+                                                name="detalles_cumplir_horario"></textarea>
+                                            <label>Asistencia</label>
+                                            <select class="form-control" id="asistencia" name="asistencia">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">Necesita apoyo total</option>
+                                                <option value="2">Necesita algun apoyo</option>
+                                                <option value="3">No necesita apoyo</option>
+                                            </select>
+                                            <textarea class="form-control" type="text" placeholder="Detalles" maxLength="500" id="detalles_asistencia"
+                                                name="detalles_asistencia"></textarea>
+                                            <label>Comunicacion</label>
+                                            <select class="form-control" id="comunicacion" name="comunicacion">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">Necesita apoyo total</option>
+                                                <option value="2">Necesita algun apoyo</option>
+                                                <option value="3">No necesita apoyo</option>
+                                            </select>
+                                            <textarea class="form-control" type="text" placeholder="Detalles" maxLength="500" id="detalles_comunicacion"
+                                                name="detalles_comunicacion"></textarea>
+                                            <label>Conducta</label>
+                                            <select class="form-control" id="conducta" name="conducta">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">Necesita apoyo total</option>
+                                                <option value="2">Necesita algun apoyo</option>
+                                                <option value="3">No necesita apoyo</option>
+                                            </select>
+                                            <textarea class="form-control" type="text" placeholder="Detalles" maxLength="500" id="detalles_conducta"
+                                                name="detalles_conducta"></textarea>
+                                            <label>Vestido/apariencia</label>
+                                            <select class="form-control" id="vestido" name="vestido">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">Necesita apoyo total</option>
+                                                <option value="2">Necesita algun apoyo</option>
+                                                <option value="3">No necesita apoyo</option>
+                                            </select>
+                                            <textarea class="form-control" type="text" placeholder="Detalles" maxLength="500" id="detalles_vestido"
+                                                name="detalles_vestido"></textarea>
+                                            <label>Interaccion social</label>
+                                            <select class="form-control" id="interaccion_social"
+                                                name="interaccion_social">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">Necesita apoyo total</option>
+                                                <option value="2">Necesita algun apoyo</option>
+                                                <option value="3">No necesita apoyo</option>
+                                            </select>
+                                            <textarea class="form-control" type="text" placeholder="Detalles" maxLength="500"
+                                                id="detalles_interaccion_social" name="detalles_interaccion_social"></textarea>
+                                        </div>
+
                                     </div>
-                                    <label>Cumplir el Horario</label>
-                                    <select class="form-control" aria-label="Evaluacion de riesgo">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">Necesita apoyo total</option>
-                                        <option value="2">Necesita algun apoyo</option>
-                                        <option value="3">No necesita apoyo</option>
-                                    </select>
-                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
-                                    <label>Asistencia</label>
-                                    <select class="form-control" aria-label="Evaluacion de riesgo">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">Necesita apoyo total</option>
-                                        <option value="2">Necesita algun apoyo</option>
-                                        <option value="3">No necesita apoyo</option>
-                                    </select>
-                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
-                                    <label>Comunicacion</label>
-                                    <select class="form-control" aria-label="Evaluacion de riesgo">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">Necesita apoyo total</option>
-                                        <option value="2">Necesita algun apoyo</option>
-                                        <option value="3">No necesita apoyo</option>
-                                    </select>
-                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
-                                    <label>Conducta</label>
-                                    <select class="form-control" aria-label="Evaluacion de riesgo">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">Necesita apoyo total</option>
-                                        <option value="2">Necesita algun apoyo</option>
-                                        <option value="3">No necesita apoyo</option>
-                                    </select>
-                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
-                                    <label>Vestido/apariencia</label>
-                                    <select class="form-control" aria-label="Evaluacion de riesgo">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">Necesita apoyo total</option>
-                                        <option value="2">Necesita algun apoyo</option>
-                                        <option value="3">No necesita apoyo</option>
-                                    </select>
-                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
-                                    <label>Interaccion social</label>
-                                    <select class="form-control" aria-label="Evaluacion de riesgo">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">Necesita apoyo total</option>
-                                        <option value="2">Necesita algun apoyo</option>
-                                        <option value="3">No necesita apoyo</option>
-                                    </select>
-                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
+
+
+
                                     <div>
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="prueba4" role="tabpanel" aria-labelledby="prueba-tab4">
-                                <div style="width: 900px; height: 600px"
-                                    class="formulario-2 formulario centro my-custom-scrollbar">
-                                    <div>
-                                        <h1>Listado de comprobacion de necesidades de apoyo</h1>
+                                <div class="my-custom-scrollbar table-wrapper-scroll-y">
+
+                                    <div class="card">
+                                        <div class="card-header text-center mb-2"
+                                            style="background-color: #2257a3;color: white;position: sticky;top: 0;z-index: 1;">
+                                            <h3>Listado de comprobacion de necesidades de apoyo</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <label>Motivacion</label>
+                                            <select class="form-control" id="motivacion" name="motivacion">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">Necesita apoyo total</option>
+                                                <option value="2">Necesita algun apoyo</option>
+                                                <option value="3">No necesita apoyo</option>
+                                            </select>
+                                            <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"
+                                                id="detalles_motivacion" name="detalles_motivacion"></textarea>
+                                            <label>Flexibilidad</label>
+                                            <select class="form-control" id="flexibilidad" name="flexibilidad">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">Necesita apoyo total</option>
+                                                <option value="2">Necesita algun apoyo</option>
+                                                <option value="3">No necesita apoyo</option>
+                                            </select>
+                                            <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"
+                                                id="detalles_flexibilidad" name="detalles_flexibilidad"></textarea>
+                                            <label>Iniciativa</label>
+                                            <select class="form-control" id="iniciativa" name="iniciativa">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">Necesita apoyo total</option>
+                                                <option value="2">Necesita algun apoyo</option>
+                                                <option value="3">No necesita apoyo</option>
+                                            </select>
+                                            <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"
+                                                id="detalles_iniciativa" name="detalles_iniciativa"></textarea>
+                                            <label>Trabajo en equipo</label>
+                                            <select class="form-control" id="trabajo_equipo" name="trabajo_equipo">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">Necesita apoyo total</option>
+                                                <option value="2">Necesita algun apoyo</option>
+                                                <option value="3">No necesita apoyo</option>
+                                            </select>
+                                            <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"
+                                                id="detalles_trabajo_equipo" name="detalles_trabajo_equipo"></textarea>
+                                            <label>Salud y seguridad</label>
+                                            <select class="form-control" id="salud_seguridad" name="salud_seguridad">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">Necesita apoyo total</option>
+                                                <option value="2">Necesita algun apoyo</option>
+                                                <option value="3">No necesita apoyo</option>
+                                            </select>
+                                            <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"
+                                                id="detalles_salud_seguridad" name="detalles_salud_seguridad"></textarea>
+                                            <label>Consistencia</label>
+                                            <select class="form-control" id="consistencia" name="consistencia">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">Necesita apoyo total</option>
+                                                <option value="2">Necesita algun apoyo</option>
+                                                <option value="3">No necesita apoyo</option>
+                                            </select>
+                                            <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"
+                                                id="detalles_consistencia" name="detalles_consistencia"></textarea>
+                                            <label>Trabajar con presion</label>
+                                            <select class="form-control" id="trabajar_presion" name="trabajar_presion">
+                                                <option value="" disabled selected>Seleccione una opción</option>
+                                                <option value="1">Necesita apoyo total</option>
+                                                <option value="2">Necesita algun apoyo</option>
+                                                <option value="3">No necesita apoyo</option>
+                                            </select>
+                                            <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"
+                                                id="detalles_trabajar_presion" name="detalles_trabajar_presion"></textarea>
+                                        </div>
                                     </div>
-                                    <label>Motivacion</label>
-                                    <select class="form-control" aria-label="Evaluacion de riesgo">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">Necesita apoyo total</option>
-                                        <option value="2">Necesita algun apoyo</option>
-                                        <option value="3">No necesita apoyo</option>
-                                    </select>
-                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
-                                    <label>Flexibilidad</label>
-                                    <select class="form-control" aria-label="Evaluacion de riesgo">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">Necesita apoyo total</option>
-                                        <option value="2">Necesita algun apoyo</option>
-                                        <option value="3">No necesita apoyo</option>
-                                    </select>
-                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
-                                    <label>Iniciativa</label>
-                                    <select class="form-control" aria-label="Evaluacion de riesgo">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">Necesita apoyo total</option>
-                                        <option value="2">Necesita algun apoyo</option>
-                                        <option value="3">No necesita apoyo</option>
-                                    </select>
-                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
-                                    <label>Trabajo en equipo</label>
-                                    <select class="form-control" aria-label="Evaluacion de riesgo">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">Necesita apoyo total</option>
-                                        <option value="2">Necesita algun apoyo</option>
-                                        <option value="3">No necesita apoyo</option>
-                                    </select>
-                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
-                                    <label>Salud y seguridad</label>
-                                    <select class="form-control" aria-label="Evaluacion de riesgo">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">Necesita apoyo total</option>
-                                        <option value="2">Necesita algun apoyo</option>
-                                        <option value="3">No necesita apoyo</option>
-                                    </select>
-                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
-                                    <label>Consistencia</label>
-                                    <select class="form-control" aria-label="Evaluacion de riesgo">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">Necesita apoyo total</option>
-                                        <option value="2">Necesita algun apoyo</option>
-                                        <option value="3">No necesita apoyo</option>
-                                    </select>
-                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
-                                    <label>Trabajar con presion</label>
-                                    <select class="form-control" aria-label="Evaluacion de riesgo">
-                                        <option value="DEFAULT" disabled>Seleccione una opción</option>
-                                        <option value="1">Necesita apoyo total</option>
-                                        <option value="2">Necesita algun apoyo</option>
-                                        <option value="3">No necesita apoyo</option>
-                                    </select>
-                                    <textarea class="form-control" type="text" placeholder="Detalles Evaluacion Realizada" maxLength="500"></textarea>
+
+
+
 
                                     <div>
                                     </div>
@@ -3053,7 +1183,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <a type="button" class="btn nav-link" href="/word/1"> <i class="fas fa-file-word"></i>
+                        <a type="button" class="btn" href="/word/1" style="background-color: #2257a3;color: white;">
+                            <i class="fas fa-file-word"></i>
                             Descargar</a>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         <button type="submit" class="btn btn-success">Subir Informe</button>
@@ -3062,6 +1193,11 @@
             </div>
         </div>
     </div>
+
+
+
+
+
     <div class="modal fade" id="matriz" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
@@ -3069,8 +1205,10 @@
                     @csrf
                     <input id="id_proyecto" name="id_proyecto" type="text" hidden>
                     <div class="modal-header text-center">
-                        <h5 class="modal-title w-100" id="exampleModalLabel"><b>Matriz de evaluación de Accesibilidad Universal</b></h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h5 class="modal-title w-100" id="exampleModalLabel"><b>Matriz de evaluación de Accesibilidad
+                                Universal</b></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
                         <ul class="nav nav-tabs" id="myTab" role="tablist" style="margin-bottom: 20px;">
@@ -3349,7 +1487,8 @@
                                                     <textarea class="form-control" id="ingreso_revision_1" name="ingreso_revision_1"></textarea>
                                                 </td>
                                                 <td><select id="ingreso_1" class="form-control" name="ingreso_1">
-                                                        <option selected disabled value="">Seleccionar Criterio</option>
+                                                        <option selected disabled value="">Seleccionar Criterio
+                                                        </option>
                                                         <option value="cumple">Cumple</option>
                                                         <option value="no_cumple">No Cumple</option>
                                                         <option value="no_aplica">No Aplica</option>
@@ -3376,7 +1515,8 @@
                                                     <textarea class="form-control" id="ingreso_revision_2" name="ingreso_revision_2"></textarea>
                                                 </td>
                                                 <td><select id="ingreso_2" class="form-control" name="ingreso_2">
-                                                        <option selected disabled value="">Seleccionar Criterio</option>
+                                                        <option selected disabled value="">Seleccionar Criterio
+                                                        </option>
                                                         <option value="cumple">Cumple</option>
                                                         <option value="no_cumple">No Cumple</option>
                                                         <option value="no_aplica">No Aplica</option>
@@ -3402,7 +1542,8 @@
                                                     <textarea class="form-control" id="ingreso_revision_3" name="ingreso_revision_3"></textarea>
                                                 </td>
                                                 <td><select id="ingreso_3" class="form-control" name="ingreso_3">
-                                                        <option selected disabled value="">Seleccionar Criterio</option>
+                                                        <option selected disabled value="">Seleccionar Criterio
+                                                        </option>
                                                         <option value="cumple">Cumple</option>
                                                         <option value="no_cumple">No Cumple</option>
                                                         <option value="no_aplica">No Aplica</option>
@@ -3429,7 +1570,8 @@
                                                     <textarea class="form-control" id="ingreso_revision_4" name="ingreso_revision_4"></textarea>
                                                 </td>
                                                 <td><select id="ingreso_4" class="form-control" name="ingreso_4">
-                                                        <option selected disabled value="">Seleccionar Criterio</option>
+                                                        <option selected disabled value="">Seleccionar Criterio
+                                                        </option>
                                                         <option value="cumple">Cumple</option>
                                                         <option value="no_cumple">No Cumple</option>
                                                         <option value="no_aplica">No Aplica</option>
@@ -3457,7 +1599,8 @@
                                                     <textarea class="form-control" id="ingreso_revision_5" name="ingreso_revision_5"></textarea>
                                                 </td>
                                                 <td><select id="ingreso_5" class="form-control" name="ingreso_5">
-                                                        <option selected disabled value="">Seleccionar Criterio</option>
+                                                        <option selected disabled value="">Seleccionar Criterio
+                                                        </option>
                                                         <option value="cumple">Cumple</option>
                                                         <option value="no_cumple">No Cumple</option>
                                                         <option value="no_aplica">No Aplica</option>
@@ -3483,7 +1626,8 @@
                                                     <textarea class="form-control" id="ingreso_revision_6" name="ingreso_revision_6"></textarea>
                                                 </td>
                                                 <td><select id="ingreso_6" class="form-control" name="ingreso_6">
-                                                        <option selected disabled value="">Seleccionar Criterio</option>
+                                                        <option selected disabled value="">Seleccionar Criterio
+                                                        </option>
                                                         <option value="cumple">Cumple</option>
                                                         <option value="no_cumple">No Cumple</option>
                                                         <option value="no_aplica">No Aplica</option>
@@ -3510,7 +1654,8 @@
                                                     <textarea class="form-control" id="ingreso_revision_7" name="ingreso_revision_7"></textarea>
                                                 </td>
                                                 <td><select id="ingreso_7" class="form-control" name="ingreso_7">
-                                                        <option selected disabled value="">Seleccionar Criterio</option>
+                                                        <option selected disabled value="">Seleccionar Criterio
+                                                        </option>
                                                         <option value="cumple">Cumple</option>
                                                         <option value="no_cumple">No Cumple</option>
                                                         <option value="no_aplica">No Aplica</option>
@@ -3537,7 +1682,8 @@
                                                     <textarea class="form-control" id="ingreso_revision_8" name="ingreso_revision_8"></textarea>
                                                 </td>
                                                 <td><select id="ingreso_8" class="form-control" name="ingreso_8">
-                                                        <option selected disabled value="">Seleccionar Criterio</option>
+                                                        <option selected disabled value="">Seleccionar Criterio
+                                                        </option>
                                                         <option value="cumple">Cumple</option>
                                                         <option value="no_cumple">No Cumple</option>
                                                         <option value="no_aplica">No Aplica</option>
@@ -4069,7 +2215,7 @@
                                             <td>
                                                 <textarea class="form-control" id="espacios_revision_5" name="espacios_revision_5"></textarea>
                                             </td>
-                                            <td><select id="espacios_5" class="form-control" name="espacios_5" >
+                                            <td><select id="espacios_5" class="form-control" name="espacios_5">
                                                     <option selected disabled value="">Seleccionar Criterio</option>
                                                     <option value="cumple">Cumple</option>
                                                     <option value="no_cumple">No Cumple</option>
@@ -4795,24 +2941,35 @@
             </div>
         </div>
     </div>
-    
+
 @stop
 
 @section('css')
-<style>
-    /* Media Query for Mobile Devices */
-    @media only screen and (max-width: 767px) {
-        .col-10{
-            flex: none;
-            max-width: 100%;
+    <style>
+        /* Media Query for Mobile Devices */
+        @media only screen and (max-width: 767px) {
+            .col-9 {
+                flex: none;
+                max-width: 100%;
+            }
+
+            .col-auto {
+                width: 100%;
+                max-width: 100%;
+                flex: 0 0 auto;
+            }
         }
-        .col-auto{
-            width: 100%;
-            max-width: 100%;
-            flex: 0 0 auto;
+
+        .my-custom-scrollbar {
+            position: relative;
+            height: 500px;
+            overflow: auto;
         }
-    }
-</style>
+
+        .table-wrapper-scroll-y {
+            display: block;
+        }
+    </style>
 @stop
 
 @section('js')
@@ -4822,7 +2979,7 @@
 
 
 
-            $("#matriz").on("hidden.bs.modal", function () {
+            $("#matriz").on("hidden.bs.modal", function() {
                 // Aquí va el código a disparar en el evento
                 for (let index = 1; index <= 6; index++) {
                     $(`#estacionamiento_${index}`).val("");
@@ -4879,10 +3036,82 @@
                     $(`#logro_ascensor_${index}`).val("")
                 }
             });
+            $("#informaApt").on("hidden.bs.modal", function() {
+                $("#nombre_puesto").val("")
+                    $("#descripcion_puesto").val("")
+                    $("#horario").val("")
+                    $("#detalles_horario").val("")
+                    $("#vestuario").val("")
+                    $("#detalles_vestuario").val("")
+                    $("#formacion_casa").val("")
+                    $("#detalles_formacion_casa").val("")
+                    $("#pension_empresa").val("")
+                    $("#detalles_pension_empresa").val("")
+                    $("#relacion_familia").val("")
+                    $("#detalles_relacion_familia").val("")
+                    $("#seguro_enfermedad").val("")
+                    $("#detalles_seguro_enfermedad").val("")
+                    $("#vacaciones").val("")
+                    $("#detalles_vacaciones").val("")
+                    $("#evaluacion_riesgo").val("")
+                    $("#detalles_evaluacion_riesgo").val("")
+                    $("#evaluacion_realizada").val("")
+                    $("#detalles_evaluacion_realizada").val("")
+                    $("#promocion_laboral").val("")
+                    $("#flexibilidad_laboral").val("")
+                    $("#estar_pie").val("")
+                    $("#caminar").val("")
+                    $("#estar_sentado").val("")
+                    $("#levantar").val("")
+                    $("#acarrear").val("")
+                    $("#empujar").val("")
+                    $("#subir").val("")
+                    $("#mantener_equilibrio").val("")
+                    $("#encorvarse").val("")
+                    $("#arrodillarse").val("")
+                    $("#manipular_manos").val("")
+                    $("#manipular_destreza").val("")
+                    $("#vision").val("")
+                    $("#audicion").val("")
+                    $("#requisitos_adaptacion").val("")
+                    $("#apoyo_natural").val("")
+                    for (let index = 0; index <= 45; index++) {
+                        // $(`#option${index}`).val(data[0][`option${index}`])
+
+                        $(`input:radio[name=option${index}]`).prop('checked', false);
+                        
+                    }
+                    $("#cumplir_horario").val("")
+                    $("#detalles_cumplir_horario").val("")
+                    $("#asistencia").val("")
+                    $("#detalles_asistencia").val("")
+                    $("#comunicacion").val("")
+                    $("#detalles_comunicacion").val("")
+                    $("#conducta").val("")
+                    $("#detalles_conducta").val("")
+                    $("#vestido").val("")
+                    $("#detalles_vestido").val("")
+                    $("#interaccion_social").val("")
+                    $("#detalles_interaccion_social").val("")
+                    $("#motivacion").val("")
+                    $("#detalles_motivacion").val("")
+                    $("#flexibilidad").val("")
+                    $("#detalles_flexibilidad").val("")
+                    $("#iniciativa").val("")
+                    $("#detalles_iniciativa").val("")
+                    $("#trabajo_equipo").val("")
+                    $("#detalles_trabajo_equipo").val("")
+                    $("#salud_seguridad").val("")
+                    $("#detalles_salud_seguridad").val("")
+                    $("#consistencia").val("")
+                    $("#detalles_consistencia").val("")
+                    $("#trabajar_presion").val("")
+                    $("#detalles_trabajar_presion").val("")
+            });
 
 
             //Estacionamiento
-            if(true){
+            if (true) {
                 $("#estacionamiento_1").change(function() {
                     if ($("#estacionamiento_1").val() == "cumple") {
                         $("#logro_estacionamiento_1").css("visibility", "visible");
@@ -5780,8 +4009,8 @@
                         render: function(data, type, row, meta) {
                             return type === 'display' ?
                                 `<div style="display:flex;gap:2px;">
-                                <a  class="btn btn-success" style="width: max-content;" onClick=AbrirInformeAPT(${data.id})>Informe APT </a>
-                            <a  class="btn btn-warning" style="width: max-content;" onClick=AbrirMatriz(${data.id})>Matriz de Evaluacion</a>
+                                <a  class="btn btn-success"  onClick=AbrirInformeAPT(${data.id})>Informe APT </a>
+                            <a  class="btn btn-warning"  onClick=AbrirMatriz(${data.id})>Matriz de Evaluacion</a>
                             
                             </div>` :
                                 data;
@@ -5960,8 +4189,89 @@
         }
 
         function AbrirInformeAPT(id) {
-            // $("#informaApt").val(id);
+            $("#id_proyecto_apt").val(id);
+            $.get(`/informe-apt/${id}`, function(data) {
 
+                //ESTACIONAMIENTO
+
+                if (data.length != 0) {
+                    console.log(data[0]);
+
+
+                    $("#nombre_puesto").val(data[0][`nombre_puesto`])
+                    $("#descripcion_puesto").val(data[0][`descripcion_puesto`])
+                    $("#horario").val(data[0][`horario`])
+                    $("#detalles_horario").val(data[0][`detalles_horario`])
+                    $("#vestuario").val(data[0][`vestuario`])
+                    $("#detalles_vestuario").val(data[0][`detalles_vestuario`])
+                    $("#formacion_casa").val(data[0][`formacion_casa`])
+                    $("#detalles_formacion_casa").val(data[0][`detalles_formacion_casa`])
+                    $("#pension_empresa").val(data[0][`pension_empresa`])
+                    $("#detalles_pension_empresa").val(data[0][`detalles_pension_empresa`])
+                    $("#relacion_familia").val(data[0][`relacion_familia`])
+                    $("#detalles_relacion_familia").val(data[0][`detalles_relacion_familia`])
+                    $("#seguro_enfermedad").val(data[0][`seguro_enfermedad`])
+                    $("#detalles_seguro_enfermedad").val(data[0][`detalles_seguro_enfermedad`])
+                    $("#vacaciones").val(data[0][`vacaciones`])
+                    $("#detalles_vacaciones").val(data[0][`detalles_vacaciones`])
+                    $("#evaluacion_riesgo").val(data[0][`evaluacion_riesgo`])
+                    $("#detalles_evaluacion_riesgo").val(data[0][`detalles_evaluacion_riesgo`])
+                    $("#evaluacion_realizada").val(data[0][`evaluacion_realizada`])
+                    $("#detalles_evaluacion_realizada").val(data[0][`detalles_evaluacion_realizada`])
+                    $("#promocion_laboral").val(data[0][`promocion_laboral`])
+                    $("#flexibilidad_laboral").val(data[0][`flexibilidad_laboral`])
+                    $("#estar_pie").val(data[0][`estar_pie`])
+                    $("#caminar").val(data[0][`caminar`])
+                    $("#estar_sentado").val(data[0][`estar_sentado`])
+                    $("#levantar").val(data[0][`levantar`])
+                    $("#acarrear").val(data[0][`acarrear`])
+                    $("#empujar").val(data[0][`empujar`])
+                    $("#subir").val(data[0][`subir`])
+                    $("#mantener_equilibrio").val(data[0][`mantener_equilibrio`])
+                    $("#encorvarse").val(data[0][`encorvarse`])
+                    $("#arrodillarse").val(data[0][`arrodillarse`])
+                    $("#manipular_manos").val(data[0][`manipular_manos`])
+                    $("#manipular_destreza").val(data[0][`manipular_destreza`])
+                    $("#vision").val(data[0][`vision`])
+                    $("#audicion").val(data[0][`audicion`])
+                    $("#requisitos_adaptacion").val(data[0][`requisitos_adaptacion`])
+                    $("#apoyo_natural").val(data[0][`apoyo_natural`])
+                    for (let index = 0; index <= 45; index++) {
+                        // $(`#option${index}`).val(data[0][`option${index}`])
+
+                        $(`input:radio[name=option${index}]`).filter(`[value=${data[0][`option${index}`]}]`).prop('checked', true);
+                        
+                    }
+                    $("#cumplir_horario").val(data[0][`cumplir_horario`])
+                    $("#detalles_cumplir_horario").val(data[0][`detalles_cumplir_horario`])
+                    $("#asistencia").val(data[0][`asistencia`])
+                    $("#detalles_asistencia").val(data[0][`detalles_asistencia`])
+                    $("#comunicacion").val(data[0][`comunicacion`])
+                    $("#detalles_comunicacion").val(data[0][`detalles_comunicacion`])
+                    $("#conducta").val(data[0][`conducta`])
+                    $("#detalles_conducta").val(data[0][`detalles_conducta`])
+                    $("#vestido").val(data[0][`vestido`])
+                    $("#detalles_vestido").val(data[0][`detalles_vestido`])
+                    $("#interaccion_social").val(data[0][`interaccion_social`])
+                    $("#detalles_interaccion_social").val(data[0][`detalles_interaccion_social`])
+                    $("#motivacion").val(data[0][`motivacion`])
+                    $("#detalles_motivacion").val(data[0][`detalles_motivacion`])
+                    $("#flexibilidad").val(data[0][`flexibilidad`])
+                    $("#detalles_flexibilidad").val(data[0][`detalles_flexibilidad`])
+                    $("#iniciativa").val(data[0][`iniciativa`])
+                    $("#detalles_iniciativa").val(data[0][`detalles_iniciativa`])
+                    $("#trabajo_equipo").val(data[0][`trabajo_equipo`])
+                    $("#detalles_trabajo_equipo").val(data[0][`detalles_trabajo_equipo`])
+                    $("#salud_seguridad").val(data[0][`salud_seguridad`])
+                    $("#detalles_salud_seguridad").val(data[0][`detalles_salud_seguridad`])
+                    $("#consistencia").val(data[0][`consistencia`])
+                    $("#detalles_consistencia").val(data[0][`detalles_consistencia`])
+                    $("#trabajar_presion").val(data[0][`trabajar_presion`])
+                    $("#detalles_trabajar_presion").val(data[0][`detalles_trabajar_presion`])
+                }
+
+
+            })
             $("#informaApt").modal('show');
 
         }
@@ -5980,63 +4290,67 @@
             $("#id_proyecto").val(id);
 
             $.get(`/matrizevaluacion/${id}`, function(data) {
-                
+
                 //ESTACIONAMIENTO
-                
-                if(data.length != 0){
+
+                if (data.length != 0) {
                     for (let index = 1; index <= 6; index++) {
-                    $(`#estacionamiento_revision_${index}`).val(data[0][`estacionamiento_revision_${index}`]);
-                    $(`#estacionamiento_${index}`).val(data[0][`estacionamiento_criterio_${index}`]);
-                    setMatriz(index, data[0][`estacionamiento_criterio_${index}`], data[0][
-                        `estacionamiento_logro_${index}`
-                    ], "estacionamiento");
-                }
-                for (let index = 1; index <= 8; index++) {
-                    $(`#ingreso_revision_${index}`).val(data[0][`ingreso_revision_${index}`]);
-                    $(`#ingreso_${index}`).val(data[0][`ingreso_criterio_${index}`]);
-                    setMatriz(index, data[0][`ingreso_criterio_${index}`], data[0][`ingreso_logro_${index}`],
-                        "ingreso");
-                }
-                for (let index = 1; index <= 5; index++) {
-                    $(`#puerta_revision_${index}`).val(data[0][`puerta_revision_${index}`]);
-                    $(`#puerta_${index}`).val(data[0][`puerta_criterio_${index}`]);
-                    setMatriz(index, data[0][`puerta_criterio_${index}`], data[0][`puerta_logro_${index}`],
-                        "puerta");
+                        $(`#estacionamiento_revision_${index}`).val(data[0][`estacionamiento_revision_${index}`]);
+                        $(`#estacionamiento_${index}`).val(data[0][`estacionamiento_criterio_${index}`]);
+                        setMatriz(index, data[0][`estacionamiento_criterio_${index}`], data[0][
+                            `estacionamiento_logro_${index}`
+                        ], "estacionamiento");
+                    }
+                    for (let index = 1; index <= 8; index++) {
+                        $(`#ingreso_revision_${index}`).val(data[0][`ingreso_revision_${index}`]);
+                        $(`#ingreso_${index}`).val(data[0][`ingreso_criterio_${index}`]);
+                        setMatriz(index, data[0][`ingreso_criterio_${index}`], data[0][`ingreso_logro_${index}`],
+                            "ingreso");
+                    }
+                    for (let index = 1; index <= 5; index++) {
+                        $(`#puerta_revision_${index}`).val(data[0][`puerta_revision_${index}`]);
+                        $(`#puerta_${index}`).val(data[0][`puerta_criterio_${index}`]);
+                        setMatriz(index, data[0][`puerta_criterio_${index}`], data[0][`puerta_logro_${index}`],
+                            "puerta");
+                    }
+
+                    for (let index = 1; index <= 7; index++) {
+                        $(`#evacuacion_revision_${index}`).val(data[0][`evacuacion_revision_${index}`]);
+                        $(`#evacuacion_${index}`).val(data[0][`evacuacion_criterio_${index}`]);
+                        setMatriz(index, data[0][`evacuacion_criterio_${index}`], data[0][
+                                `evacuacion_logro_${index}`
+                            ],
+                            "evacuacion");
+                    }
+                    for (let index = 1; index <= 5; index++) {
+                        $(`#espacios_revision_${index}`).val(data[0][`espacios_revision_${index}`]);
+                        $(`#espacios_${index}`).val(data[0][`espacios_criterio_${index}`]);
+                        setMatriz(index, data[0][`espacios_criterio_${index}`], data[0][`espacios_logro_${index}`],
+                            "espacios");
+                    }
+                    for (let index = 1; index <= 5; index++) {
+                        $(`#interior_revision_${index}`).val(data[0][`interior_revision_${index}`]);
+                        $(`#interior_${index}`).val(data[0][`interior_criterio_${index}`]);
+                        setMatriz(index, data[0][`interior_criterio_${index}`], data[0][`interior_logro_${index}`],
+                            "interior");
+                    }
+                    for (let index = 1; index <= 6; index++) {
+                        $(`#escaleras_revision_${index}`).val(data[0][`escaleras_revision_${index}`]);
+                        $(`#escaleras_${index}`).val(data[0][`escaleras_criterio_${index}`]);
+                        setMatriz(index, data[0][`escaleras_criterio_${index}`], data[0][
+                                `escaleras_logro_${index}`
+                            ],
+                            "escaleras");
+                    }
+                    for (let index = 1; index <= 10; index++) {
+                        $(`#ascensor_revision_${index}`).val(data[0][`ascensor_revision_${index}`]);
+                        $(`#ascensor_${index}`).val(data[0][`ascensor_criterio_${index}`]);
+                        setMatriz(index, data[0][`ascensor_criterio_${index}`], data[0][`ascensor_logro_${index}`],
+                            "ascensor");
+                    }
+
                 }
 
-                for (let index = 1; index <= 7; index++) {
-                    $(`#evacuacion_revision_${index}`).val(data[0][`evacuacion_revision_${index}`]);
-                    $(`#evacuacion_${index}`).val(data[0][`evacuacion_criterio_${index}`]);
-                    setMatriz(index, data[0][`evacuacion_criterio_${index}`], data[0][`evacuacion_logro_${index}`],
-                        "evacuacion");
-                }
-                for (let index = 1; index <= 5; index++) {
-                    $(`#espacios_revision_${index}`).val(data[0][`espacios_revision_${index}`]);
-                    $(`#espacios_${index}`).val(data[0][`espacios_criterio_${index}`]);
-                    setMatriz(index, data[0][`espacios_criterio_${index}`], data[0][`espacios_logro_${index}`],
-                        "espacios");
-                }
-                for (let index = 1; index <= 5; index++) {
-                    $(`#interior_revision_${index}`).val(data[0][`interior_revision_${index}`]);
-                    $(`#interior_${index}`).val(data[0][`interior_criterio_${index}`]);
-                    setMatriz(index, data[0][`interior_criterio_${index}`], data[0][`interior_logro_${index}`],
-                        "interior");
-                }
-                for (let index = 1; index <= 6; index++) {
-                    $(`#escaleras_revision_${index}`).val(data[0][`escaleras_revision_${index}`]);
-                    $(`#escaleras_${index}`).val(data[0][`escaleras_criterio_${index}`]);
-                    setMatriz(index, data[0][`escaleras_criterio_${index}`], data[0][`escaleras_logro_${index}`],
-                        "escaleras");
-                }
-                for (let index = 1; index <= 10; index++) {
-                    $(`#ascensor_revision_${index}`).val(data[0][`ascensor_revision_${index}`]);
-                    $(`#ascensor_${index}`).val(data[0][`ascensor_criterio_${index}`]);
-                    setMatriz(index, data[0][`ascensor_criterio_${index}`], data[0][`ascensor_logro_${index}`],
-                        "ascensor");
-                }
-
-                }
-                
 
             })
             $("#matriz").modal('show');

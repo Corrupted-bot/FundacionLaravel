@@ -209,6 +209,8 @@ class ProyectoController extends Controller
         }
         $matrizevaluacion->save();
 
+        Session::flash('message', "Se guardo correctamente los cambios en la matriz de evaluacion.");
+        return Redirect::back();
         // return redirect("/proyectos"); 
 
     }

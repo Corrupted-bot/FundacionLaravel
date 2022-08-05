@@ -75,7 +75,7 @@
 
                     <div class="row" style="display: flex;justify-content: center;">
                         <button id="boton-enviar" class="btn btn-success btn-lg"
-                            style="width: 20%;background-color: #2157a3;">Guardar</button>
+                            style="background-color: #2157a3;">Guardar</button>
                     </div>
 
 

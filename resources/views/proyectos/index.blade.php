@@ -391,208 +391,210 @@
                                             <h3>El trabajo es:</h3>
                                         </div>
                                         <div class="card-body">
-                                            <table class="table table-bordered">
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col"></th>
-                                                        <th scope="col">1</th>
-                                                        <th scope="col">2</th>
-                                                        <th scope="col">3</th>
-                                                        <th scope="col">4</th>
-                                                        <th scope="col">5</th>
-                                                        <th scope="col">6</th>
-                                                        <th scope="col">7</th>
-                                                        <th scope="col">8</th>
-                                                        <th scope="col">9</th>
-                                                        <th scope="col"></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th scope="row">Jornada Completa</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option0" id="jornada{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">Media Jornada</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Dentro</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option1" id="dentro{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">En el exterior</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Estando en un lugar</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option2" id="lugar{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col"></th>
+                                                            <th scope="col">1</th>
+                                                            <th scope="col">2</th>
+                                                            <th scope="col">3</th>
+                                                            <th scope="col">4</th>
+                                                            <th scope="col">5</th>
+                                                            <th scope="col">6</th>
+                                                            <th scope="col">7</th>
+                                                            <th scope="col">8</th>
+                                                            <th scope="col">9</th>
+                                                            <th scope="col"></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">Jornada Completa</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option0" id="jornada{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">Media Jornada</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Dentro</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option1" id="dentro{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">En el exterior</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Estando en un lugar</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option2" id="lugar{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
 
-                                                        <th scope="row">Cambiando de lugar</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Donde haya mucha actividad</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option3" id="actividad{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">Donde haya poca actividad</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Donde haga calor</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option4" id="calor{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">Donde haga frío</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">En un lugar ruidoso</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option5" id="ruidoso{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">En un lugar silencioso</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">En un sitio limpio</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option6" id="limpio{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">En un sitio desaliñado, sucio</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Una tarea constante</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option7" id="constante{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">Haciendo diferentes tareas</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">En un espacio grande</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option8" id="espacio{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">En un espacio pequeño</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Principalmente con hombres</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option9"
-                                                                        id="principalmente{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">Principalmente con mujeres</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Con uniforme</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option10" id="uniforme{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">Sin uniforme</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Con palabras / libros</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option11" id="palabras{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No con palabras ni libros</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Con números</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option12" id="numeros{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No con números</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Utilizando transporte público</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option13"
-                                                                        id="transporte{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">Sin usar transporte público</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Con otros</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option14" id="otros{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No con otros</th>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                                            <th scope="row">Cambiando de lugar</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Donde haya mucha actividad</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option3" id="actividad{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">Donde haya poca actividad</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Donde haga calor</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option4" id="calor{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">Donde haga frío</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">En un lugar ruidoso</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option5" id="ruidoso{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">En un lugar silencioso</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">En un sitio limpio</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option6" id="limpio{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">En un sitio desaliñado, sucio</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Una tarea constante</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option7" id="constante{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">Haciendo diferentes tareas</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">En un espacio grande</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option8" id="espacio{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">En un espacio pequeño</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Principalmente con hombres</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option9"
+                                                                            id="principalmente{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">Principalmente con mujeres</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Con uniforme</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option10" id="uniforme{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">Sin uniforme</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Con palabras / libros</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option11" id="palabras{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No con palabras ni libros</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Con números</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option12" id="numeros{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No con números</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Utilizando transporte público</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option13"
+                                                                            id="transporte{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">Sin usar transporte público</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Con otros</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option14" id="otros{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No con otros</th>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -611,412 +613,415 @@
                                             <h3>Habilidades Requeridas</h3>
                                         </div>
                                         <div class="card-body">
-                                            <table class="table table-bordered">
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col"></th>
-                                                        <th scope="col">1</th>
-                                                        <th scope="col">2</th>
-                                                        <th scope="col">3</th>
-                                                        <th scope="col">4</th>
-                                                        <th scope="col">5</th>
-                                                        <th scope="col">6</th>
-                                                        <th scope="col">7</th>
-                                                        <th scope="col">8</th>
-                                                        <th scope="col">9</th>
-                                                        <th scope="col"></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th scope="row">Usar manos</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option15" id="manos{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Buena visión</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option16" id="vision{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Buen oido</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option17" id="oido{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Comunicarse bien</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option18"
-                                                                        id="comunicarse{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Levantar pesos</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option19" id="levantar{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Tener fuerza</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option20" id="fuerza{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Poder Leer</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option21" id="leer{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Poder usar números</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option22" id="numeros{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Poder usar dinero</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option23" id="dinero{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Saber decir la hora</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option24" id="hora{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Saber trabajar rapido</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option25"
-                                                                        id="trabajar-rapido{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Saber conseguir calidad</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option26" id="calidad{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Concentrarse + de 2 hs</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option27"
-                                                                        id="concentrarse{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Poder hacer varias tareas</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option28"
-                                                                        id="varias-tareas{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">Solo 1 ó 2 tareas</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Tener buen equilibrio</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option29"
-                                                                        id="equilibrio{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Poder andar</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option30"
-                                                                        id="andar-bien{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Poder estar de pie + de 2 hs</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option31" id="estar-pie{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Poder estar sentado + de 2 hs</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option32"
-                                                                        id="estar-sentado{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Poder utilizar escaleras</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option33"
-                                                                        id="usar-escaleras{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">No enfadarse a menudo</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option34"
-                                                                        id="no-enfadarse{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Poder recordar instrucciones</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option35"
-                                                                        id="recordar-instrucciones{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Saber utilizar el teléfono</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option36"
-                                                                        id="usar-telefono{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Saber conducir</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option37" id="conducir{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Saber utilizar el ordenador</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option38" id="ordenador{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Saber deletrear</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option39" id="deletrear{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Tener buena letra</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option40"
-                                                                        id="buena-letra{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Tener opinion,criterio,juicio</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option41" id="opinion{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Poder trabajar sin apoyo</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option42"
-                                                                        id="trabajar-apoyo{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">Se requiere apoyo directo</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Tener iniciativa</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option43"
-                                                                        id="iniciativa{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Saber cuidar su apariencia</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option44"
-                                                                        id="apariencia{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Tener buena higiene personal</th>
-                                                        @for ($i = 1; $i <= 9; $i++)
-                                                            <td>
-                                                                <div class="form-check form-check-inline"><input
-                                                                        class="form-check-input" type="radio"
-                                                                        name="option45" id="higiene{{ $i }}"
-                                                                        value="{{ $i }}"></div>
-                                                            </td>
-                                                        @endfor
-                                                        <th scope="row">No requerida</th>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                            <div class="table-responsive">
+
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col"></th>
+                                                            <th scope="col">1</th>
+                                                            <th scope="col">2</th>
+                                                            <th scope="col">3</th>
+                                                            <th scope="col">4</th>
+                                                            <th scope="col">5</th>
+                                                            <th scope="col">6</th>
+                                                            <th scope="col">7</th>
+                                                            <th scope="col">8</th>
+                                                            <th scope="col">9</th>
+                                                            <th scope="col"></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">Usar manos</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option15" id="manos{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Buena visión</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option16" id="vision{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Buen oido</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option17" id="oido{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Comunicarse bien</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option18"
+                                                                            id="comunicarse{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Levantar pesos</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option19" id="levantar{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Tener fuerza</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option20" id="fuerza{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Poder Leer</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option21" id="leer{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Poder usar números</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option22" id="numeros{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Poder usar dinero</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option23" id="dinero{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Saber decir la hora</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option24" id="hora{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Saber trabajar rapido</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option25"
+                                                                            id="trabajar-rapido{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Saber conseguir calidad</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option26" id="calidad{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Concentrarse + de 2 hs</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option27"
+                                                                            id="concentrarse{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Poder hacer varias tareas</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option28"
+                                                                            id="varias-tareas{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">Solo 1 ó 2 tareas</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Tener buen equilibrio</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option29"
+                                                                            id="equilibrio{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Poder andar</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option30"
+                                                                            id="andar-bien{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Poder estar de pie + de 2 hs</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option31" id="estar-pie{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Poder estar sentado + de 2 hs</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option32"
+                                                                            id="estar-sentado{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Poder utilizar escaleras</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option33"
+                                                                            id="usar-escaleras{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">No enfadarse a menudo</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option34"
+                                                                            id="no-enfadarse{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Poder recordar instrucciones</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option35"
+                                                                            id="recordar-instrucciones{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Saber utilizar el teléfono</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option36"
+                                                                            id="usar-telefono{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Saber conducir</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option37" id="conducir{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Saber utilizar el ordenador</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option38" id="ordenador{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Saber deletrear</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option39" id="deletrear{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Tener buena letra</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option40"
+                                                                            id="buena-letra{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Tener opinion,criterio,juicio</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option41" id="opinion{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Poder trabajar sin apoyo</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option42"
+                                                                            id="trabajar-apoyo{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">Se requiere apoyo directo</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Tener iniciativa</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option43"
+                                                                            id="iniciativa{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Saber cuidar su apariencia</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option44"
+                                                                            id="apariencia{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Tener buena higiene personal</th>
+                                                            @for ($i = 1; $i <= 9; $i++)
+                                                                <td>
+                                                                    <div class="form-check form-check-inline"><input
+                                                                            class="form-check-input" type="radio"
+                                                                            name="option45" id="higiene{{ $i }}"
+                                                                            value="{{ $i }}"></div>
+                                                                </td>
+                                                            @endfor
+                                                            <th scope="row">No requerida</th>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
 
                                     </div>

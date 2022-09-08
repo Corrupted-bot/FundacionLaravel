@@ -8,7 +8,7 @@
 @stop
 
 @section('content')
-
+<div class="container">
     <div class="card">
         <div class="card-header">
             Administrar Empresas
@@ -25,6 +25,7 @@
                         <th>Dirección</th>
                         <th>Cargo</th>
                         <th>Dotación</th>
+                        <th></th>
                         <th style="text-align: center;">Herramientas</th>
                     </tr>
                 </thead>
@@ -39,6 +40,8 @@
                             <td>{{ $empresa->direccion }}</td>
                             <td>{{ $empresa->cargo }}</td>
                             <td>{{ $empresa->dotacion }}</td>
+                            <td><button class="btn btn-info"><i
+                                class="fa-solid fa-eye"></i></button></td>
                             <td>
                                 <div style="display: flex;gap: 5px;flex-wrap: wrap;">
                                     <button class="btn btn-success" onclick="AbrirProyecto({{ $empresa->id }})">Proyecto <i
@@ -68,6 +71,8 @@
 
         </div>
     </div>
+</div>
+
 
     <div class="modal fade" id="ProyectoModal" tabindex="-1" aria-labelledby="ProyectoModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">

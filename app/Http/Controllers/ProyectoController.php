@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\AscensorMatriz;
+use App\Models\Candidatos;
 use App\Models\EscalerasMatriz;
 use App\Models\EspaciosMatriz;
 use App\Models\EstacionamientoMatriz;
@@ -36,7 +37,9 @@ class ProyectoController extends Controller
     public function index()
     {
         //
-        return View("proyectos.index");
+        $candidatos = Candidatos::all();
+
+        return View("proyectos.index")->with("candidatos",$candidatos);
     }
 
     /**

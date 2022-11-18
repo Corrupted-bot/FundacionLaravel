@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Fundacion Kosmo Inclusión',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -261,9 +261,14 @@ return [
         //     'icon'        => 'far fa-solid fa-building',
         // ],
         [
-            'text'        => 'Administrar Proyectos',
+            'text'        => 'Administrar Puestos de trabajo',
             'url'         => '/proyectos',
             'icon'        => 'far fa-solid fa-list-check',
+        ],
+        [
+            'text'        => 'Administrar Candidatos',
+            'url'         => '/candidatos',
+            'icon'        => 'far fa-solid fa-user-plus',
         ],
         [
             'text'        => 'Crear Usuario',
@@ -377,14 +382,74 @@ return [
                     'location' => '//cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js',
                 ],
                 [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => '//cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => '//cdn.datatables.net/buttons/2.2.3/js/buttons.bootstrap4.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => '//cdn.datatables.net/searchpanes/2.0.2/js/dataTables.searchPanes.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => '//cdn.datatables.net/searchpanes/2.0.2/js/searchPanes.bootstrap4.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => '//cdn.datatables.net/select/1.4.0/js/dataTables.select.min.js',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => '//cdn.datatables.net/buttons/2.2.3/js/buttons.colVis.min.js',
+                ],
+                // [
+                //     'type' => 'css',
+                //     'asset' => true,
+                //     'location' => '//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css',
+                // ],
+                [
                     'type' => 'css',
                     'asset' => true,
-                    'location' => '//cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css',
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => '//cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css',
                 ],
                 [
                     'type' => 'css',
                     'asset' => true,
                     'location' => '//cdn.datatables.net/responsive/2.3.0/css/responsive.dataTables.min.css',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => '//cdn.datatables.net/fixedcolumns/4.1.0/css/fixedColumns.dataTables.min.css',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => '//cdn.datatables.net/buttons/2.2.3/css/buttons.bootstrap4.min.css',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => '//cdn.datatables.net/searchpanes/2.0.2/css/searchPanes.dataTables.min.css',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => '//cdn.datatables.net/select/1.4.0/css/select.dataTables.min.css',
                 ],
             ],
         ],
